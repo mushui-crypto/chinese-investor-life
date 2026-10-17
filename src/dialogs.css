@@ -1,0 +1,195 @@
+/* Shared dialogs: a stable frame, readable content, and familiar game controls. */
+#game-dialog {
+ --dialog-inset: 24px;
+ width: min(720px, calc(100vw - 32px));
+ max-width: none;
+ max-height: calc(100dvh - 40px);
+ padding: 0;
+ overflow: hidden;
+ background: #f3e7c9;
+ color: #382d20;
+ border: 3px solid var(--frame);
+ border-radius: 8px;
+}
+#game-dialog[open] {display: flex; flex-direction: column;}
+#game-dialog .dialog-head {flex: none; position: relative; padding: 12px var(--dialog-inset); gap: 16px;}
+#game-dialog .dialog-head h2 {min-width: 0; font-size: 1.375rem; line-height: 1.4; font-weight: 700; letter-spacing: 0; overflow-wrap: anywhere;}
+#game-dialog .dialog-head .icon-button {flex: 0 0 44px; width: 44px; height: 44px; min-width: 44px; min-height: 44px; box-shadow: 0 2px 0 var(--frame);}
+#game-dialog .dialog-body {min-height: 0; overflow: auto; overscroll-behavior: contain; padding: var(--dialog-inset); scroll-padding: 16px; font-size: .9375rem; line-height: 1.7;}
+#game-dialog .dialog-body > :first-child {margin-top: 0;}
+#game-dialog .dialog-body > :last-child {margin-bottom: 0;}
+#game-dialog :is(p,li,dd,small,label,summary,button) {overflow-wrap: anywhere;}
+#game-dialog p {margin: 12px 0; line-height: 1.7;}
+#game-dialog h3 {font-family: var(--font); font-size: 1rem; font-weight: 700; line-height: 1.5; margin: 20px 0 8px;}
+#game-dialog h4 {font-size: .9375rem; line-height: 1.5; margin: 12px 0 8px;}
+#game-dialog :is(.dialog-intro,.result-dialog-text) {font-size: .9375rem; line-height: 1.8; color: #382d20; margin: 0 0 20px;}
+#game-dialog :is(.field-help,.field small,.behavior-note,.behavior-reason,.workspace-footnote,.term-note,.setting-row p,.mode-option small,.life-offer small,.save-slot p) {font-size: .8125rem; line-height: 1.65; color: #63513b;}
+#game-dialog .field {margin: 20px 0; gap: 8px;}
+#game-dialog :is(.field label,fieldset legend,.start-path > label) {font-size: .875rem; font-weight: 650;}
+#game-dialog .field-pair {gap: 16px;}
+#game-dialog .field-pair > .field {min-width: 0;}
+#game-dialog .button {min-height: 44px; font-family: var(--font); font-size: .875rem; font-weight: 650; line-height: 1.5; gap: 8px; padding: 9px 14px;}
+#game-dialog .dialog-footer {gap: 12px; flex-wrap: wrap; padding-top: 16px; margin-top: 24px; border-top: 1px solid #bca67d;}
+#game-dialog .dialog-footer > span {font-size: .8125rem; color: #63513b; flex: 1 1 180px;}
+#game-dialog .dialog-form-actions {position: sticky; bottom: -24px; z-index: 2; margin-top: 20px; padding: 12px 0; background: #f3e7c9; border-top: 1px solid #bca67d;}
+#game-dialog .dialog-form-actions .form-error {margin: 0 0 10px;}
+#game-dialog .form-error {font-size: .875rem; color: #9b3429;}
+#game-dialog .dialog-budget {display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; padding: 16px; background: #e7d9b5; border: 1px solid #bca67d; border-radius: 4px; font-size: .8125rem; color: #63513b;}
+#game-dialog .dialog-budget b {font-size: 1.125rem; font-variant-numeric: tabular-nums;}
+#game-dialog .term-note {border: 1px solid #bca67d; border-radius: 4px; background: #e9dcba; padding: 12px 16px; margin: 16px 0;}
+#game-dialog details {margin-block: 16px;}
+#game-dialog summary {display: list-item; cursor: pointer; min-height: 44px; padding: 10px 12px; border: 1px solid #ac9062; border-radius: 4px; background: #e7d5a9; font-size: .875rem; font-weight: 650; line-height: 1.6; color: #382d20;}
+#game-dialog details[open] > summary {margin-bottom: 12px;}
+#game-dialog .dialog-help {display: grid; gap: 12px;}
+#game-dialog .dialog-help details {margin: 0;}
+#game-dialog .dialog-help p {padding: 0 12px; margin: 12px 0 8px;}
+#game-dialog .setting-row {padding: 16px 0;}
+#game-dialog .setting-row:first-child {padding-top: 0;}
+#game-dialog .setting-row p {margin: 4px 0 0;}
+#game-dialog .switch {display: grid; align-items: center; height: 44px; min-width: 48px;}
+#game-dialog .switch span {height: 28px;}
+#game-dialog .save-slots {display: grid; gap: 16px;}
+#game-dialog .save-slot {margin: 0; padding: 16px; border-radius: 4px; gap: 16px; align-items: flex-start;}
+#game-dialog .save-slot h3 {margin: 0; flex-wrap: wrap;}
+#game-dialog .save-slot-buttons {gap: 10px;}
+#game-dialog .save-slot-buttons .button {font-size: .8125rem;}
+#game-dialog .danger-text {color: #9b3429; border-color: #9b3429;}
+#game-dialog .mode-option {margin: 12px 0; padding: 12px 16px; gap: 12px; border-radius: 4px;}
+#game-dialog .mode-option strong {font-size: .875rem;}
+#game-dialog :is(.behavior-actions,.guide-actions,.rescue-work-actions,.amount-shortcuts) {gap: 12px; flex-wrap: wrap;}
+#game-dialog :is(.behavior-hub > section:not(.behavior-pending),.life-history article,.debt-calendar-row) {padding: 20px 0; border-bottom: 1px solid #bca67d;}
+#game-dialog .behavior-hub > section > h3:first-child {margin-top: 0;}
+/* Pending messages are inset cards, unlike the open ledger sections below. */
+#game-dialog .behavior-hub > .behavior-pending {display: grid; gap: 12px; padding: 20px; border: 2px solid #637257; border-radius: 6px;}
+#game-dialog .behavior-pending > :is(span,h3,p,.button) {margin: 0;}
+#game-dialog .behavior-pending > span {align-items: center; font-size: .8125rem;}
+#game-dialog .behavior-pending > .button {justify-self: start;}
+#game-dialog :is(.life-offer,.behavior-choice,.rescue-offer) {border-radius: 4px; padding: 16px;}
+#game-dialog .behavior-choice {min-height: 52px; text-align: left; margin-block: 12px;}
+#game-dialog :is(.behavior-choice strong,.life-offer h3) {font-size: 1rem; line-height: 1.5;}
+#game-dialog :is(.behavior-choice span,.debt-calendar-row small) {font-size: .875rem; line-height: 1.6;}
+#game-dialog :is(.behavior-numbers,.access-checklist) {gap: 16px;}
+#game-dialog .access-check {gap: 12px; padding: 12px 0;}
+#game-dialog :is(.access-check strong,.access-check span) {font-size: .875rem;}
+#game-dialog .access-check progress {margin-top: 8px;}
+#game-dialog :is(.game-text-input,.game-select-trigger) {font-size: 1rem;}
+#game-dialog :is(.life-choices,.goal-choices) {gap: 16px;}
+#game-dialog .life-choices > .behavior-choice {margin-block: 0;}
+#game-dialog :is(button,summary,a):focus-visible {outline: 3px solid #af5823; outline-offset: 3px;}
+#game-dialog #dialog-title:focus {outline: none;}
+/* Information panels follow the same visual and action vocabulary. */
+.game-info {width: min(420px,calc(100vw - 24px)); padding: 0; display: none; overflow: hidden; border-radius: 6px; background: #f3e7c9; box-shadow: 0 4px 0 #705536;}
+.game-info:popover-open {display: flex; flex-direction: column;}
+.game-info .info-heading {flex: none; padding: 12px 16px; background: #e7d5a9; border-bottom: 1px solid #ac9062; gap: 12px;}
+.game-info .info-heading h2 {font-size: 1rem; line-height: 1.5;}
+.game-info .info-close {flex: 0 0 44px; min-width: 44px; min-height: 44px; border: 2px solid #705536; border-radius: 4px; background: #f3e7c9; color: #382d20; box-shadow: 0 2px 0 #705536; font-size: 24px; cursor: pointer;}
+.game-info .info-body {overflow: auto; min-height: 0; padding: 16px; font-size: .875rem; line-height: 1.75; color: #382d20; overscroll-behavior: contain;}
+.game-info .info-body > :first-child {margin-top: 0;}
+.game-info .info-body > :last-child {margin-bottom: 0;}
+.game-info .info-secondary {color: #63513b;}
+.game-info .button {min-height: 44px; font-size: .875rem;}
+@media(max-width:600px) {
+ #game-dialog {--dialog-inset: 16px; width:calc(100vw - 24px); max-height:calc(100dvh - 24px);}
+ #game-dialog .dialog-head {padding: 12px var(--dialog-inset); gap: 12px;}
+ #game-dialog .dialog-head h2 {font-size: 1.125rem;}
+ #game-dialog .dialog-body {font-size: .9375rem;}
+ #game-dialog .behavior-hub > .behavior-pending {padding: 16px;}
+ #game-dialog .behavior-pending > span {font-size: .875rem;}
+ #game-dialog .dialog-form-actions {bottom: -16px;}
+ #game-dialog .field-pair {display: grid; grid-template-columns: minmax(0,1fr); gap: 12px;}
+ #game-dialog .dialog-budget {gap:12px; padding:12px;}
+ #game-dialog .field-pair > .field {margin: 0;}
+ #game-dialog .save-slot {padding: 12px; gap: 10px;}
+ #game-dialog .save-slot-number {font-size: 1.25rem;}
+ #game-dialog .save-slot-buttons {gap: 8px;}
+ #game-dialog :is(.field-help,.field small,.behavior-note,.behavior-reason,.workspace-footnote,.term-note,.setting-row p,.mode-option small,.life-offer small,.save-slot p) {font-size: .875rem;}
+ #game-dialog .dialog-footer > .button {flex: 1 1 auto;}
+}
+#game-dialog .loan-receipt {padding: 16px; background: #e9dcba; border: 1px solid #bca67d; border-radius: 4px;}
+#game-dialog .loan-receipt h3 {margin: 0 0 12px;}
+#game-dialog .loan-receipt dl {gap: 16px;}
+#game-dialog .loan-receipt :is(dt,dd) {font-size: .875rem; line-height: 1.6;}
+#game-dialog .loan-receipt dd {font-size: 1rem; font-weight: 700; font-variant-numeric: tabular-nums;}
+#game-dialog .goal-choices [aria-pressed=true] {background: #edce7d; border-color: #87612d;}
+#game-dialog .life-history {margin-top: 24px;}
+#game-dialog .life-history article > h3 {margin: 4px 0 8px;}
+#game-dialog .playtest-form {display: grid; gap: 20px;}
+#game-dialog .playtest-form > label {display: grid; gap: 8px; font-size: .875rem; font-weight: 650;}
+#game-dialog .playtest-form .dialog-form-actions {margin-top: 0;}
+#game-dialog .run-comparison {padding: 0 0 16px; margin: 0 0 20px; border: 0; border-bottom: 1px solid #bca67d; background: none;}
+#game-dialog .run-comparison h2 {font-family: var(--font); font-size: 1rem;}
+#game-dialog .run-comparison p {font-size: .875rem;}
+#game-dialog .ending-item {min-height: 64px; border: 2px solid #ac9062; background: #e9dcba; border-radius: 4px;}
+#game-dialog .ending-item.unlocked {background: #edce7d; box-shadow: 0 2px 0 #705536;}
+#game-dialog .ending-item strong {font-size: .875rem; font-weight: 650;}
+#game-dialog .ending-prose {font-size: .9375rem; line-height: 1.85;}
+/* The dialog supplies the frame and inset; the character sheet groups its content. */
+#game-dialog .character-panel {padding: 0; max-height: none; width: auto; position: static; background: none; border: 0; border-radius: 0; box-shadow: none;}
+#game-dialog .character-panel .character-heading {gap: 16px;}
+#game-dialog .character-panel .character-heading > div {min-width: 0;}
+#game-dialog .character-panel .character-heading h2 {margin: 0 0 4px; font-size: 1.25rem; line-height: 1.4; overflow-wrap: anywhere;}
+#game-dialog .character-panel .character-heading > div > span {font-size: .8125rem; line-height: 1.5;}
+#game-dialog .character-panel .family-tag {width: fit-content; max-width: 100%; margin: 16px 0 20px; padding: 4px 12px; font-size: .8125rem; line-height: 1.5;}
+#game-dialog .character-panel .stats {margin: 0; gap: 12px;}
+#game-dialog .character-panel .stat {grid-template-columns: minmax(0,1fr) 60px; gap: 4px 8px;}
+#game-dialog .character-panel .stat dt {gap: 8px; font-size: .875rem; line-height: 1.5;}
+#game-dialog .character-panel .stat dt .info-button {position: relative; width: 28px; height: 28px; min-height: 28px; flex-basis: 28px;}
+#game-dialog .character-panel .stat dt .info-button::before {content: ''; position: absolute; inset: -8px;}
+#game-dialog .character-panel .stat dd {margin: 0; font-size: .875rem; font-variant-numeric: tabular-nums;}
+#game-dialog .character-panel .stat dd span {margin-left: 2px; font-size: .6875rem;}
+#game-dialog .character-panel .stat-track {height: 6px;}
+#game-dialog .character-panel .pocket-book {margin-top: 24px; padding-top: 20px;}
+#game-dialog .character-panel .pocket-book h3 {margin: 0 0 12px; gap: 8px; font-size: 1rem;}
+#game-dialog .character-panel .pocket-book dl {margin: 0;}
+#game-dialog .character-panel .pocket-book dl > div {margin: 0; padding: 4px 0; gap: 16px; font-size: .875rem; line-height: 1.6;}
+#game-dialog .character-panel .pocket-book dd {margin: 0; font-size: .875rem; text-align: right; font-variant-numeric: tabular-nums;}
+#game-dialog .character-panel .pocket-book .total {margin-top: 8px; padding-top: 12px;}
+#game-dialog .character-panel .pocket-book .total dd {font-size: 1rem;}
+#game-dialog .character-panel .wallet-open {width: 100%; margin-top: 16px;}
+#game-dialog .character-panel .family-line {margin-top: 24px; padding-top: 16px; gap: 4px; font-size: .8125rem; line-height: 1.5;}
+#game-dialog .character-panel .family-line strong {font-size: 1rem;}
+#game-dialog .character-panel .family-line small {font-size: .75rem; line-height: 1.5;}
+@media(max-width:420px){
+ #game-dialog .case-timeline {grid-template-columns:repeat(2,minmax(0,1fr));}
+ #game-dialog .case-bill {grid-template-columns:minmax(0,1fr);}
+ #game-dialog .case-step {min-width:0;}
+ #game-dialog .rescue-work-actions {grid-template-columns:minmax(0,1fr);}
+ #game-dialog .rescue-offer-title {flex-wrap:wrap;}
+ #game-dialog .rescue-offer-detail {flex-wrap:wrap;}
+}
+/* Order opportunities are easier to compare as rows than six uneven cards. */
+#game-dialog .life-choices:has(.life-offer) {display: block;}
+#game-dialog .life-offer {display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 6px 20px; padding: 16px 0; background: transparent; border: 0; border-bottom: 1px solid #bca67d; box-shadow: none; border-radius: 0;}
+#game-dialog .life-offer > h3 {margin: 0;}
+#game-dialog .life-offer > p {grid-column: 1; margin: 0;}
+#game-dialog .life-offer > small {grid-column: 1;}
+#game-dialog .life-offer > .button {grid-column: 2; grid-row: 1 / 4; align-self: center; margin: 0;}
+@media(max-width:600px) {
+ #game-dialog .life-offer {grid-template-columns: minmax(0,1fr); gap: 8px;}
+ #game-dialog .life-offer > .button {grid-column: 1; grid-row: auto; justify-self: start;}
+}
+/* Routine and household settings use the same inset and button footer as other dialogs. */
+#game-dialog .life-plan-form .plan-options {border: 0; padding: 0; margin: 20px 0; min-width: 0;}
+#game-dialog .life-plan-form .plan-options legend {padding: 0; color: #254f40; font-size: 1rem;}
+#game-dialog .life-plan-form .mode-option {display: flex; align-items: flex-start; margin: 8px 0; padding: 8px 12px; min-height: 0; cursor: pointer;}
+#game-dialog .life-plan-form .mode-option input {flex: none; margin-top: 5px; accent-color: #254f40;}
+#game-dialog .life-plan-form .mode-option span {display: grid; gap: 3px; min-width: 0;}
+#game-dialog .life-plan-form .mode-option:has(input:checked) {border-color: #254f40; background: #e2e3c3;}
+#game-dialog .life-plan-form .field-pair {display: grid; grid-template-columns: repeat(2,minmax(0,1fr));}
+#game-dialog .life-plan-form .field {margin: 0;}
+#game-dialog .life-plan-form .dialog-footer {justify-content: flex-end;}
+#game-dialog .plan-preview {background: #e7d9b5; padding: 16px; border-radius: 4px;}
+#game-dialog .plan-preview dl {margin: 0; display: grid; gap: 8px;}
+#game-dialog .plan-preview dl > div {display: flex; gap: 16px; justify-content: space-between;}
+#game-dialog .plan-preview dd {margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; text-align: right;}
+#game-dialog .plan-preview small {display: block; margin-top: 8px; color: #63513b;}
+.routine-receipt {display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 0 0 12px; font-size: .875rem; line-height: 1.6;}
+.routine-receipt strong {color: #254f40;}
+.routine-receipt details {flex-basis: 100%; margin: 0;}
+.routine-receipt summary {cursor: pointer;}
+.routine-receipt ul {max-height: 140px; overflow: auto; margin: 8px 0 0; padding-left: 20px;}
+.daily-dock-event > .routine-receipt {grid-column: 1 / -1;}
+@media(max-width:420px){#game-dialog .life-plan-form .field-pair {grid-template-columns: minmax(0,1fr);gap: 16px;}}
+.attendance-summary {display: grid; gap: 4px; padding: 12px 0; line-height: 1.6;}
+.attendance-summary strong {color: #254f40; font-size: .875rem;}
+.attendance-summary small {color: #63513b; font-size: .8125rem;}

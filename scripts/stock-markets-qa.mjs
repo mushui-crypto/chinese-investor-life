@@ -1,0 +1,46 @@
+import {clearClockMessages} from './qa-continue.mjs';
+import {createRequire} from 'node:module';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {createRun} from '../src/game/narrative.js';
+import {PRODUCTS} from '../src/game/core.js';
+import {setSaveCatalog,encodeSave} from '../src/game/storage.js';
+const {chromium}=createRequire(import.meta.url)(process.env.PLAYWRIGHT_PATH||`${process.env.HOME}/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright`);
+const catalog={};for(const n of ['events','families','characters','history','endings']){const d=JSON.parse(await readFile(`data/${n}.json`));catalog[n]=n==='events'?d.events:d;}setSaveCatalog(catalog);
+const report=process.env.QA_REPORT_DIR||'reports/stock-regions/browser',url=process.env.GAME_URL||'http://127.0.0.1:4173';await mkdir(report,{recursive:true});
+const browser=await chromium.launch({headless:true,channel:'chrome'}),page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'}),checks=[],errors=[];
+page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+const check=(name,v)=>{assert.ok(v,name);checks.push(name);console.log('PASS',name);};
+const click=q=>page.locator(q+':visible').first().click(),current=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('cng-v1-slot-0')).state);
+async function close(){if(await page.locator('#game-dialog').evaluate(e=>e.open))await click('[data-action=close-dialog]');}
+function adult(){const s=createRun({seed:'regional-browser',familyId:'F08'},catalog);Object.assign(s,{age:25,turn:20,phase:'planning',activeEvent:null,eventQueue:[],dueAnchors:[],cash:1000000000,monthlyIncome:800000,giftReceived:true});s.stats.insight=90;s.marketProgress={firstExperienceAge:18,simulations:3,unlocked:Object.fromEntries(Object.keys(PRODUCTS).map(k=>[k,true]))};s.trading.stockCards={bull:1,bear:1};s.trading.research['stock:chip:contacts']=s.trading.day;s.trading.journal=[{day:s.trading.day,phase:0,text:'供应商访谈：旧记录'}];s.journey.lastAction='desk_research';s.lastResult={title:'资料已记下',text:'供应商访谈：旧记录',changes:[]};return s;}
+async function load(){await page.goto(url);await page.locator('#app button').first().waitFor();await page.evaluate(save=>{localStorage.setItem('cng-v1-slot-0',JSON.stringify(save));localStorage.setItem('cng-v1-active-slot','0');},encodeSave(adult()));await page.reload();await click('[data-action=load-slot]');await click('[data-action=tab][data-tab=market]');await click('[data-action=invest][data-product=stock]');}
+async function region(id){await click(`[data-action=stock-market][data-id=${id}]`);}
+async function order(n='1'){await page.locator('[name=lots]').fill(n);await click('#desk-order [type=submit]');await close();}
+try{
+ await load();check('old stock investigation receipt does not return after reload',await page.locator('.inline-receipt').count()===0);check('three region switches and four A-share companies',await page.locator('.stock-market-tab').count()===3&&await page.locator('.stock-board button').count()===4);
+ await order('2');let s=await current();check('A shares buy 200 and expose T+1 lock',s.positions[0].shares===200&&(await page.locator('.position-restriction').innerText()).includes('T+1'));
+ const before=await current();await region('hk_platform');await region('us_compute');await region('chip');check('switching regions changes no game state or RNG',JSON.stringify(await current())===JSON.stringify(before));
+ await region('hk_platform');await click('[data-action=desk-instrument][data-id=hk_property]');check('Hong Kong company-specific 500-share lot is shown',(await page.locator('#desk-order').innerText()).includes('1 手 = 500 股'));
+ await order('3');s=await current();check('Hong Kong actually buys 1500 shares',s.positions.at(-1).shares===1500);check('only current-market holdings are listed',await page.locator('.desk-position-row').count()===1);
+ await click('[data-command*=desk_sell][data-command*="5000"]');await close();s=await current();check('Hong Kong partial sale exits one 500-share lot immediately',s.positions.at(-1).shares===1000);check('sale receipt has correct share and lot count',s.lastResult.text.includes('500 股（1 手）'));
+ await region('us_compute');check('US form uses shares rather than 100-share lots',(await page.locator('#desk-order').innerText()).includes('买入股数 · 1 股起'));
+ await click('.stock-market-weather>summary');
+ check('market personality and regime are not displayed as player hints',(await page.locator('.stock-weather-heading h2').innerText())==='美股行情'&&!/热点轮动|估值拉锯|成长与财报/.test(await page.locator('.stock-market-tabs').innerText()));
+ await order('3');s=await current();check('US actually buys three shares',s.positions.at(-1).shares===3);check('US position does not show T+1 lock',!(await page.locator('.desk-position-row').innerText()).includes('T+1'));
+ await click('[data-command*=desk_sell][data-command*="5000"]');await close();s=await current();check('US immediate partial sale leaves two shares',s.positions.at(-1).shares===2);
+ await clearClockMessages(page,current);await click('.desk-quickbar [data-action=life-continue]');await close();s=await current();check('all three indices move on one shared tick',Object.values(s.trading.stockWorld).every(w=>w.history.length===2));check('same US stock selection survives market update',await page.locator('#desk-order').getAttribute('data-instrument')==='us_compute');
+ await click('[data-action=stock-market][data-id=hk_platform]');await page.keyboard.press('Tab');await page.keyboard.press('Enter');check('market tabs support keyboard selection',await page.locator('#desk-order').getAttribute('data-instrument')==='us_compute');
+ await click('.desk-quickbar [data-action=desk-jump][data-area=order]');check('order shortcut focuses visible order field',await page.locator('[name=lots]').evaluate(e=>e===document.activeElement));
+ const saved=await current();await page.reload();await click('[data-action=load-slot]');await click('[data-action=tab][data-tab=assets]');await page.locator('.holding').filter({hasText:'星核算力'}).locator('[data-action=desk-open]').click();check('holding shortcut opens its correct region after reload',await page.locator('.stock-market-tab.selected strong').innerText()==='美股');
+ check('reload preserves three-region history and holdings',JSON.stringify((await current()).trading.stockWorld)===JSON.stringify(saved.trading.stockWorld)&&JSON.stringify((await current()).positions)===JSON.stringify(saved.positions));
+ for(const width of [1920,1440,768,390,320]){await page.setViewportSize({width,height:1000});for(const [id,label] of [['chip','a'],['hk_platform','hk'],['us_compute','us']]){await region(id);check(`${label} has no research, cards or review at ${width}px`,await page.locator('.stock-hand,.stock-extras,.company-information,.research-actions,.disclosure-review').count()===0&&!/订单抽样|回款核查|供应商访谈|行情卡|复盘/.test(await page.locator('.market-desk').innerText()));check(`${label} fits ${width}px`,await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));check(`${label} has four companies at ${width}px`,await page.locator('.stock-board button').count()===4);await page.locator('.stock-exchanges').scrollIntoViewIfNeeded();await page.screenshot({path:`${report}/${label}-${width}.png`,animations:'disabled'});
+ await click('.desk-quickbar [data-area=holdings]');
+ check(`${label} holdings stay inside their frame at ${width}px`,await page.locator('.stock-position').evaluate(e=>{const b=e.getBoundingClientRect();return e.scrollWidth<=e.clientWidth+1&&[...e.querySelectorAll('dd,button')].every(n=>{const r=n.getBoundingClientRect();return r.left>=b.left-1&&r.right<=b.right+1;});}));
+ if(width===1920)check(`${label} holdings use one compact row`,await page.locator('.stock-position').evaluate(e=>{const name=e.querySelector('.stock-position-name').getBoundingClientRect(),metrics=e.querySelector('dl').getBoundingClientRect(),actions=e.querySelector('.position-actions').getBoundingClientRect();return e.getBoundingClientRect().height<180&&Math.abs(name.top-metrics.top)<2&&actions.left>=metrics.right;}));
+ const holding=(await current()).positions.find(p=>p.instrument===(label==='a'?'chip':label==='hk'?'hk_property':'us_compute')),profit=holding.value-holding.cost;
+ check(`${label} PnL sign and color agree at ${width}px`,await page.locator('.stock-position .position-pnl').evaluate((e,profit)=>{const expected=profit>0?'rgb(176, 49, 39)':profit<0?'rgb(35, 100, 71)':null;return e.classList.contains(profit>0?'is-gain':profit<0?'is-loss':'is-flat')&&(!expected||getComputedStyle(e).color===expected);},profit));
+ await page.screenshot({path:`${report}/${label}-holdings-${width}.png`,animations:'disabled'});}}
+ check('no runtime or resource errors',errors.length===0);
+ await writeFile(`${report}/result.json`,JSON.stringify({passed:true,checks,errors,url},null,2));
+}catch(e){await page.screenshot({path:`${report}/failure.png`,fullPage:true});await writeFile(`${report}/result.json`,JSON.stringify({passed:false,checks,errors,error:e.stack},null,2));console.error(e);process.exitCode=1;}finally{await browser.close();}

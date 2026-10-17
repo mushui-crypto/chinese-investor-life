@@ -1,0 +1,103 @@
+{
+  "method": "built-in image_gen",
+  "assets": [
+    {
+      "id": "N01",
+      "name": "阿豪",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: Chinese man around 26, slightly round face, lively confident smile, short slightly tousled black hair, unbuttoned rust-brown casual overshirt over an ochre T-shirt, approachable young former classmate.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-87fd29d5-ea3a-4ab3-83c4-496d65f51ff0.png",
+      "output": "public/assets/people/N01.webp"
+    },
+    {
+      "id": "N02",
+      "name": "林夏",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: Chinese woman around 26, oval face, calm intelligent eyes, gentle self-assured smile, straight dark brown hair tucked behind the ears and reaching the shoulders, muted sage-green cardigan over cream blouse.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-22011784-3954-4a61-af3f-db00d46a20e7.png",
+      "output": "public/assets/people/N02.webp"
+    },
+    {
+      "id": "N03",
+      "name": "许舟",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: Chinese man around 31, slim angular face, fine round dark glasses, slightly tired but attentive eyes, tidy short black hair, muted blue-gray casual collared shirt, practical startup founder.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-9e4ebca3-510c-4b3c-90d5-984e2fbfac1b.png",
+      "output": "public/assets/people/N03.webp"
+    },
+    {
+      "id": "N04",
+      "name": "老周",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: Chinese man around 43, square face, warm grounded expression, short black hair with a few gray strands near temples, subdued indigo work jacket over an off-white undershirt, reliable coworker.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-d2eb7fc8-7b81-46d5-a852-b8ec1984191a.png",
+      "output": "public/assets/people/N04.webp"
+    },
+    {
+      "id": "N05",
+      "name": "陈经理",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: Chinese man around 39, neat side-parted black hair, narrow rectangular glasses, measured professional expression, charcoal jacket and cream shirt with subdued brown tie, ordinary bank employee.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-b4eb9348-c04c-46b0-b73a-c3fb684c1bb0.png",
+      "output": "public/assets/people/N05.webp"
+    },
+    {
+      "id": "N06",
+      "name": "金老师",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: Chinese man around 47, fuller round face, neatly slicked side-parted black hair, confident polished smile, small gold-rimmed spectacles, dark olive business jacket and ochre scarf, investment promoter without caricature.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-b8dc2845-9a0f-435c-a60e-afcacc622659.png",
+      "output": "public/assets/people/N06.webp"
+    },
+    {
+      "id": "N07",
+      "name": "赵姨",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: Chinese woman around 53, warm broad face, small gentle smile, dark hair with a few gray strands in a tidy bun, muted maroon cardigan and faded tan shop apron.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-59bc8ed8-8b41-4316-a88c-3a01f03c8f9e.png",
+      "output": "public/assets/people/N07.webp"
+    },
+    {
+      "id": "N08",
+      "name": "杜衡",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: Chinese man around 36, long narrow face, thoughtful serious eyes, clean short swept-back black hair, dark forest-green blazer and sand-colored open-neck shirt.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-6b39c522-74ad-4b9a-9643-1cc85b3fac25.png",
+      "output": "public/assets/people/N08.webp"
+    },
+    {
+      "id": "N09",
+      "name": "小满",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: Chinese youthful person around 17, rounded face, bright curious eyes, natural short bobbed black hair, muted golden-yellow crewneck top with off-white collar, gentle independent expression, youthful and androgynous, not a baby.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-4fd883e0-591d-43e3-9f45-1ebb9a1d42ba.png",
+      "output": "public/assets/people/N09.webp"
+    },
+    {
+      "id": "N11",
+      "name": "沈岚",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: Chinese woman around 33, confident perceptive eyes, asymmetrical chin-length dark bob with side part, small round glasses, muted brick-red jacket over a cream blouse, media editor.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-4b67dc09-c0a0-4376-be67-6ab5541cddac.png",
+      "output": "public/assets/people/N11.webp"
+    },
+    {
+      "id": "N12",
+      "name": "吴师傅",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: Chinese man around 58, weathered kindly face, laugh lines, short salt-and-pepper hair, plain muted olive utility jacket with a carpenter pencil in the breast pocket, humble craftsperson.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-a58ff6cb-ce44-453c-9826-317ad3f2ebb3.png",
+      "output": "public/assets/people/N12.webp"
+    },
+    {
+      "id": "N10",
+      "name": "家人",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: A close family portrait of TWO ordinary Chinese adults around 45, a woman with short softly curled dark hair in a sage cardigan and a man with short graying hair in a brown collared jacket, warm sincere expressions, shoulders touching, both faces equally large and comfortably visible, no child.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-2f6b2afb-5217-4667-8773-a3613b564a85.png",
+      "output": "public/assets/people/N10.webp"
+    },
+    {
+      "id": "N10-single",
+      "name": "家人（单亲）",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: ONE Chinese adult woman around 44, short softly curled dark hair, gentle determined eyes and a warm restrained smile, simple sage-green knit cardigan over cream shirt, single caregiver, only one person.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-b8058825-b956-45d3-a418-97e31d7e61dd.png",
+      "output": "public/assets/people/N10-single.webp"
+    },
+    {
+      "id": "N10-elders",
+      "name": "家人（隔代）",
+      "prompt": "Use case: illustration-story. Asset: a square NPC head-and-shoulders avatar for a Chinese everyday-life simulation game. Hand-painted nostalgic animated-film character illustration, fine loose warm-brown pencil contours, delicate gouache and watercolor wash on subtle textured paper, gently stylized expressive dark eyes, natural human proportions, soft warm daylight, earthy sage, ochre and terracotta palette. Quiet pale tan parchment background, no scene objects. Centered close head-and-shoulders composition; face(s) occupy 60 percent of image, top of hair entirely visible with generous 8 percent margin, full shoulders at lower edge, suitable for a square rounded-corner crop. Uniform visual scale and lighting across the series. No frame, no circle, no letters, no text, no logo, no watermark, no hands, no photorealism, no glossy 3D, no neon. Subject: A close family portrait of TWO elderly Chinese adults around 70, grandmother with silver-gray hair in a neat bun and muted plum cardigan, grandfather with short silver hair and olive jacket, kind natural lined faces, shoulders touching, both faces equally visible, no child.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-6653425d-5db9-4c64-a023-ca97a62d1447.png",
+      "output": "public/assets/people/N10-elders.webp"
+    }
+  ]
+}

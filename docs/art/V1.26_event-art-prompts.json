@@ -1,0 +1,109 @@
+{
+  "mode": "builtin imagegen",
+  "generatedAt": "2026-09-23",
+  "stylePrompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: ",
+  "images": [
+    {
+      "key": "first-coin",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: A Chinese six-year-old child's small hand holding one worn coin in front of a neighborhood corner shop, glass jars of colorful sweets, a wooden counter, late afternoon sunlight. Close-up viewpoint from the child, no readable signage.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-270f56c9-2854-4b0e-bbff-0b62cebf8394.png",
+      "output": "public/assets/events/first-coin-v1.webp"
+    },
+    {
+      "key": "school",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: A Chinese secondary-school classroom after school, a schoolbag, exercise books, pencils and a small savings tin on a wooden desk by an open window, bicycles and schoolyard beyond, hopeful early summer afternoon. No people required.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-4870da22-0f1f-47f7-8815-76dbb55873ec.png",
+      "output": "public/assets/events/school-v1.webp",
+      "final": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-e4e6beee-d002-4d14-8992-1666bf13c75c.png",
+      "editPrompt": "Edit this existing game illustration only to remove ALL readable letters, Chinese characters, slogans, motivational quotes, logos, printed book titles, labels and watermarks everywhere. Replace writing on walls/boards with a clean plain wall or blank board matching its material. Keep books, cups, documents and cards unbranded, with only faint abstract marks for forms if needed. Keep the exact warm hand-painted Chinese life-simulation setting, composition, characters, palette, lighting and wide aspect ratio. No new text or decorations. All surfaces should look natural and lived-in, not airbrushed. No other changes."
+    },
+    {
+      "key": "family",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: An ordinary Chinese family discussing a household ledger at a small dinner table, two parents seen from side/back and a child listening, rice bowls, an old tin cash box and a red envelope, warm apartment lamplight. Quiet and believable.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-dc470f05-03a1-4a78-bc3e-cd820f044023.png",
+      "output": "public/assets/events/family-v1.webp"
+    },
+    {
+      "key": "market",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: A modest Chinese securities trading hall, several ordinary adult investors seen from behind facing a board of abstract red and green price charts, paper slips and tea cups, sunlight through dusty windows. Neither a guaranteed profit nor a final crash, a decision in progress.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-8423487f-7d78-4415-956c-6f1152da09f8.png",
+      "output": "public/assets/events/market-v1.webp"
+    },
+    {
+      "key": "derivatives",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: An adult Chinese investor's hands at a night desk, a laptop with abstract red and green candlestick fluctuations, a ticking desk clock, scattered notes and a half-empty mug, amber lamplight against blue night. Suspenseful leveraged trading, no legible numbers or interface text.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-d7e83249-178f-4130-b9d4-973ce4506883.png",
+      "output": "public/assets/events/derivatives-v1.webp"
+    },
+    {
+      "key": "crypto",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: An adult's home desk with a laptop showing abstract digital asset charts, a small hardware wallet and handwritten notebook, warm monitor glow, cool evening skyline outside. One plain gold token and one silver token, no brand logos, no real ticker or instructional content.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-5a213e90-9218-4304-9b75-5fe66e8aa902.png",
+      "output": "public/assets/events/crypto-v1.webp"
+    },
+    {
+      "key": "casino",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: An adult Chinese man viewed from behind holding a smartphone with a fictional colorful casino game, softly visible card suits and slot symbols on the screen, a few loose coins on a cramped night table, subdued purple and amber lighting. A grounded gambling temptation scene, no readable text, no glamorous winnings.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-6ee0425a-23d1-4efa-aaac-06f60ef19b56.png",
+      "output": "public/assets/events/casino-v1.webp"
+    },
+    {
+      "key": "fraud",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: An overpolished investment pitch in a rented hotel meeting room, a well-dressed presenter seen from behind, a projection of an abstract rising line, ordinary adults holding brochures, one empty chair and an unattended briefcase. Uneasy, restrained, not celebratory, no words or brands.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-f78b3849-815c-483a-8988-2f9d09c37ebc.png",
+      "output": "public/assets/events/fraud-v1.webp"
+    },
+    {
+      "key": "venture",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: Three adult founders and an investor around a scratched meeting table in a modest Chinese startup office, prototype objects, open laptop and handwritten diagram sheets, a potted plant, morning light. An uncertain business decision, no legible text.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-b34ab29d-ad48-49e9-b7f9-64153bc15e61.png",
+      "output": "public/assets/events/venture-v1.webp"
+    },
+    {
+      "key": "property",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: A real estate office in a Chinese city, a small apartment architectural model, a ring of keys and an unsigned contract in the foreground, dense apartment buildings beyond the window. Warm late afternoon, no agent sales slogans or legible text.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-6491acf1-fa91-4f8c-b2d1-091e415835b7.png",
+      "output": "public/assets/events/property-v1.webp"
+    },
+    {
+      "key": "work",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: An ordinary Chinese adult receiving a work badge and folded work apron over a small workshop counter, tools, cardboard boxes and a thermos behind, morning light. Dignified everyday work and a new start, no readable brand or text.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-8851eda8-ed56-4c32-bafb-61723386e190.png",
+      "output": "public/assets/events/work-v1.webp"
+    },
+    {
+      "key": "debt",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: Close-up of an adult's hands sorting household bills beside a calculator, bank card and phone with a generic incoming-call symbol on a worn wooden kitchen table, a glass of water, warm late-night lamp. Financial pressure without melodrama, no readable account details.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-588f54f3-e25c-40ad-bb3d-11ee7d57c150.png",
+      "output": "public/assets/events/debt-v1.webp",
+      "final": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-5a5b8178-554a-41a1-93be-a8a1d6e53152.png",
+      "editPrompt": "Edit this existing game illustration only to remove ALL readable letters, Chinese characters, slogans, motivational quotes, logos, printed book titles, labels and watermarks everywhere. Replace writing on walls/boards with a clean plain wall or blank board matching its material. Keep books, cups, documents and cards unbranded, with only faint abstract marks for forms if needed. Keep the exact warm hand-painted Chinese life-simulation setting, composition, characters, palette, lighting and wide aspect ratio. No new text or decorations. All surfaces should look natural and lived-in, not airbrushed. No other changes."
+    },
+    {
+      "key": "relationships",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: Two Chinese adults talking honestly across a small cafe table by a window, one phone face down, tea cups, a folded personal letter, warm rain-muted daylight. Expressive hands and body language, listening rather than confrontation. No readable text.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-c0ca72d8-a785-4534-8e82-387cf756b3ea.png",
+      "output": "public/assets/events/relationships-v1.webp"
+    },
+    {
+      "key": "energy",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: A long queue of ordinary cars at a small petrol station on the edge of a Chinese city, shipping containers and cranes visible far in the background, grey-blue clouds with amber evening light. Economic uncertainty and supply disruption, no disaster spectacle, no legible signage.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-36827a01-61a3-4f8c-b58a-6fa90b492f8f.png",
+      "output": "public/assets/events/energy-v1.webp"
+    },
+    {
+      "key": "health",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: An ordinary Chinese hospital waiting area, an adult sitting with an elderly family member, a medical envelope held on their lap, a warm patch of sunlight and quiet green chairs, humane and calm. No readable records, no graphic injury.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-9764b043-41ef-4e3d-92db-49fdc6982d91.png",
+      "output": "public/assets/events/health-v1.webp"
+    },
+    {
+      "key": "legal",
+      "prompt": "Create one polished landscape 3:2 hand-painted narrative illustration for the Chinese life/investment game 中国式赌狗. Original warm slice-of-life 2D game art, delicate dark-brown drawn contours, watercolor/gouache shading, lived-in Chinese urban setting, ochre wood, cream paper, muted jade, amber natural light; match the grounded illustrated apartment aesthetic of a life simulation. Strong clear focal point, readable when displayed small, full-bleed artwork edge to edge, no border, no collage, no UI frame, no caption, no watermark, no readable text. This is a single event illustration, not a screenshot. Scene: A closed legal case folder, an official envelope and a pair of empty chairs at a plain public-service interview desk, a barred window casting soft light, muted teal and warm wood. Accountability and an unresolved investigation, no readable legal text, no police insignia or violence.",
+      "original": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-7bd3c539-16f1-4ba0-8f32-a13e5573c2ad.png",
+      "output": "public/assets/events/legal-v1.webp",
+      "final": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-c64420e2-6ec7-4335-82e4-11fa446bd160.png",
+      "editPrompt": "Edit this existing game illustration only to remove ALL readable letters, Chinese characters, slogans, motivational quotes, logos, printed book titles, labels and watermarks everywhere. Replace writing on walls/boards with a clean plain wall or blank board matching its material. Keep books, cups, documents and cards unbranded, with only faint abstract marks for forms if needed. Keep the exact warm hand-painted Chinese life-simulation setting, composition, characters, palette, lighting and wide aspect ratio. No new text or decorations. All surfaces should look natural and lived-in, not airbrushed. No other changes."
+    }
+  ]
+}

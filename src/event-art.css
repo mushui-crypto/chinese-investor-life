@@ -1,0 +1,11 @@
+/* All framed scene illustrations use 3:1, including narrow screens. */
+:root{--scene-art-ratio:3/1}
+.event-intro.has-event-art{display:flex;flex-direction:column;align-items:stretch;gap:16px;margin:0 0 16px}
+.event-illustration{position:relative;aspect-ratio:var(--scene-art-ratio,3/1);width:100%;min-width:0;margin:0;overflow:hidden;border:1px solid var(--wood);border-radius:6px;background:#e6d7b3;box-shadow:none}
+.event-illustration img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.event-copy{min-width:0}.event-copy h2{margin-top:0}.event-intro.has-event-art .story-text{margin-bottom:0}
+.dialog-body>.event-illustration,.behavior-story>.event-illustration{margin-bottom:16px}
+@media(max-width:600px){
+ .event-intro.has-event-art{gap:12px;margin-bottom:16px}
+ .event-intro.has-event-art .event-copy h2{font-size:22px;margin-bottom:10px}
+}

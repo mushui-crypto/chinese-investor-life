@@ -1,0 +1,52 @@
+/* Trading foreground; warm illustrated shell and physical controls stay intact. */
+.market-playing .game-layout{grid-template-columns:minmax(0,1fr);max-width:1320px;margin-inline:auto}
+.market-playing .character-panel,.market-playing .arrangement-panel{display:none}
+.market-playing .main-stage{min-width:0;gap:12px}
+.market-playing .desk-title{padding-block:8px;margin-block:4px;gap:10px}
+.market-playing .desk-title h1{font-size:clamp(20px,2.2vw,29px)}
+.market-playing .desk-title p{display:none}
+.market-playing .desk-title>span{font-size:12px}
+.market-playing .desk-quickbar{margin-block:8px;gap:10px}
+.quickbar-clock small{display:block;font-weight:400;font-size:12px;margin-top:4px}
+.session-account{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:8px 4px;font-size:13px}
+.desk-reference{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.desk-reference>details{flex:1;min-width:220px;margin:0;padding:10px 12px}
+.desk-reference .time-preview summary{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px}
+.desk-reference .desk-play-help summary{font-size:12px}
+.desk-reference .time-preview[open],.desk-reference .desk-play-help[open]{flex-basis:100%}
+.stock-market-weather>summary,.upbringing-note>summary,.daily-account-drawer>summary{cursor:pointer;font-weight:650;padding:10px 0;font-size:13px}
+.stock-market-weather{padding:8px 16px!important}
+.stock-exchanges{margin-bottom:12px}
+.daily-account-drawer{max-width:1320px;margin:8px auto;padding:4px 18px;border:1px solid #c1b18c;border-radius:10px;background:#faf0df}
+.upbringing-note{padding:10px;margin:8px 0;border:1px dashed #b2a681;border-radius:10px;background:#f8efd9}.upbringing-note p{font-size:13px;line-height:1.7}.upbringing-note small{color:#716750}
+.contract-scenarios{width:100%;padding:10px 0;border-top:1px dashed currentColor;font-size:12px}.contract-scenarios summary{cursor:pointer;font-weight:700;margin-bottom:8px}.contract-scenarios>div{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;margin:8px 0}.contract-scenarios p{font-size:12px;line-height:1.7;margin-bottom:0}
+.market-playing .inline-receipt{padding:9px 14px;font-size:12px;margin-block:0}.market-playing .inline-receipt>strong{font-size:13px}.market-playing .inline-receipt .receipt-metrics{margin:5px 0;gap:14px}.market-playing .inline-receipt .action-quip{display:none}
+.market-playing .desk-body{grid-template-columns:minmax(0,1.5fr) minmax(290px,1fr);gap:18px}
+.market-playing .stock-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.market-playing .instrument-option{min-width:0;padding:12px;gap:8px}.market-playing .instrument-option strong{font-size:14px}.market-playing .instrument-option small{font-size:11px}
+.market-playing .quote-chart{max-height:none;margin-block:12px}.market-playing .stock-market-tabs{margin-bottom:8px}
+.run-comparison{margin:20px 0;padding:16px;border:1px solid #bbad8d;border-radius:12px;text-align:left}.run-comparison h2{font-size:18px}.run-comparison article{padding:12px 0;border-bottom:1px dashed #cdbd99}.run-comparison p{font-size:13px;line-height:1.8}
+.playtest-form label{display:block;margin:16px 0}.playtest-form select,.playtest-form textarea{display:block;width:100%;margin-top:8px;min-height:44px;padding:8px;font:inherit}.playtest-form textarea{min-height:90px}
+@media(max-width:760px){
+ .market-playing .game-layout{padding-inline:0}.market-playing .game-header{padding-block:8px}.market-playing .mobile-summary{margin-bottom:4px;padding-block:6px}
+ .market-playing .desk-title{display:none}.market-playing .desk-navigation{padding-block:4px;margin-bottom:0}.market-playing .desk-navigation label{font-size:11px}.market-playing .desk-navigation select{min-height:36px}
+ .market-playing .desk-body{grid-template-columns:minmax(0,1fr)}.market-playing .stock-market-tab{padding:9px 5px;gap:3px}.market-playing .stock-market-tab small{display:none}
+ .desk-reference{gap:4px}.desk-reference>details{min-width:0;flex:1;padding:7px 8px}.desk-reference .time-preview summary span{display:none}.session-account{font-size:11px;gap:4px}.session-account .text-button{font-size:12px;min-height:32px}
+ .market-playing .desk-quickbar{padding:8px;gap:6px;top:4px}.market-playing .quickbar-clock{font-size:12px}.market-playing .desk-quickbar>.button{min-height:38px;font-size:12px}.market-playing .quickbar-jumps button{padding:6px;font-size:12px;min-height:36px}
+ .market-playing .instrument-option{padding:10px 8px;flex-direction:column;align-items:stretch}.market-playing .instrument-price{display:flex;justify-content:space-between;align-items:center}.market-playing .instrument-option>span:first-child{min-width:0}
+ .market-playing .desk-journal{overflow-wrap:anywhere}.market-playing .inline-receipt>strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+ .daily-account-drawer{margin:6px 12px;padding:3px 12px}.daily-account-drawer>summary{font-size:11px}
+}
+.market-playing .stock-market-tab{padding:10px 14px;display:grid;grid-template-columns:1fr auto;gap:4px 12px;text-align:left}
+.market-playing .stock-market-tab strong{font-size:18px}.market-playing .stock-market-tab span,.market-playing .stock-market-tab small{font-size:12px}.market-playing .stock-market-tab b{font-size:14px}
+.market-playing .desk-reference details summary{padding:0;min-height:24px;align-items:center}.market-playing .desk-reference details summary strong{font-size:12px;margin:0}
+@media(max-width:760px){
+ .market-playing .desk-quickbar{display:grid;grid-template-columns:minmax(0,1fr) auto}
+ .market-playing .quickbar-clock{margin:0;min-width:0;flex-basis:auto}.market-playing .desk-quickbar>.button{min-width:0;max-width:145px;padding:6px 8px}
+ .market-playing .quickbar-jumps{grid-column:1/-1;width:100%}.market-playing .desk-reference .time-preview summary{font-size:11px;min-height:27px}
+ .market-playing .stock-market-tab{display:flex;flex-direction:column;align-items:flex-start;padding:8px}.market-playing .stock-market-tab strong{font-size:16px}.market-playing .stock-market-tab span{font-size:11px}.market-playing .stock-market-tab b{font-size:13px}.market-playing .stock-market-tab small{display:none}
+ .market-playing .session-account{display:grid;grid-template-columns:1fr auto}.market-playing .session-account>[data-action=life-hub]{grid-column:2;grid-row:2}.market-playing .desk-reference{margin-bottom:6px}.market-playing .stock-market-weather{padding:2px 8px!important}
+}
+
+.market-playing .quote-chart svg{display:block;max-height:150px}
+.market-playing .quote-chart small{display:block;margin-top:8px}

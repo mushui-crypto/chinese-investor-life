@@ -1,0 +1,196 @@
+/* The room is the board. Only the edges carry controls. */
+.world-backdrop.daily-world>img{object-position:50% 50%}
+.daily-world::after{background:linear-gradient(180deg,#312d2226,transparent 18%,transparent 76%,#312d2240)}
+/* Night scenes use real night artwork, rather than a dimmed daytime sky. */
+.daily-world[data-motion=screen]::before{content:'';position:absolute;z-index:1;left:47%;top:35%;width:15%;height:20%;border-radius:50%;background:#87c8ae0d;filter:blur(18px);pointer-events:none;animation:daily-screen-glow 4s ease-in-out infinite alternate}
+.daily-world[data-motion=steam]::before{content:'';position:absolute;z-index:1;left:49%;top:40%;width:2%;height:9%;background:radial-gradient(ellipse,#f7ebcc38,transparent 70%);pointer-events:none;animation:daily-steam 3s ease-out infinite}
+@keyframes daily-screen-glow{from{opacity:.3}to{opacity:.8}}
+@keyframes daily-steam{from{opacity:0;transform:translateY(10px) scale(.8)}40%{opacity:.65}to{opacity:0;transform:translateY(-18px) scale(1.2)}}
+.daily-operation-dock{position:fixed;bottom:var(--daily-dock-bottom,120px);transform:translateX(-50%);z-index:9}
+.life-clockbar{max-height:var(--operation-max-height,52dvh);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:12px var(--panel-inset,24px);border:2px solid #81633e;border-radius:7px;background:#e9d9b4;box-shadow:inset 0 0 0 2px #f5e9c8,0 3px #49372755}
+.life-clockbar .life-pace-actions{display:flex;justify-content:flex-end;align-items:center;flex-wrap:wrap;gap:8px;padding-top:10px;border-top:1px solid #b8a17180}
+.life-clock{display:flex;flex-direction:column;min-width:0;gap:3px}
+.life-clock>strong{display:flex;align-items:center;gap:6px;color:#284e3e;font-size:16px;line-height:1.5}
+.life-clock>span{font-size:12px;line-height:1.7;color:#59452d}
+.life-clock .info-button{vertical-align:middle;width:28px;min-width:28px;height:28px;min-height:28px}
+.life-shortage{font-size:13px;color:#9b3928}
+/* A pending daily event takes over the existing dock, with choices below the story. */
+.life-clockbar.has-daily-event{max-height:min(56dvh,var(--operation-max-height,56dvh));overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;gap:12px}
+.life-clockbar.is-highlighted{outline:3px solid #ad7c2f;outline-offset:3px}
+.life-clockbar.has-daily-activities{max-height:min(52dvh,var(--operation-max-height,52dvh));overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.daily-dock-activities{border-top:1px solid #b8a17180;padding-top:12px;min-width:0}
+.daily-activity-feedback{margin:0 0 10px;font-size:13px;line-height:1.6;color:#2e543f}
+.daily-activity-footer{display:flex;justify-content:flex-end;align-items:flex-end;flex-wrap:wrap;gap:12px 20px}
+.daily-dock-tools{display:flex;gap:8px;flex-wrap:wrap;margin-right:auto}
+.daily-dock-tools:empty{display:none}
+.daily-activity-footer>.day-choices{flex:1 1 480px;justify-content:flex-end;gap:10px}
+.daily-activity-footer .day-choice{flex:0 1 224px;min-height:90px;padding:10px 14px;gap:4px}
+.daily-activity-footer .day-choice strong{font-size:14px;line-height:1.5}
+.daily-activity-footer .day-choice small,.day-choice-time{font-size:12px;line-height:1.5;color:#59452d}
+.day-choice-time{color:#315744;font-weight:600}
+.daily-arrangements>.daily-rules-button:first-child{margin-top:0}
+@media(max-width:900px){
+ .daily-activity-footer{gap:10px}
+ .daily-dock-tools{order:2;margin-left:auto;margin-right:0}
+ .daily-activity-footer>.day-choices{flex-basis:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .daily-activity-footer .day-choice{min-width:0;min-height:100px;padding:10px;flex-basis:auto}
+ .daily-activity-footer .day-choices>.button:only-child{grid-column:1/-1}
+}
+.has-daily-event .life-clock{flex-direction:row;align-items:center;flex-wrap:wrap;gap:4px 16px;padding-bottom:8px;border-bottom:1px solid #b8a17180}
+.has-daily-event .life-clock>strong{font-size:14px}
+.has-daily-event .life-clock>.life-shortage{flex-basis:100%;font-size:12px}
+.daily-dock-event{display:flex;flex-direction:column;gap:16px;min-width:0}
+.daily-event-story h2{margin:0 0 6px;font:700 18px/1.5 var(--font);color:#3c2f20}
+.daily-event-story p{margin:0;max-width:100%;font-size:14px;line-height:1.75;color:#51432d;text-wrap:wrap}
+.daily-event-footer{display:flex;align-items:flex-end;justify-content:flex-end;flex-wrap:wrap;gap:12px}
+.daily-event-footer>.daily-event-rescue{margin-right:auto;min-height:44px}
+.daily-event-footer>.day-choices{flex:1 1 420px;justify-content:flex-end;gap:12px}
+.daily-event-footer .day-choice{flex:0 1 230px;min-height:68px;padding:10px 14px;gap:4px}
+.daily-event-footer .day-choice strong{font-size:14px;line-height:1.5}
+.daily-event-footer .day-choice small{font-size:12px;line-height:1.5}
+.daily-arrangements.is-event-pending .daily-rules-button{margin-top:0}
+.daily-arrangements.is-event-pending .employment-update{margin:0 0 12px;padding-top:0;border-top:0}
+@media(max-width:600px){
+ .life-clockbar.has-daily-event{gap:10px}
+ .has-daily-event .life-clock{gap:2px 12px}
+ .daily-event-story h2{font-size:16px}
+ .daily-event-story p{font-size:13px}
+ .daily-dock-event{gap:12px}
+ .daily-event-footer{gap:10px}
+ .daily-event-footer>.day-choices{flex-basis:100%;gap:8px}
+ .daily-event-footer .day-choice{flex:1 1 0;min-width:0;min-height:68px;padding:10px}
+}
+.life-playing .pocket-book .cash-primary{display:block;margin:0 0 10px}
+.life-playing .cash-primary dt{color:#59452d;font-size:12px}
+.life-playing .cash-primary dd{font-size:23px;line-height:1.6;color:#285543;font-variant-numeric:tabular-nums}
+.wallet-details{border-top:1px solid #b8a171;margin-top:8px}
+.wallet-details>summary{cursor:pointer;padding:10px 0;font-size:12px;min-height:38px}
+.wallet-open{width:100%;margin-top:8px}
+.life-playing .family-line{display:none}
+.life-scenic .main-stage{display:flex;flex-direction:column;min-height:0}
+.daily-stage{position:relative;flex:1;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;pointer-events:none;padding:0 0 14px}
+.daily-mobile-art{display:none}
+.daily-scene-caption{position:absolute;left:40%;top:20%;width:max-content;max-width:min(280px,calc(100% - 24px));padding:12px 16px;border:2px solid #765a38;border-radius:16px;color:#3c2f20;background:#f3e6c5;box-shadow:0 3px #49372755}
+.daily-scene-caption::after{content:'';position:absolute;left:18px;bottom:-8px;width:12px;height:12px;background:#f3e6c5;border-right:2px solid #765a38;border-bottom:2px solid #765a38;transform:skewY(-18deg) rotate(45deg)}
+.daily-scene-caption p{margin:0;font-size:14px;font-weight:500;line-height:1.7;text-wrap:wrap}
+.world-scene.is-daily .world-actor{display:none}
+.life-scenic .status-rail{max-height:calc(100dvh - var(--status-rail-top,var(--player-header-height)) - var(--screen-gap))}
+.daily-action-rail{background:#eddfba;border:2px solid #81633e;box-shadow:inset 0 0 0 2px #f8edcf,0 3px #49372755;border-radius:7px;overflow:hidden}
+.daily-arrangements{padding:14px}
+.daily-arrangements-heading{margin-bottom:14px}
+.daily-arrangements-heading h2{margin:0;font:700 16px/1.5 var(--font);color:#285543}
+.daily-arrangements-heading>span{font-size:12px;line-height:1.7;color:#59452d}
+.daily-arrangements .day-choices{flex-direction:column;gap:10px}
+.daily-arrangements .day-choice{flex:0 0 auto;width:100%;min-height:76px;padding:12px;text-align:left}
+.daily-arrangements .day-choice.is-selected{background:#c8d2aa;border-color:#587147;opacity:1;color:#29412e}
+.daily-arrangements .day-choice:not(.is-selected):disabled{opacity:.58}
+.daily-arrangements h3{font-size:15px;line-height:1.6;margin:0 0 8px}
+.daily-event-copy{font-size:13px;line-height:1.75;margin:0 0 12px;color:#51432d}
+.day-done{font-size:12px;line-height:1.7;margin:12px 0;color:#36553f}
+.daily-rules-button{width:100%;margin-top:14px}
+.extra-arrangements{border-top:1px solid #b8a171}
+.extra-arrangements>summary{padding:14px;min-height:48px;font-size:13px;font-weight:600;cursor:pointer}
+.extra-arrangements>.arrangements{border:0;box-shadow:none;border-radius:0;background:transparent;padding:0 14px 14px}
+.daily-action-rail>.life-notebook{border:0;border-top:1px solid #b8a171;border-radius:0;box-shadow:none;background:transparent}
+.daily-action-rail .life-notebook>summary{background:transparent;font-size:14px}
+.daily-action-rail .mainline-status{border:0;background:transparent;padding:14px;box-shadow:none}
+.daily-action-rail .mainline-status h2{font-size:14px}
+.daily-receipt{border-top:1px solid #b8a171}
+.daily-receipt>summary{font-size:13px;font-weight:600;min-height:44px;padding:12px 14px;cursor:pointer}
+.daily-receipt .inline-receipt{background:transparent;border:0;padding:0 14px 14px;margin:0;box-shadow:none}
+.daily-receipt .receipt-metrics{flex-direction:column;gap:5px}
+.life-scenic .life-pace-actions>[data-action=day-routine]{display:none}
+.daily-survival{border-top:1px solid #b8a171}
+.daily-survival>summary{padding:14px;min-height:48px;color:#963e2b;font-size:13px;font-weight:700;cursor:pointer}
+.daily-survival .survival-panel{margin:0;padding:14px;border:0;border-top:1px solid #c2a17b;border-radius:0;box-shadow:none;grid-template-columns:minmax(0,1fr);gap:14px}
+.daily-survival .survival-heading{align-items:flex-start;gap:8px}
+.daily-survival .survival-heading h2{font-size:16px}
+.daily-survival .survival-symbol{width:30px;height:30px}
+.daily-survival .survival-symbol svg{width:23px;height:23px}
+.daily-survival .survival-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.daily-survival .survival-metrics dd{font-size:16px;overflow-wrap:anywhere}
+.daily-survival .survival-days{gap:4px}
+.daily-survival .survival-days span{flex:1;min-width:0}
+.daily-survival .survival-actions{display:grid;grid-template-columns:minmax(0,1fr)}
+.daily-survival .survival-actions .button{min-height:44px;white-space:normal}
+@media(min-width:1250px){
+ /* Size the scene from its container, including any alerts, rather than adding another viewport. */
+ .life-scenic .game-scroll{display:flex;flex-direction:column;overflow:clip;scrollbar-gutter:auto;padding-right:2px}
+ .life-scenic .game-layout{flex:1;min-height:0;grid-template-rows:minmax(0,1fr)}
+ .life-scenic .main-stage{height:100%;gap:16px}
+ .life-scenic .daily-stage{min-height:min-content;flex:1 0 auto}
+ .life-scenic .daily-notices{min-height:0;max-height:50%;flex:0 1 auto;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;display:grid;gap:12px}
+ .life-scenic .arrangement-panel{padding-bottom:5px}
+}
+@media(max-width:1249px){
+ .daily-world>img{opacity:.6}
+ .daily-world::before{display:none}
+ .life-scenic .main-stage{min-height:0}
+ .daily-stage{flex:none;min-height:0;padding:0;overflow:hidden;border-radius:5px;display:flex;flex-direction:column;align-items:stretch}
+ .daily-mobile-art{display:block;flex:none;width:100%;aspect-ratio:var(--scene-art-ratio,3/1);overflow:hidden;background:#564d37}
+ .daily-mobile-art img{display:block;width:100%;height:100%;object-fit:cover}
+ .daily-scene-caption{position:relative;order:-1;left:auto;top:auto;margin:8px auto 14px;max-width:calc(100% - 24px);padding:10px 14px}
+ .daily-scene-caption::after{left:calc(50% - 7px)}
+ .daily-action-rail{margin-top:0}
+ .daily-arrangements .day-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .life-scenic .arrangement-panel{margin-top:14px}
+ .life-scenic .life-pace-actions>[data-action=day-routine]{display:flex}
+}
+@media(max-width:900px){.life-clockbar{gap:8px;padding:10px 12px}.life-clockbar .life-pace-actions{padding-top:8px}.life-clockbar .life-pace-actions .button{min-height:44px;font-size:12px;padding:8px;white-space:normal}.daily-arrangements{padding:12px}.daily-arrangements .day-choice{min-height:80px}.daily-scene-caption p{font-size:13px}}
+@media(max-width:380px){.daily-arrangements .day-choices{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.daily-world::before{animation:none!important}}
+.reduce-motion .daily-world::before{animation:none!important}
+
+.daily-next-button{display:none}
+@media(max-width:1249px){.daily-next-button{display:flex;width:100%;margin-top:14px;justify-content:center}}
+/* Three morning attendance decisions share a row, with secondary tools below. */
+.daily-activity-footer:has([data-choice=day_leave]):not(:has([data-choice=slack])) > .day-choices {flex:1 0 100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));}
+.daily-activity-footer:has([data-choice=day_leave]):not(:has([data-choice=slack])) > .daily-dock-tools {order:2;}
+.daily-activity-footer:has([data-choice=day_leave]) .day-choice {min-width:0;}
+@media(max-width:640px){
+ .daily-activity-footer:has([data-choice=day_leave]):not(:has([data-choice=slack])) > .day-choices {grid-template-columns:repeat(2,minmax(0,1fr));}
+ .daily-activity-footer:has([data-choice=day_leave]):not(:has([data-choice=slack])) > .day-choices > :first-child {grid-column:1/-1;min-height:76px;}
+}
+
+/* Scrolling the dock must not compress its text or action groups. */
+.life-clockbar>*{flex-shrink:0}
+@media(min-width:1250px){
+ .daily-activity-footer:has(.day-choice:last-child:nth-child(3))>.day-choices{flex-basis:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+ .daily-activity-footer:has(.day-choice:last-child:nth-child(3))>.daily-dock-tools{order:2;margin-left:auto;margin-right:0}
+ .daily-activity-footer:has(.day-choice:last-child:nth-child(3)) .day-choice{min-width:0}
+}
+
+/* Short desktop windows keep the activity visible above compact controls. */
+@media(min-width:1250px) and (max-height:850px){
+ .world-backdrop.daily-world>img{position:relative;height:calc(100% + 120px);top:-120px}
+ .life-clockbar,.life-clockbar.has-daily-activities,.life-clockbar.has-daily-event{max-height:min(32dvh,var(--operation-max-height));gap:6px;padding:8px 14px}
+ .life-clockbar .life-clock{flex-direction:row;align-items:center;flex-wrap:wrap;gap:2px 12px}
+ .life-clock>strong{font-size:14px}
+ .life-clock .info-button{height:22px;min-height:22px}
+ .daily-dock-activities{padding-top:6px}
+ .daily-activity-feedback{margin-bottom:6px;font-size:12px}
+ .daily-activity-footer{gap:6px}
+ .daily-activity-footer>.day-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));flex-basis:100%;gap:8px}
+ .daily-activity-footer>.day-choices:has(>:last-child:nth-child(2)){grid-template-columns:repeat(2,minmax(0,1fr))}
+ .daily-activity-footer>.day-choices:has(>:only-child){grid-template-columns:1fr}
+ .daily-activity-footer .day-choice{min-width:0;min-height:74px;padding:6px 10px;gap:2px}
+ .daily-dock-tools{order:2;justify-content:flex-end;width:100%;gap:8px}
+ .daily-dock-tools .button{min-height:36px;padding-block:5px}
+ .daily-event-story h2{font-size:15px;margin-bottom:3px}
+ .daily-event-story p{font-size:13px;line-height:1.6}
+ .daily-dock-event{gap:8px}
+}
+
+.consumption-event .consumption-context{margin-top:6px;font-size:12px;color:var(--green,#24513f)}
+
+/* Current activities share equal columns; recurring tools live in the rail. */
+.daily-dock-activities{container-type:inline-size}
+.daily-activity-footer>.day-choices:has(.day-choice:last-child:nth-child(4)){flex-basis:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.daily-activity-footer>.day-choices:has(.day-choice:last-child:nth-child(4)) .day-choice{min-width:0}
+@container (min-width:800px){
+ .daily-activity-footer>.day-choices:has(.day-choice:last-child:nth-child(4)){grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+.career-arrangements{padding:0 14px 14px}
+.career-arrangements .secondary-actions{margin-top:10px;padding-top:0}
+.career-arrangements>.field-help{margin:10px 0 0;font-size:12px;line-height:1.6}
+.daily-arrangements>.employment-update:first-child{border-top:0;padding-top:0;margin-top:0}

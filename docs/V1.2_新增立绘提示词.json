@@ -1,0 +1,16 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-09-22",
+  "assets": [
+    {
+      "name": "character-atlas-v3",
+      "prompt": "Use case: precise-object-edit. This is an existing transparent 4 by 4 character sprite sheet. Preserve all 16 painted characters, their age, outfits and expressions exactly. Fix ONLY atlas packing: within EACH of the 16 mathematically equal square cells shrink and reposition the character so entire head and both arms and mid-thigh cutoff fit with at least 8% empty transparent padding on ALL four sides. EXACT 4 columns and 4 rows, EVERY character stays entirely inside its equal cell, large uniform gutters. Keep actual transparent alpha. Clean the cutout edges, remove colored red/yellow fringe pixels. No checkerboard texture, no frames, no background, no text, no new elements. Square image.",
+      "src": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-02529222-c297-4fad-aa20-2fefa00ac9e3.png"
+    },
+    {
+      "name": "character-newborn-v2",
+      "prompt": "Use case: illustration-story. One standalone newborn Chinese baby asleep in a small wicker cradle, wrapped in sage green and warm cream blanket, viewed three-quarter front. Hand-painted animated film illustration matching the warm earthy palette of the reference game's character portraits. Full cradle entirely in frame, simple wooden legs, no person holding it. Centered square composition, generous transparent padding on all sides. Genuine transparent alpha background, clean edges without colored fringes; no scenery, no floor, no shadow, no checkerboard, no text. This is the age-zero protagonist sprite of a life simulation game.",
+      "src": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-9b41c992-fb09-42c7-b297-7ba7522197eb.png"
+    }
+  ]
+}

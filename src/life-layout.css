@@ -1,0 +1,101 @@
+/* Life: current choices lead; settled history lives in the right-hand notebook. */
+.life-playing .main-stage{gap:16px}
+.life-console{background:#eee1c0;border:1px solid var(--wood);border-radius:8px;box-shadow:none}
+.life-console .period-heading{padding:10px 16px;gap:12px}
+.life-console .period-heading>div{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.life-console .period-heading p{margin:0}
+.life-console .compact-budget{padding:8px 16px 12px}
+.life-console .compact-budget dl{align-items:start}
+.life-console .compact-budget dt{display:flex;align-items:center;min-height:28px;font-size:12px;line-height:1.5}
+.life-console .compact-budget dd{font-size:18px;margin:0;line-height:1.5}
+.life-console .compact-budget .info-button{height:28px;min-height:28px;width:28px;min-width:28px}
+.life-console .budget-footer{margin-top:4px;min-height:28px}
+.life-console .cash-shortage{font-weight:650}
+.life-playing .mainline-status{display:flex;align-items:center;gap:8px 12px;flex-wrap:wrap;padding:10px 16px;border:1px solid var(--wood);border-radius:8px;background:var(--paper-deep);box-shadow:none}
+.mainline-status .mainline-label{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--green);white-space:nowrap}
+.mainline-label .game-icon{width:22px;height:22px}
+.life-playing .mainline-status h2{font:600 16px/1.5 var(--body,sans-serif);margin:0}
+.mainline-state{font-size:12px;color:var(--muted);white-space:nowrap}
+.mainline-status>.text-button{margin-left:auto;font-size:12px;min-height:36px;padding:4px 0}
+.life-playing .inline-receipt{padding:12px 16px;border:1px solid var(--wood);box-shadow:none;font-size:13px}
+.life-playing .inline-receipt>strong{font-size:13px}
+.action-group-label{grid-column:1/-1;font-size:12px;color:var(--muted);margin:0}
+.arrangements .action-list{gap:8px;margin-top:8px}
+.arrangements .life-action{min-height:60px;padding:8px}
+.arrangements .life-action small{line-height:1.5}
+.arrangements .secondary-actions{padding-top:12px}
+/* Notebook: raised buttons act; chevron rows expand records. */
+.life-notebook{background:#eee1c0;border:2px solid var(--wood);border-radius:8px;box-shadow:inset 0 0 0 2px #f7edcf,0 3px 0 #49372755;color:#382d20}
+.life-notebook>summary{min-height:52px;padding:12px 14px;font:700 1rem/1.5 var(--font);background:#e4d2a8}
+.life-notebook>:is(.life-links,.turn-receipt,.childhood-summary,.compact-goal,.upbringing-note,.mini-journal){border:0;border-top:1px solid var(--line);border-radius:0;background:none;box-shadow:none;margin:0;padding:14px}
+.life-notebook .life-links-heading{gap:6px;flex-wrap:wrap}
+.life-notebook .life-links-heading h2,.life-notebook .compact-goal h2{font:600 .875rem/1.5 var(--font);color:#315447;margin:0}
+.life-notebook .life-state{margin-left:auto;font-size:.75rem;line-height:1.5;color:#665238;font-variant-numeric:tabular-nums}
+.life-notebook .life-state b{font-weight:600;color:#382d20}
+.life-notebook .life-links-heading .info-button{margin:-8px -8px -8px -6px}
+.life-notebook .life-links>.notebook-actions{grid-template-columns:repeat(auto-fit,minmax(min(100%,6rem),1fr));gap:12px 8px;margin-top:12px}
+.life-notebook .notebook-button{min-width:0;min-height:44px;padding:8px 10px;border:2px solid #80613d;border-radius:5px;background:#eddbaf;color:#382d20;box-shadow:inset 0 1px 0 #fff1d0,0 3px 0 #80613d;font:600 .875rem/1.4 var(--font);white-space:normal;text-align:center;justify-content:center;gap:6px}
+.life-notebook .notebook-button:hover:not(:disabled){background:#f3d184;border-color:#70502b}
+.life-notebook .notebook-button:active:not(:disabled){transform:translateY(2px);box-shadow:inset 0 1px 0 #fff1d0,0 1px 0 #80613d}
+.life-notebook :is(button,summary):focus-visible{outline:3px solid #995518;outline-offset:3px}
+.life-notebook .notebook-actions .notebook-button{flex-wrap:wrap}
+.life-notebook .notebook-new{flex-basis:100%;font-size:.75rem;font-weight:400;color:#7b3820}
+.life-notebook .notebook-settle{width:100%;margin-top:12px}
+.life-notebook .compact-goal .section-heading{gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.life-notebook .compact-goal .section-heading>.notebook-button{margin-left:auto;font-size:.75rem;padding:6px 10px}
+.life-notebook .goal-complete{color:#315447;font-size:.75rem;font-weight:400}
+.life-notebook .compact-goal>strong{display:block;font:600 1rem/1.5 var(--font);color:#382d20}
+.life-notebook .compact-goal progress{height:6px;margin:12px 0 0}
+.life-notebook .goal-action{width:100%;margin-top:12px}
+.life-notebook>.notebook-fold{padding:0}
+.life-notebook .notebook-fold>summary{display:flex;align-items:center;gap:8px;min-height:56px;padding:12px 14px;font:400 .875rem/1.5 var(--font);list-style:none;cursor:pointer;color:#382d20}
+.life-notebook .notebook-fold>summary::-webkit-details-marker{display:none}
+.life-notebook .notebook-fold>summary::after{content:none}
+.life-notebook .notebook-fold>summary:hover{background:#e7d6b0}
+.life-notebook .notebook-fold[open]>summary{background:#e7d6b0}
+.life-notebook .notebook-fold>summary strong{font-weight:600}
+.life-notebook .notebook-fold>summary>.game-icon{width:20px;height:20px;flex:none}
+.life-notebook .notebook-fold>summary>.game-icon:last-child{width:16px;height:16px;margin-left:auto}
+.life-notebook .notebook-fold[open]>summary>.game-icon:last-child{transform:rotate(90deg)}
+.life-notebook .notebook-count,.life-notebook .notebook-period{font-size:.75rem;font-weight:400;color:#665238;white-space:nowrap}
+.life-notebook .notebook-count{margin-left:auto}
+.life-notebook .notebook-period{margin-left:8px}
+.life-notebook .turn-receipt summary>span{min-width:0}
+.life-notebook .turn-receipt summary small{font-size:.75rem;line-height:1.7;margin-top:4px;color:#665238;font-variant-numeric:tabular-nums}
+.life-notebook .notebook-fold>:not(summary){margin:12px 14px;font-size:.875rem;line-height:1.7}
+.life-notebook .notebook-ledger-delta>span{display:flex;flex-wrap:wrap;gap:0 4px}
+.life-notebook .notebook-ledger-delta b{font-weight:400;white-space:nowrap}
+.life-notebook .turn-receipt dl{grid-template-columns:1fr;gap:8px}
+.life-notebook .turn-receipt dl>div{display:flex;justify-content:space-between;gap:8px}
+.life-notebook .turn-receipt dt{font-size:.75rem;color:#665238}
+.life-notebook .turn-receipt dd{margin:0;font-size:.875rem;font-weight:600;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.life-notebook .turn-receipt>.field-help{font-size:.75rem;color:#665238}
+.life-notebook .mini-entry{display:block;padding:0 0 12px}
+.life-notebook .mini-entry>span{font-size:.75rem;color:#665238}
+.life-notebook .mini-entry p{font-size:.875rem;line-height:1.7;margin-top:4px}
+.life-notebook .mini-journal>.notebook-button{width:calc(100% - 28px);margin-bottom:16px}
+.life-notebook .upbringing-note{font-size:.75rem;line-height:1.7}
+.life-notebook .childhood-summary .upbringing-note{padding:8px 0 0;margin:8px 14px 14px;border:0;background:none;box-shadow:none}
+.life-alerts{display:flex;flex-direction:column;gap:4px;background:#f0dfb8;border:1px solid var(--wood);border-radius:8px;padding:8px 12px}
+.life-alerts>.text-button{justify-content:space-between;text-align:left;min-height:40px;font-size:13px;color:#7e3721}
+@media(max-width:700px){
+ .life-console .period-heading{padding:10px 12px}
+ .life-console .period-heading>div{display:block}
+ .life-console .period-heading p{margin-top:2px}
+ .life-console .compact-budget{padding:8px 12px 10px}
+ .life-console .compact-budget dt{font-size:10px;min-height:32px}
+ .life-console .compact-budget dd{font-size:15px;overflow-wrap:anywhere}
+ .life-playing .mainline-status{gap:4px 8px;padding:10px 12px}
+ .mainline-status .mainline-label{flex-basis:100%}
+ .life-playing .mainline-status h2{font-size:15px}
+ .mainline-status>.text-button{min-height:44px}
+}
+
+/* Two time choices: enter a market, or let ordinary days pass. */
+.life-console .period-heading>.life-pace-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.life-pace-actions .button{min-height:44px;font-size:13px;white-space:normal}
+@media(max-width:700px){
+ .life-console .period-heading{flex-wrap:wrap}
+ .life-console .period-heading>.life-pace-actions{width:100%;display:grid;grid-template-columns:1fr 1fr}
+ .life-pace-actions .button{padding:8px}
+}

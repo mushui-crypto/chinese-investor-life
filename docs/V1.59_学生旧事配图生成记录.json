@@ -1,0 +1,86 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-09-27",
+  "requestedRatio": "3:1",
+  "nativeSize": [
+    2172,
+    724
+  ],
+  "assets": [
+    {
+      "key": "marbles",
+      "scene": "Two Chinese primary school boys aged 7 crouch on a dusty school playground after class, with small glass marbles and cloth pouches, one hand covering several marbles for a guessing game and the other child considering his own three marbles. No money.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-c04d66ee-10db-4fdd-aad0-54d6ca8b06e1.png",
+      "path": "/Users/moss/Desktop/中国式赌狗/public/assets/events/student-marbles-v1.png",
+      "prompt": "Use case: illustration-story. Game story banner, exact 3:1 panoramic aspect ratio, 2304 x 768 pixels. Two Chinese primary school boys aged 7 crouch on a dusty school playground after class, with small glass marbles and cloth pouches, one hand covering several marbles for a guessing game and the other child considering his own three marbles. No money. Hand-painted realistic anime illustration matching a warm Chinese life-simulation game, detailed ink and gouache texture, amber light, olive green and cream palette, believable faces and hands, everyday Chinese school environment not tied to a specific calendar year. Wide horizontal composition with all key subjects inside central safe area; single coherent scene, no collage, no border, no overlay text, no watermark. Neutral decision moment suitable before choices and as a memory afterward, no predetermined victory or loss."
+    },
+    {
+      "key": "cards",
+      "scene": "Three Chinese primary school children aged 8 at a courtyard stone bench carefully comparing colorful worn paper picture cards, one holds a single special card separately. Their faces curious and undecided, no winning celebration. No money.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-73e6828a-e7b5-4dc2-a5c2-b21acc72b1a7.png",
+      "path": "/Users/moss/Desktop/中国式赌狗/public/assets/events/student-cards-v1.png",
+      "prompt": "Use case: illustration-story. Game story banner, exact 3:1 panoramic aspect ratio, 2304 x 768 pixels. Three Chinese primary school children aged 8 at a courtyard stone bench carefully comparing colorful worn paper picture cards, one holds a single special card separately. Their faces curious and undecided, no winning celebration. No money. Hand-painted realistic anime illustration matching a warm Chinese life-simulation game, detailed ink and gouache texture, amber light, olive green and cream palette, believable faces and hands, everyday Chinese school environment not tied to a specific calendar year. Wide horizontal composition with all key subjects inside central safe area; single coherent scene, no collage, no border, no overlay text, no watermark. Neutral decision moment suitable before choices and as a memory afterward, no predetermined victory or loss."
+    },
+    {
+      "key": "shop",
+      "scene": "Two Chinese upper-primary pupils aged 10 at a neighborhood snack shop, a tray of wrapped snacks with collectible cards, small sealed lucky packets, a notebook with tally marks, a child comparing a missing space in a card album to a classmate’s card. No legible lettering or brands, no cash piles.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-44cea726-bc0a-4d46-808f-28462aa2b5e0.png",
+      "path": "/Users/moss/Desktop/中国式赌狗/public/assets/events/student-shop-v1.png",
+      "prompt": "Use case illustration-story. Single warm detailed hand-painted Chinese life-simulation narrative banner, exact 3:1 ratio, 2304x768. Two Chinese upper-primary pupils aged 10 visiting a neighborhood snack shop. A small tray of wrapped snacks each containing a collectible card, card album on the counter with one missing slot, friend holds a duplicate card and a small notebook. They consider their choice, no celebration. Wide view showing shop shelves, children and counter. Amber light, olive and cream palette, realistic anime watercolor/gouache, credible anatomy and hands, same black-haired child protagonist as a gentle everyday Chinese school story. All key subjects within wide frame. No legible lettering, no slogans, no branded objects, no overlay, no casino styling, no border."
+    },
+    {
+      "key": "arcade",
+      "scene": "Two Chinese middle-school friends aged 13 in a modest neighborhood arcade, side view of a glass-front token pusher prize machine, a few metal game tokens in one palm and a friend considering the tray. Quiet uncertain decision, neither celebratory nor devastated. No casino decor, no cash, no adult bodies.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-e650477c-7b4a-4cf4-ae09-8690ce4a6b35.png",
+      "path": "/Users/moss/Desktop/中国式赌狗/public/assets/events/student-arcade-v1.png",
+      "prompt": "Use case: illustration-story. Game story banner, exact 3:1 panoramic aspect ratio, 2304 x 768 pixels. Two Chinese middle-school friends aged 13 in a modest neighborhood arcade, side view of a glass-front token pusher prize machine, a few metal game tokens in one palm and a friend considering the tray. Quiet uncertain decision, neither celebratory nor devastated. No casino decor, no cash, no adult bodies. Hand-painted realistic anime illustration matching a warm Chinese life-simulation game, detailed ink and gouache texture, amber light, olive green and cream palette, believable faces and hands, everyday Chinese school environment not tied to a specific calendar year. Wide horizontal composition with all key subjects inside central safe area; single coherent scene, no collage, no border, no overlay text, no watermark. Neutral decision moment suitable before choices and as a memory afterward, no predetermined victory or loss."
+    },
+    {
+      "key": "card-club",
+      "scene": "Chinese middle-school pupils aged 13 comparing illustrated fantasy game cards on a classroom desk after school, exercise books nearby, one rarer card set aside as they discuss rules, neutral thoughtful mood.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-0f295f73-bcf2-4302-ab2a-169501c7f890.png",
+      "path": "/Users/moss/Desktop/中国式赌狗/public/assets/events/student-card-club-v1.png",
+      "prompt": "Use case: illustration-story. Game story banner, exact 3:1 panoramic aspect ratio, 2304 x 768 pixels. Chinese middle-school pupils aged 13 comparing illustrated fantasy game cards on a classroom desk after school, exercise books nearby, one rarer card set aside as they discuss rules, neutral thoughtful mood. Hand-painted realistic anime illustration matching a warm Chinese life-simulation game, detailed ink and gouache texture, amber light, olive green and cream palette, believable faces and hands, everyday Chinese school environment not tied to a specific calendar year. Wide horizontal composition with all key subjects inside central safe area; single coherent scene, no collage, no border, no overlay text, no watermark. Neutral decision moment suitable before choices and as a memory afterward, no predetermined victory or loss."
+    },
+    {
+      "key": "match",
+      "scene": "Three Chinese high-school classmates aged 16 at a neighborhood drinks shop watching a sports match on a small television in the background; two unopened soft drinks and a few small banknotes lying separately on the table, a student considers a small friendly wager. No casino, no lavish wealth.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-345b4839-7c3e-40ac-8540-d05f2b33303d.png",
+      "path": "/Users/moss/Desktop/中国式赌狗/public/assets/events/student-match-v1.png",
+      "prompt": "Use case: illustration-story. Game story banner, exact 3:1 panoramic aspect ratio, 2304 x 768 pixels. Three Chinese high-school classmates aged 16 at a neighborhood drinks shop watching a sports match on a small television in the background; two unopened soft drinks and a few small banknotes lying separately on the table, a student considers a small friendly wager. No casino, no lavish wealth. Hand-painted realistic anime illustration matching a warm Chinese life-simulation game, detailed ink and gouache texture, amber light, olive green and cream palette, believable faces and hands, everyday Chinese school environment not tied to a specific calendar year. Wide horizontal composition with all key subjects inside central safe area; single coherent scene, no collage, no border, no overlay text, no watermark. Neutral decision moment suitable before choices and as a memory afterward, no predetermined victory or loss."
+    },
+    {
+      "key": "game-items",
+      "scene": "Two Chinese high-school pupils aged 16 on a free afternoon at a plain bedroom study desk, fantasy equipment inventory on a correctly oriented laptop screen facing them, an illustrated game item under discussion, hands resting calmly. Camera over shoulder sees the front screen and keyboard. No trading charts, no casino.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-1baa9456-43bb-4293-8514-286f1f762cce.png",
+      "path": "/Users/moss/Desktop/中国式赌狗/public/assets/events/student-game-items-v1.png",
+      "prompt": "Use case: illustration-story. Game story banner, exact 3:1 panoramic aspect ratio, 2304 x 768 pixels. Two Chinese high-school pupils aged 16 on a free afternoon at a plain bedroom study desk, fantasy equipment inventory on a correctly oriented laptop screen facing them, an illustrated game item under discussion, hands resting calmly. Camera over shoulder sees the front screen and keyboard. No trading charts, no casino. Hand-painted realistic anime illustration matching a warm Chinese life-simulation game, detailed ink and gouache texture, amber light, olive green and cream palette, believable faces and hands, everyday Chinese school environment not tied to a specific calendar year. Wide horizontal composition with all key subjects inside central safe area; single coherent scene, no collage, no border, no overlay text, no watermark. Neutral decision moment suitable before choices and as a memory afterward, no predetermined victory or loss."
+    },
+    {
+      "key": "statistics",
+      "scene": "Chinese high-school student aged 16 comparing sports results in a ruled notebook while two classmates discuss across a desk, tally columns and hand drawn probability sketches without readable words, ordinary classroom after school, reflective neutral mood.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-15547efa-d27c-4ea8-90a5-0dbfae100066.png",
+      "path": "/Users/moss/Desktop/中国式赌狗/public/assets/events/student-statistics-v1.png",
+      "prompt": "Use case: illustration-story. Game story banner, exact 3:1 panoramic aspect ratio, 2304 x 768 pixels. Chinese high-school student aged 16 comparing sports results in a ruled notebook while two classmates discuss across a desk, tally columns and hand drawn probability sketches without readable words, ordinary classroom after school, reflective neutral mood. Hand-painted realistic anime illustration matching a warm Chinese life-simulation game, detailed ink and gouache texture, amber light, olive green and cream palette, believable faces and hands, everyday Chinese school environment not tied to a specific calendar year. Wide horizontal composition with all key subjects inside central safe area; single coherent scene, no collage, no border, no overlay text, no watermark. Neutral decision moment suitable before choices and as a memory afterward, no predetermined victory or loss."
+    },
+    {
+      "key": "graduation",
+      "scene": "Chinese high-school classmates aged 17 in casual school clothes at an outdoor school bench near graduation, looking through a small keepsake box containing one old glass marble and worn collectible cards, nostalgic conversation before a last game. No university graduation caps, no alcohol, no adult office.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-3463bd43-8cad-4ac4-9bed-d3dc97e7908b.png",
+      "path": "/Users/moss/Desktop/中国式赌狗/public/assets/events/student-graduation-v1.png",
+      "prompt": "Use case: illustration-story. Game story banner, exact 3:1 panoramic aspect ratio, 2304 x 768 pixels. Chinese high-school classmates aged 17 in casual school clothes at an outdoor school bench near graduation, looking through a small keepsake box containing one old glass marble and worn collectible cards, nostalgic conversation before a last game. No university graduation caps, no alcohol, no adult office. Hand-painted realistic anime illustration matching a warm Chinese life-simulation game, detailed ink and gouache texture, amber light, olive green and cream palette, believable faces and hands, everyday Chinese school environment not tied to a specific calendar year. Wide horizontal composition with all key subjects inside central safe area; single coherent scene, no collage, no border, no overlay text, no watermark. Neutral decision moment suitable before choices and as a memory afterward, no predetermined victory or loss."
+    },
+    {
+      "key": "shop-young",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-038dfb6f-8c28-4e41-bd31-b2b4ef7f7135.png",
+      "path": "/Users/moss/Desktop/中国式赌狗/public/assets/events/student-shop-young-v1.png",
+      "prompt": "Use case illustration-story. Generate a single 3:1 panoramic image, 2304x768. Chinese life simulation game art, warm hand-painted anime gouache in amber, olive green, cream. Two visibly six-year-old first-grade boys at a modest neighborhood snack shop after school, watching a closed cardboard lucky-draw box and sealed snack packets on the wooden counter. The black-haired protagonist calmly considers what to do, hands resting on the edge, curious but neutral expression; his same-age male friend waits beside him. An elderly shopkeeper behind the counter arranges stock. Wide view of children, counter and sunlit shop. Decision moment only: nobody is handing out or receiving a prize, no celebration, no tears, no money. No readable lettering, no logos, no overlay text, no slogans, no casino imagery. Anatomically natural hands. Must read as young children, not teenagers."
+    }
+  ],
+  "discarded": [
+    {
+      "key": "shop-young",
+      "reason": "中奖动作不适合亏损分支结果页，重绘为中性等待场景。"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+/* One quiet clock and one place for the current day's choices. */
+.daily-routine{display:flex;flex-direction:column;gap:20px;padding:4px}
+.daily-now{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.daily-now strong{display:flex;align-items:center;gap:8px;font-size:18px;color:var(--green)}
+.daily-now span{font-size:13px;color:#5a482f}
+.day-timeline{list-style:none;padding:0;margin:0;display:flex;gap:0;border-block:1px solid #ad9565;overflow:auto}
+.day-timeline li{flex:1;min-width:74px;padding:12px 8px;text-align:center;font-size:12px;color:#665237}
+.day-timeline time,.day-timeline span{display:block}.day-timeline time{font-weight:700;font-variant-numeric:tabular-nums;margin-bottom:4px}
+.day-timeline [aria-current]{background:#285543;color:#ffefc6}.day-timeline .is-past{color:#75623e;background:#ddd0aa}
+.day-choices{display:flex;gap:12px;flex-wrap:wrap}.day-choices .day-choice{flex:1 1 180px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;padding:14px 16px;text-align:left;white-space:normal;gap:6px;min-height:78px}
+.day-choice strong{font-size:15px;font-weight:700}.day-choice small{font-size:12px;line-height:1.6;font-weight:400;color:inherit}
+.daily-event h3{font-size:18px;margin:0 0 10px}.daily-event p{line-height:1.75;margin:0 0 18px}
+.day-feedback{margin:0;color:#36523d;font-size:14px;line-height:1.7}.day-rules{border-top:1px solid #bca578;padding-top:8px}
+.day-rules summary{min-height:44px;align-content:center;cursor:pointer;font-size:13px}.day-rules p{font-size:13px;line-height:1.75;margin:8px 0;color:#53412c}
+@media(max-width:500px){.daily-routine{gap:16px;padding:0}.day-choices{gap:10px}.day-choices .day-choice{flex-basis:100%;min-height:70px}.daily-now strong{font-size:17px}.life-pace-actions{grid-template-columns:1fr 1fr}.life-pace-actions .primary{grid-column:1/-1}}
+/* Shared market heading: all desks use the same composition and type scale. */
+.market-playing .market-desk:not(.crypto-terminal):not(.casino-hall){background:#e8d9b2;padding:16px}
+.market-desk .market-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:0 0 8px;margin:0 0 8px;border-bottom:1px solid #ad9260;background:transparent}
+.market-heading-name{display:flex;align-items:center;gap:8px;min-width:0}
+.market-desk .market-heading h1{display:flex;align-items:center;gap:8px;margin:0;font:700 20px/1.4 var(--title);letter-spacing:1px;color:#284f3e}
+.market-heading h1 .game-icon{width:28px;height:28px;flex:none}
+.market-heading .info-button{flex:none;min-width:32px;width:32px;min-height:44px;height:44px}
+.market-heading-switch{display:flex;align-items:center;gap:8px;margin:0;font-size:12px;white-space:nowrap;color:#514127}
+.market-heading-switch .game-select{width:170px;max-width:100%}.market-heading-switch .game-select-trigger{min-height:44px;font-size:12px}
+.market-desk:not(.crypto-terminal):not(.casino-hall) .trade-ticket{background:#ecd49e;border-color:#9b7949}
+.market-desk:not(.crypto-terminal):not(.casino-hall) .desk-bulletin{background:#d7d8b8;color:#304934;border-color:#a4a279}
+.market-desk:not(.crypto-terminal):not(.casino-hall) .instrument-option{background:#dacfaa}.market-desk:not(.crypto-terminal):not(.casino-hall) .instrument-option.selected{background:#f2cf75}
+.market-desk:not(.crypto-terminal):not(.casino-hall) .desk-positions{background:#ddd0a6}
+.market-desk.crypto-terminal .market-heading{padding:14px var(--terminal-inset,16px);margin:0;background:#262d34;border-color:#635a43}
+.market-desk.crypto-terminal .market-heading h1{color:#f3d789}.crypto-terminal .market-heading-switch{color:#e2d5b6}
+.market-desk.casino-hall .market-heading{padding:14px 16px;margin:0;background:#392c2c;border-color:#987341}
+.market-desk.casino-hall .market-heading h1{color:#f3d789}.casino-hall .market-heading-switch{color:#e2d5b6}
+.casino-hall .market-heading .game-select-trigger{background:#e3c988;color:#392b21;border-color:#97754a}
+@media(max-width:760px){.market-playing .market-desk:not(.crypto-terminal):not(.casino-hall){padding:12px}.market-desk .market-heading{flex-wrap:wrap;gap:6px;min-height:0;padding-bottom:10px}.market-desk .market-heading h1{font-size:18px}.market-heading-switch{margin-left:auto}.market-heading-switch .game-select{width:155px}}
+@media(max-width:420px){.market-heading-switch{width:100%;justify-content:space-between}.market-heading-switch .game-select{width:min(190px,75%)}.market-desk .market-heading{gap:4px}}
+
+.daily-routine .dialog-footer{margin-top:0;padding-top:16px}.daily-routine .day-rules{margin-bottom:0}
+
+.crypto-terminal-open .trade-toolbar .pace-away{background:#343b42;color:#f1e5cd;border-color:#67624f;box-shadow:0 3px #14171b}
+
+.living-cost-detail{margin-top:16px}.living-cost-detail h3{font-size:16px;margin:0 0 12px}.living-cost-detail dl{margin:0}.living-cost-detail dl>div{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid #bca57866}.living-cost-detail dt{font-size:13px;color:#5a482f}.living-cost-detail dd{margin:0;font-size:14px;font-weight:650;font-variant-numeric:tabular-nums;text-align:right}.living-total{font-weight:700}.living-cost-detail p,.recent-expenses p{font-size:13px;line-height:1.75;color:#5a482f}.living-cost-detail summary,.recent-expenses summary{cursor:pointer;padding:12px 0;font-weight:650;font-size:14px}.recent-expenses{border-block:1px solid #bca578}.recent-expenses summary span{float:right;color:#98452e;font-variant-numeric:tabular-nums}.recent-expenses ul{list-style:none;margin:0;padding:0}.recent-expenses li{padding:12px 0;border-top:1px solid #bca57866}.recent-expenses li>div{display:flex;gap:16px;justify-content:space-between;font-size:14px}.recent-expenses li b{color:#98452e;font-variant-numeric:tabular-nums;white-space:nowrap}.recent-expenses p{margin:6px 0 0}.recent-expenses>.button{margin:0 0 12px}
+
+/* Copy stays at the top; timing shares the bottom baseline across equal-height cards. */
+.day-choice-copy{display:flex;flex-direction:column;align-items:flex-start;gap:inherit;width:100%;min-width:0}
+.day-choice .day-choice-time{margin-top:auto}
+
+.fatigue-income-notice{margin:0;padding:8px 0;color:#9e3826;font-size:13px;line-height:1.65}

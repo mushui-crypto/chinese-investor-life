@@ -1,0 +1,160 @@
+{
+  "mode": "built-in image_gen",
+  "ratio": "3:1",
+  "jobs": [
+    {
+      "key": "first-coin",
+      "ref": "events/first-coin-wide-v2.webp",
+      "scene": "A child's foreground hand holds one coin at a Chinese neighborhood candy shop; smiling elderly woman shopkeeper reaching across the counter. Keep her entire hair and head with air above it, both exchange hands, coin, candy jars and sunlit alley visible. Reduce the vertical size of foreground hand and shopkeeper; horizontal medium wide shot.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. A child's foreground hand holds one coin at a Chinese neighborhood candy shop; smiling elderly woman shopkeeper reaching across the counter. Keep her entire hair and head with air above it, both exchange hands, coin, candy jars and sunlit alley visible. Reduce the vertical size of foreground hand and shopkeeper; horizontal medium wide shot.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-53b11765-436f-4429-bb4a-72a1894ae59a.png",
+      "output": "public/assets/events/first-coin-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "school",
+      "ref": "events/school-v1.webp",
+      "scene": "Empty Chinese classroom in afternoon sun, school backpack with green dinosaur charm, textbooks, open notebook and fountain pen, a green tin savings bank and enamel pencil cup. Arrange all these objects laterally on the desk, entirely visible, with classroom, blackboard and playground in the background. Notebook and savings tin must not run off the lower edge.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Empty Chinese classroom in afternoon sun, school backpack with green dinosaur charm, textbooks, open notebook and fountain pen, a green tin savings bank and enamel pencil cup. Arrange all these objects laterally on the desk, entirely visible, with classroom, blackboard and playground in the background. Notebook and savings tin must not run off the lower edge.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-51dc484b-3a70-4a79-b89e-13270340f79e.png",
+      "output": "public/assets/events/school-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "market",
+      "ref": "events/market-v1.webp",
+      "scene": "Chinese stock trading hall with rows of seated adult investors watching a large red and green candlestick board. Keep all heads and the full key chart readable as shapes, teacups and notebooks in foreground. View from farther back, with heads below chart, shorter row depth, a wide panoramic hall. No readable claims or brand marks.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Chinese stock trading hall with rows of seated adult investors watching a large red and green candlestick board. Keep all heads and the full key chart readable as shapes, teacups and notebooks in foreground. View from farther back, with heads below chart, shorter row depth, a wide panoramic hall. No readable claims or brand marks.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-4b9e4ca6-60b7-43c8-9ced-cea7129ff403.png",
+      "output": "public/assets/events/market-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "derivatives",
+      "ref": "events/derivatives-v1.webp",
+      "scene": "First-person late-night desk, laptop with abstract trading candlesticks, two hands working keyboard and mouse, analog alarm clock, enamel cup and scattered handwritten notes. Keep whole laptop screen, clock face and both hands inside the wide image, city lights and river outside. Lower the viewpoint and spread the desk objects laterally instead of stacking them.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. First-person late-night desk, laptop with abstract trading candlesticks, two hands working keyboard and mouse, analog alarm clock, enamel cup and scattered handwritten notes. Keep whole laptop screen, clock face and both hands inside the wide image, city lights and river outside. Lower the viewpoint and spread the desk objects laterally instead of stacking them.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-83d02c31-e110-4229-96fc-c538f54de189.png",
+      "output": "public/assets/events/derivatives-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "crypto",
+      "ref": "events/crypto-wide-v2.webp",
+      "scene": "Young Chinese man watching a cryptocurrency chart on a laptop, his full head, thoughtful hand, complete laptop, hardware wallet, two tokens and open notebook all within the wide banner. Evening apartment, sleeping cat and warm desk light. Move notebook laterally beside laptop to keep it visible.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Young Chinese man watching a cryptocurrency chart on a laptop, his full head, thoughtful hand, complete laptop, hardware wallet, two tokens and open notebook all within the wide banner. Evening apartment, sleeping cat and warm desk light. Move notebook laterally beside laptop to keep it visible.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-74b8fe39-647e-4a8b-ac1c-207b8cdf2606.png",
+      "output": "public/assets/events/crypto-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "casino",
+      "ref": "events/casino-v1.webp",
+      "scene": "Young Chinese adult sitting on his bed at night holding a phone with a fictional slot game, viewed from behind over his shoulder. Entire head and hair, both hands and phone, loose coins on bedside table within the horizontal safe area. Quiet uneasy mood, sleeping cat and city lights.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Young Chinese adult sitting on his bed at night holding a phone with a fictional slot game, viewed from behind over his shoulder. Entire head and hair, both hands and phone, loose coins on bedside table within the horizontal safe area. Quiet uneasy mood, sleeping cat and city lights.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-dc00bb5a-5c77-4d81-8927-53659d256eec.png",
+      "output": "public/assets/events/casino-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "venture",
+      "ref": "events/venture-v1.webp",
+      "scene": "Four Chinese adults discuss their startup at an old worktable. All four full heads and expressive hands visible, laptop, prototype devices, design papers and coffee cups arranged laterally. Pull back to a wider room shot with a panoramic window. Preserve thoughtful earnest mood.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Four Chinese adults discuss their startup at an old worktable. All four full heads and expressive hands visible, laptop, prototype devices, design papers and coffee cups arranged laterally. Pull back to a wider room shot with a panoramic window. Preserve thoughtful earnest mood.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-dec3af31-8ec3-4edb-83f4-976c75ec17ca.png",
+      "output": "public/assets/events/venture-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "property",
+      "ref": "events/property-wide-v2.webp",
+      "scene": "Thoughtful Chinese young man sitting at a property-sales table. Complete head and hair, hand at chin, full apartment building scale model, keys, contract and pen visible together. Place contract and keys beside the model instead of at bottom foreground. Warm sunset skyline.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Thoughtful Chinese young man sitting at a property-sales table. Complete head and hair, hand at chin, full apartment building scale model, keys, contract and pen visible together. Place contract and keys beside the model instead of at bottom foreground. Warm sunset skyline.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-5835c1ad-c462-4bb7-934e-80b83cb89414.png",
+      "output": "public/assets/events/property-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "debt",
+      "ref": "events/debt-wide-v2.webp",
+      "scene": "Worried Chinese man holding an unpaid bill and touching forehead. Whole head, hair, both hands, bills, calculator, ringing phone and bank card visible within the wide scene. Pull camera back and arrange props horizontally. No readable financial information or real payment logos.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Worried Chinese man holding an unpaid bill and touching forehead. Whole head, hair, both hands, bills, calculator, ringing phone and bank card visible within the wide scene. Pull camera back and arrange props horizontally. No readable financial information or real payment logos.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-4579bf4d-3905-4670-89a8-4544eb6ed1ea.png",
+      "output": "public/assets/events/debt-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "health",
+      "ref": "events/health-wide-v2.webp",
+      "scene": "Young Chinese man beside elderly woman on green hospital waiting chairs. Full heads, hands, medical envelope and cane grip visible. Wide medium shot, not full-body vertical shot. Warm afternoon hospital corridor and distant staff. Ample headroom.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Young Chinese man beside elderly woman on green hospital waiting chairs. Full heads, hands, medical envelope and cane grip visible. Wide medium shot, not full-body vertical shot. Warm afternoon hospital corridor and distant staff. Ample headroom.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-a016b807-1033-48d3-89a3-88bbe04fb45b.png",
+      "output": "public/assets/events/health-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "legal",
+      "ref": "events/legal-v1.webp",
+      "scene": "Quiet Chinese public-service office with two empty chairs, file folder tied with string, sealed envelope and enamel pencil cup on the wooden desk. Keep entire case folder and sealed envelope with margin below, barred window and plants in background. Arrange desk horizontally.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Quiet Chinese public-service office with two empty chairs, file folder tied with string, sealed envelope and enamel pencil cup on the wooden desk. Keep entire case folder and sealed envelope with margin below, barred window and plants in background. Arrange desk horizontally.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-371ba1c1-0934-437b-bbe3-ce1bb74a37ab.png",
+      "output": "public/assets/events/legal-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "prison",
+      "ref": "life-prison-v2.webp",
+      "scene": "Empty modest prison cell, barred window glowing with late light, narrow metal bed with folded bedding, wood desk holding letter and enamel cup. Reposition window lower and furniture horizontally to keep bars, bedding and letter completely inside the 3:1 panorama. Preserve restrained calm painted style.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Empty modest prison cell, barred window glowing with late light, narrow metal bed with folded bedding, wood desk holding letter and enamel cup. Reposition window lower and furniture horizontally to keep bars, bedding and letter completely inside the 3:1 panorama. Preserve restrained calm painted style.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-cee2540b-54d0-43cc-851a-694b2e058a32.png",
+      "output": "public/assets/events/prison-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "energy",
+      "ref": "events/energy-v1.webp",
+      "scene": "Chinese petrol station with queue of cars at sunset, fuel attendant, port cranes in distance. Horizontal side-angle view so car queue, drivers' whole heads, attendant, fuel pump and port cranes all remain visible. Preserve warm sunset and worn urban textures.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Chinese petrol station with queue of cars at sunset, fuel attendant, port cranes in distance. Horizontal side-angle view so car queue, drivers' whole heads, attendant, fuel pump and port cranes all remain visible. Preserve warm sunset and worn urban textures.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-e82705cd-73e5-4a03-ad64-f2aac7c7c631.png",
+      "output": "public/assets/events/energy-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    },
+    {
+      "key": "everyday",
+      "ref": "life-rental-v2.webp",
+      "scene": "Small Chinese rental room in afternoon sun, narrow bed, drying clothes, old computer on desk, enamel cup, chair and sleeping ginger cat. Compose as wide horizontal interior panorama with bed, desk and cat all visible; lower clothes rail in background. Preserve room objects, colors and calm mood.",
+      "prompt": "Use case: illustration-story. Asset: full-bleed event banner for the Chinese life simulation 中国式赌狗. Input is the edit target and exact style/scene reference. Recompose this same scene into a native 3:1 panoramic illustration, 2304x768. Do NOT crop it or stretch it: pull the camera back and arrange the important subjects horizontally so their whole heads, hands and story objects fit inside the central 80 percent of image height. Preserve warm amber lighting, muted jade, worn wood, painterly gouache realism and expressive contours. Render only the illustration, edge to edge, no border, no letterboxing, no text overlay, no watermark, no collage. Small Chinese rental room in afternoon sun, narrow bed, drying clothes, old computer on desk, enamel cup, chair and sleeping ginger cat. Compose as wide horizontal interior panorama with bed, desk and cat all visible; lower clothes rail in background. Preserve room objects, colors and calm mood.",
+      "source": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-5c1eee61-d72d-4dd3-a08b-74cd57483213.png",
+      "output": "public/assets/events/everyday-panorama-v3.webp",
+      "width": 2172,
+      "height": 724,
+      "reviewed": true
+    }
+  ]
+}

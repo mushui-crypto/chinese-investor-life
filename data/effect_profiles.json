@@ -1,0 +1,1629 @@
+{
+  "observe": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "insight": 2
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "family": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "flag",
+            "key": "employed",
+            "value": false
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "trust": 6,
+              "stress": -3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "rest": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "health": 5,
+              "stress": -8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "study": {
+    "min_cash_yuan": 1000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "spend",
+            "amount_yuan": 1000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "insight": 8,
+              "skill": 3,
+              "academic": 3,
+              "discipline": 2
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "work": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 85,
+        "effects": [
+          {
+            "op": "earn",
+            "amount_yuan": 600
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "skill": 4,
+              "stress": 4
+            }
+          }
+        ]
+      },
+      {
+        "weight": 15,
+        "effects": [
+          {
+            "op": "earn",
+            "amount_yuan": 150
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "skill": 2,
+              "stress": 8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "job": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 65,
+        "effects": [
+          {
+            "op": "flag",
+            "key": "employed",
+            "value": false
+          },
+          {
+            "op": "flag",
+            "key": "employed",
+            "value": true
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "skill": 3
+            }
+          }
+        ]
+      },
+      {
+        "weight": 35,
+        "effects": [
+          {
+            "op": "flag",
+            "key": "employed",
+            "value": false
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "hustle": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 60,
+        "effects": [
+          {
+            "op": "flag",
+            "key": "employed",
+            "value": false
+          },
+          {
+            "op": "earn",
+            "amount_yuan": 100
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "skill": 5,
+              "health": -3
+            }
+          }
+        ]
+      },
+      {
+        "weight": 40,
+        "effects": [
+          {
+            "op": "flag",
+            "key": "employed",
+            "value": false
+          },
+          {
+            "op": "earn",
+            "amount_yuan": 40
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "skill": 2,
+              "stress": 6
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "network": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 60,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "fame": 8,
+              "trust": 2
+            }
+          }
+        ]
+      },
+      {
+        "weight": 40,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 4,
+              "trust": -2
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "publicity": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 30,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "fame": 25,
+              "stress": 6
+            }
+          }
+        ]
+      },
+      {
+        "weight": 70,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "fame": 4,
+              "trust": -10,
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "repair": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 65,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "trust": 12,
+              "stress": -5
+            }
+          }
+        ]
+      },
+      {
+        "weight": 35,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "trust": 2,
+              "stress": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "gift": {
+    "min_cash_yuan": 3000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "spend",
+            "amount_yuan": 3000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "trust": 10
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "aid": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "family_reserve_positive"
+    ],
+    "outcomes": [
+      {
+        "weight": 55,
+        "effects": [
+          {
+            "op": "family_transfer",
+            "cap_yuan": 20000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "trust": -3
+            }
+          }
+        ]
+      },
+      {
+        "weight": 45,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "repay": {
+    "min_cash_yuan": 100,
+    "prerequisites": [
+      "debt_positive"
+    ],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "repay",
+            "cash_fraction": 0.3
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "credit": 5,
+              "trust": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "negotiate": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "debt_positive"
+    ],
+    "outcomes": [
+      {
+        "weight": 55,
+        "effects": [
+          {
+            "op": "extend_debt",
+            "turns": 2
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": -5
+            }
+          }
+        ]
+      },
+      {
+        "weight": 45,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "bank": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "bank_eligible"
+    ],
+    "outcomes": [
+      {
+        "weight": 55,
+        "effects": [
+          {
+            "op": "loan",
+            "principal_yuan": 50000,
+            "apr_bps": 800,
+            "term_months": 24,
+            "purpose": "approved_use"
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 5
+            }
+          }
+        ]
+      },
+      {
+        "weight": 45,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "netloan": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "consumer_credit_eligible"
+    ],
+    "outcomes": [
+      {
+        "weight": 65,
+        "effects": [
+          {
+            "op": "loan",
+            "principal_yuan": 15000,
+            "apr_bps": 1800,
+            "term_months": 12,
+            "purpose": "consumption"
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 10
+            }
+          }
+        ]
+      },
+      {
+        "weight": 35,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 6
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "guarantee": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "adult"
+    ],
+    "outcomes": [
+      {
+        "weight": 65,
+        "effects": [
+          {
+            "op": "guarantee",
+            "limit_yuan": 50000,
+            "called": false
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "trust": 5
+            }
+          }
+        ]
+      },
+      {
+        "weight": 35,
+        "effects": [
+          {
+            "op": "guarantee",
+            "limit_yuan": 50000,
+            "called": true
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "trust": -15,
+              "stress": 20
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "sell_asset": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "saleable_asset_positive"
+    ],
+    "outcomes": [
+      {
+        "weight": 65,
+        "effects": [
+          {
+            "op": "liquidate_asset",
+            "fraction": 0.3,
+            "haircut_bps": 1000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": -3
+            }
+          }
+        ]
+      },
+      {
+        "weight": 35,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "claim": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "claim_positive"
+    ],
+    "outcomes": [
+      {
+        "weight": 30,
+        "effects": [
+          {
+            "op": "recover_claim",
+            "recovery_bps": 3000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": -4
+            }
+          }
+        ]
+      },
+      {
+        "weight": 70,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ponzi_recruit": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 35,
+        "effects": [
+          {
+            "op": "earn",
+            "amount_yuan": 5000
+          },
+          {
+            "op": "flag",
+            "key": "recruited",
+            "value": true
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "trust": -5,
+              "fame": 8
+            }
+          }
+        ]
+      },
+      {
+        "weight": 65,
+        "effects": [
+          {
+            "op": "flag",
+            "key": "recruited",
+            "value": true
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "trust": -20,
+              "stress": 20
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "stock": {
+    "min_cash_yuan": 1000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 35,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.3,
+            "gross_multiple": 2.5
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 4
+            }
+          }
+        ]
+      },
+      {
+        "weight": 65,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.3,
+            "gross_multiple": 0.4
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "allin": {
+    "min_cash_yuan": 1000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 12,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 1,
+            "gross_multiple": 8
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 4
+            }
+          },
+          {
+            "op": "flag",
+            "key": "employed",
+            "value": false
+          }
+        ]
+      },
+      {
+        "weight": 88,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 1,
+            "gross_multiple": 0
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "fund": {
+    "min_cash_yuan": 1000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 65,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.25,
+            "gross_multiple": 1.15
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 4
+            }
+          }
+        ]
+      },
+      {
+        "weight": 35,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.25,
+            "gross_multiple": 0.8
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "options": {
+    "min_cash_yuan": 1000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 8,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.25,
+            "gross_multiple": 25
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 4
+            }
+          }
+        ]
+      },
+      {
+        "weight": 92,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.25,
+            "gross_multiple": 0
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "contract": {
+    "min_cash_yuan": 1000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 25,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.5,
+            "gross_multiple": 5
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 4
+            }
+          }
+        ]
+      },
+      {
+        "weight": 75,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.5,
+            "gross_multiple": 0
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "crypto": {
+    "min_cash_yuan": 1000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 20,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.3,
+            "gross_multiple": 6
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 4
+            }
+          }
+        ]
+      },
+      {
+        "weight": 80,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.3,
+            "gross_multiple": 0.1
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "business": {
+    "min_cash_yuan": 3000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 55,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.25,
+            "gross_multiple": 1.8
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 4
+            }
+          }
+        ]
+      },
+      {
+        "weight": 45,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.25,
+            "gross_multiple": 0.4
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "expand": {
+    "min_cash_yuan": 10000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 30,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.5,
+            "gross_multiple": 3
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 4
+            }
+          }
+        ]
+      },
+      {
+        "weight": 70,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.5,
+            "gross_multiple": 0.1
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "antique": {
+    "min_cash_yuan": 1000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 15,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.2,
+            "gross_multiple": 10
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 4
+            }
+          }
+        ]
+      },
+      {
+        "weight": 85,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.2,
+            "gross_multiple": 0.05
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "option_sell": {
+    "min_cash_yuan": 10000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 80,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.3,
+            "gross_multiple": 1.15
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 4
+            }
+          }
+        ]
+      },
+      {
+        "weight": 20,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.3,
+            "gross_multiple": 0,
+            "loss_debt_multiple": 2
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 20
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "ponzi": {
+    "min_cash_yuan": 1000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 30,
+        "effects": [
+          {
+            "op": "venture",
+            "stake_fraction": 0.25,
+            "gross_multiple": 1.2
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 3
+            }
+          }
+        ]
+      },
+      {
+        "weight": 70,
+        "effects": [
+          {
+            "op": "freeze_investment",
+            "stake_fraction": 0.25,
+            "claim_mark_bps": 1000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 18
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "angel": {
+    "min_cash_yuan": 10000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 15,
+        "effects": [
+          {
+            "op": "illiquid",
+            "stake_fraction": 0.3,
+            "gross_multiple": 20,
+            "lock_turns": 6
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "fame": 10
+            }
+          }
+        ]
+      },
+      {
+        "weight": 85,
+        "effects": [
+          {
+            "op": "illiquid",
+            "stake_fraction": 0.3,
+            "gross_multiple": 0,
+            "lock_turns": 6
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "housing": {
+    "min_cash_yuan": 50000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 60,
+        "effects": [
+          {
+            "op": "illiquid",
+            "stake_fraction": 0.5,
+            "gross_multiple": 1.4,
+            "lock_turns": 4
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 3
+            }
+          }
+        ]
+      },
+      {
+        "weight": 40,
+        "effects": [
+          {
+            "op": "illiquid",
+            "stake_fraction": 0.5,
+            "gross_multiple": 0.7,
+            "lock_turns": 4
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "school": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 70,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "academic": 10,
+              "discipline": 4,
+              "skill": 4,
+              "insight": 3,
+              "stress": 3
+            }
+          }
+        ]
+      },
+      {
+        "weight": 30,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "academic": 4,
+              "discipline": 1,
+              "stress": 7
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "self_study": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "academic": 5,
+              "discipline": 3,
+              "insight": 3,
+              "skill": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "child_trade": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 40,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "insight": 5,
+              "trust": 2
+            }
+          }
+        ]
+      },
+      {
+        "weight": 60,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "insight": 2,
+              "trust": -4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "settle": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "flag",
+            "key": "wants_epilogue",
+            "value": true
+          }
+        ]
+      }
+    ]
+  },
+  "uw_gamble": {
+    "min_cash_yuan": 1000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 18,
+        "effects": [
+          {
+            "op": "spend",
+            "amount_yuan": 1000
+          },
+          {
+            "op": "legal_case",
+            "case_type": "gambling",
+            "profit_yuan": 5000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 12
+            }
+          }
+        ]
+      },
+      {
+        "weight": 82,
+        "effects": [
+          {
+            "op": "spend",
+            "amount_yuan": 1000
+          },
+          {
+            "op": "legal_case",
+            "case_type": "gambling",
+            "profit_yuan": 0
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 18
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "uw_chase": {
+    "min_cash_yuan": 3000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 12,
+        "effects": [
+          {
+            "op": "spend",
+            "amount_yuan": 3000
+          },
+          {
+            "op": "legal_case",
+            "case_type": "gambling",
+            "profit_yuan": 8000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 18
+            }
+          }
+        ]
+      },
+      {
+        "weight": 88,
+        "effects": [
+          {
+            "op": "spend",
+            "amount_yuan": 3000
+          },
+          {
+            "op": "legal_case",
+            "case_type": "gambling",
+            "profit_yuan": 0
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 24
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "uw_promote": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "adult"
+    ],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "legal_case",
+            "case_type": "gambling_promotion",
+            "profit_yuan": 80000
+          },
+          {
+            "op": "flag",
+            "key": "recruited",
+            "value": true
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "fame": 12,
+              "trust": -12,
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "uw_account": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "adult"
+    ],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "legal_case",
+            "case_type": "account_rental",
+            "profit_yuan": 15000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "credit": -12,
+              "stress": 10
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "uw_fraud": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "adult"
+    ],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "legal_case",
+            "case_type": "fraud",
+            "profit_yuan": 180000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "fame": 20,
+              "trust": -20,
+              "stress": 15
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "uw_data": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "adult"
+    ],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "legal_case",
+            "case_type": "data_resale",
+            "profit_yuan": 35000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "trust": -12,
+              "stress": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "uw_fund": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "adult"
+    ],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "legal_case",
+            "case_type": "illegal_fundraising",
+            "profit_yuan": 300000
+          },
+          {
+            "op": "flag",
+            "key": "recruited",
+            "value": true
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "fame": 25,
+              "trust": -20,
+              "stress": 18
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "uw_ads": {
+    "min_cash_yuan": 0,
+    "prerequisites": [
+      "adult"
+    ],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "legal_case",
+            "case_type": "misleading_ads",
+            "profit_yuan": 20000
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "fame": 8,
+              "trust": -8,
+              "stress": 6
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "uw_quit": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "quit_gambling"
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": -8,
+              "insight": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "legal_cooperate": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "legal_cooperate"
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "insight": 3,
+              "stress": -3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "prison_study": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "skill": 4,
+              "insight": 3,
+              "stress": 2
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "prison_reflect": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "insight": 4,
+              "stress": -4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "prison_letter": {
+    "min_cash_yuan": 0,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "stat",
+            "delta": {
+              "trust": 4,
+              "stress": -3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "uw_victim": {
+    "min_cash_yuan": 3000,
+    "prerequisites": [],
+    "outcomes": [
+      {
+        "weight": 100,
+        "effects": [
+          {
+            "op": "freeze_investment",
+            "stake_fraction": 0.15,
+            "claim_mark_bps": 1000
+          },
+          {
+            "op": "flag",
+            "key": "fraud_victim",
+            "value": true
+          },
+          {
+            "op": "stat",
+            "delta": {
+              "stress": 15
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

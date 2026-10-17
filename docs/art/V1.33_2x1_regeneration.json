@@ -1,0 +1,105 @@
+{
+  "mode": "built-in image_gen",
+  "ratio": "2:1",
+  "jobs": [
+    {
+      "key": "first-coin",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed event illustration for the Chinese life simulation 中国式赌狗. Input image is the edit target and the reference for subject, character appearance, objects, palette, lighting, and painted style. Regenerate this same scene as a genuinely wide 2:1 landscape composition (1536 x 768 if supported). Recompose/zoom the scene out, do not simply crop the source. Keep complete heads, hair, hands and story-critical objects inside the central safe area, with clear breathing room above hair and below the important tabletop objects. Arrange action horizontally. Match the existing warm, grounded Chinese slice-of-life game illustration: expressive ink contours, detailed gouache shading, amber light, muted jade and worn wood. No frame, no margins, no text overlay, no watermark, no collage. Preserve the scene and mood; change only the camera framing and layout to work naturally at 2:1. A child's foreground hand holds a coin at a neighborhood candy shop. The elderly Chinese shopkeeper smiles and reaches across the counter, her entire head and face visible. Keep the coin, child's hand, shopkeeper's hand, candy jars and sunlit alley readable together. Give the shopkeeper substantial headroom; do not cut off her hair.",
+      "reference": "/Users/moss/Desktop/中国式赌狗/public/assets/events/first-coin-v1.webp",
+      "output": "public/assets/events/first-coin-wide-v2.webp",
+      "generatedOriginal": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-6fc59cb5-876e-421d-ab0b-1c1afc0abe12.png",
+      "projectOriginal": "public/assets/events/first-coin-wide-v2.png",
+      "width": 1774,
+      "height": 887,
+      "reviewed": true
+    },
+    {
+      "key": "family",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed event illustration for the Chinese life simulation 中国式赌狗. Input image is the edit target and the reference for subject, character appearance, objects, palette, lighting, and painted style. Regenerate this same scene as a genuinely wide 2:1 landscape composition (1536 x 768 if supported). Recompose/zoom the scene out, do not simply crop the source. Keep complete heads, hair, hands and story-critical objects inside the central safe area, with clear breathing room above hair and below the important tabletop objects. Arrange action horizontally. Match the existing warm, grounded Chinese slice-of-life game illustration: expressive ink contours, detailed gouache shading, amber light, muted jade and worn wood. No frame, no margins, no text overlay, no watermark, no collage. Preserve the scene and mood; change only the camera framing and layout to work naturally at 2:1. A Chinese mother, father and young boy sit around a modest dinner table considering the household ledger. Keep all three complete heads, the father's writing hand, boy's face, ledger, tin cash box, red envelope and simple dinner visible. Pull the camera farther back and arrange the three people laterally; the heads must not touch the top edge.",
+      "reference": "/Users/moss/Desktop/中国式赌狗/public/assets/events/family-v1.webp",
+      "output": "public/assets/events/family-wide-v2.webp",
+      "generatedOriginal": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-d4543a2b-243d-4667-962b-b6390e73c18a.png",
+      "projectOriginal": "public/assets/events/family-wide-v2.png",
+      "width": 1774,
+      "height": 887,
+      "reviewed": true
+    },
+    {
+      "key": "crypto",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed event illustration for the Chinese life simulation 中国式赌狗. Input image is the edit target and the reference for subject, character appearance, objects, palette, lighting, and painted style. Regenerate this same scene as a genuinely wide 2:1 landscape composition (1536 x 768 if supported). Recompose/zoom the scene out, do not simply crop the source. Keep complete heads, hair, hands and story-critical objects inside the central safe area, with clear breathing room above hair and below the important tabletop objects. Arrange action horizontally. Match the existing warm, grounded Chinese slice-of-life game illustration: expressive ink contours, detailed gouache shading, amber light, muted jade and worn wood. No frame, no margins, no text overlay, no watermark, no collage. Preserve the scene and mood; change only the camera framing and layout to work naturally at 2:1. A young Chinese adult at his warm apartment desk considers a digital-asset chart on a laptop. Entire head and hair visible, supporting hand at chin. Keep complete laptop, hardware wallet, two tokens and notebook within the frame, cat and evening skyline behind. Pull camera back for safe headroom and tabletop space.",
+      "reference": "/Users/moss/Desktop/中国式赌狗/public/assets/events/crypto-v1.webp",
+      "output": "public/assets/events/crypto-wide-v2.webp",
+      "generatedOriginal": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-428140c8-a6d7-4a1d-b89f-3bf13ddfd36b.png",
+      "projectOriginal": "public/assets/events/crypto-wide-v2.png",
+      "width": 1774,
+      "height": 887,
+      "reviewed": true
+    },
+    {
+      "key": "property",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed event illustration for the Chinese life simulation 中国式赌狗. Input image is the edit target and the reference for subject, character appearance, objects, palette, lighting, and painted style. Regenerate this same scene as a genuinely wide 2:1 landscape composition (1536 x 768 if supported). Recompose/zoom the scene out, do not simply crop the source. Keep complete heads, hair, hands and story-critical objects inside the central safe area, with clear breathing room above hair and below the important tabletop objects. Arrange action horizontally. Match the existing warm, grounded Chinese slice-of-life game illustration: expressive ink contours, detailed gouache shading, amber light, muted jade and worn wood. No frame, no margins, no text overlay, no watermark, no collage. Preserve the scene and mood; change only the camera framing and layout to work naturally at 2:1. A young Chinese adult studies a residential building model in a property-sales office. Preserve his worried thoughtful expression and whole head. Keep the complete scale model, keys, contract and pen visible in the horizontal foreground; city towers outside. Frame wider and lower relative subject size, with headroom and clear table margins.",
+      "reference": "/Users/moss/Desktop/中国式赌狗/public/assets/events/property-v1.webp",
+      "output": "public/assets/events/property-wide-v2.webp",
+      "generatedOriginal": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-4ff8588b-1ce8-46ad-8e46-f8300713c4b4.png",
+      "projectOriginal": "public/assets/events/property-wide-v2.png",
+      "width": 1774,
+      "height": 887,
+      "reviewed": true
+    },
+    {
+      "key": "work",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed event illustration for the Chinese life simulation 中国式赌狗. Input image is the edit target and the reference for subject, character appearance, objects, palette, lighting, and painted style. Regenerate this same scene as a genuinely wide 2:1 landscape composition (1536 x 768 if supported). Recompose/zoom the scene out, do not simply crop the source. Keep complete heads, hair, hands and story-critical objects inside the central safe area, with clear breathing room above hair and below the important tabletop objects. Arrange action horizontally. Match the existing warm, grounded Chinese slice-of-life game illustration: expressive ink contours, detailed gouache shading, amber light, muted jade and worn wood. No frame, no margins, no text overlay, no watermark, no collage. Preserve the scene and mood; change only the camera framing and layout to work naturally at 2:1. A young Chinese worker with backpack receives folded work clothes and an ID badge from an older friendly shop owner across a workshop counter. Both entire heads, all exchange hands, clothes and badge must be within the safe area. Wider horizontal medium shot with headroom, shelves of tools and warm window light.",
+      "reference": "/Users/moss/Desktop/中国式赌狗/public/assets/events/work-v1.webp",
+      "output": "public/assets/events/work-wide-v2.webp",
+      "generatedOriginal": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-4d9085b7-eec7-49c6-933d-27fbcccf029c.png",
+      "projectOriginal": "public/assets/events/work-wide-v2.png",
+      "width": 1774,
+      "height": 887,
+      "reviewed": true
+    },
+    {
+      "key": "debt",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed event illustration for the Chinese life simulation 中国式赌狗. Input image is the edit target and the reference for subject, character appearance, objects, palette, lighting, and painted style. Regenerate this same scene as a genuinely wide 2:1 landscape composition (1536 x 768 if supported). Recompose/zoom the scene out, do not simply crop the source. Keep complete heads, hair, hands and story-critical objects inside the central safe area, with clear breathing room above hair and below the important tabletop objects. Arrange action horizontally. Match the existing warm, grounded Chinese slice-of-life game illustration: expressive ink contours, detailed gouache shading, amber light, muted jade and worn wood. No frame, no margins, no text overlay, no watermark, no collage. Preserve the scene and mood; change only the camera framing and layout to work naturally at 2:1. A worried Chinese adult at a desk holds a bill in one hand and touches his forehead with the other. Show the whole head including hair and the entire hand touching it, with space above. Arrange unpaid bills, calculator, ringing phone and bank card horizontally across the table so all remain visible. Warm lamplight, night apartment and distant window lights, no readable financial information.",
+      "reference": "/Users/moss/Desktop/中国式赌狗/public/assets/events/debt-v1.webp",
+      "output": "public/assets/events/debt-wide-v2.webp",
+      "generatedOriginal": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-49ffbfb8-1038-4334-9390-b06b5ddaa9fd.png",
+      "projectOriginal": "public/assets/events/debt-wide-v2.png",
+      "width": 1774,
+      "height": 887,
+      "reviewed": true
+    },
+    {
+      "key": "health",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed event illustration for the Chinese life simulation 中国式赌狗. Input image is the edit target and the reference for subject, character appearance, objects, palette, lighting, and painted style. Regenerate this same scene as a genuinely wide 2:1 landscape composition (1536 x 768 if supported). Recompose/zoom the scene out, do not simply crop the source. Keep complete heads, hair, hands and story-critical objects inside the central safe area, with clear breathing room above hair and below the important tabletop objects. Arrange action horizontally. Match the existing warm, grounded Chinese slice-of-life game illustration: expressive ink contours, detailed gouache shading, amber light, muted jade and worn wood. No frame, no margins, no text overlay, no watermark, no collage. Preserve the scene and mood; change only the camera framing and layout to work naturally at 2:1. A young Chinese adult accompanies an elderly woman on green hospital waiting chairs in warm afternoon light. Keep both entire heads, their hands, the medical-paper envelope and the elder's cane grip visible, within a wide horizontal medium shot. Hospital corridor and a distant medical worker, ample headroom, concerned but quiet mood.",
+      "reference": "/Users/moss/Desktop/中国式赌狗/public/assets/events/health-v1.webp",
+      "output": "public/assets/events/health-wide-v2.webp",
+      "generatedOriginal": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-e3ce2202-1701-4a8e-acec-ed522f4e7b72.png",
+      "projectOriginal": "public/assets/events/health-wide-v2.png",
+      "width": 1774,
+      "height": 887,
+      "reviewed": true
+    },
+    {
+      "key": "fraud",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed event illustration for the Chinese life simulation 中国式赌狗. Input image is the edit target and the reference for subject, character appearance, objects, palette, lighting, and painted style. Regenerate this same scene as a genuinely wide 2:1 landscape composition (1536 x 768 if supported). Recompose/zoom the scene out, do not simply crop the source. Keep complete heads, hair, hands and story-critical objects inside the central safe area, with clear breathing room above hair and below the important tabletop objects. Arrange action horizontally. Match the existing warm, grounded Chinese slice-of-life game illustration: expressive ink contours, detailed gouache shading, amber light, muted jade and worn wood. No frame, no margins, no text overlay, no watermark, no collage. Preserve the scene and mood; change only the camera framing and layout to work naturally at 2:1. A Chinese suited presenter seen from behind pitches an investment at a hotel meeting table, gesturing toward an abstract upward chart. Show his entire head and gesturing hands, leaving ample headroom; keep the seated skeptical adult audience, brochures and cups visible. Recompose as a wider view with the presenter smaller and the people arranged horizontally. The setting should feel persuasive but uneasy, with no real company logos and no readable claims.",
+      "reference": "/Users/moss/Desktop/中国式赌狗/public/assets/events/fraud-v1.webp",
+      "output": "public/assets/events/fraud-wide-v2.webp",
+      "generatedOriginal": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-82d1e50f-5605-408a-8aec-ab96d6265534.png",
+      "projectOriginal": "public/assets/events/fraud-wide-v2.png",
+      "width": 1774,
+      "height": 887,
+      "reviewed": true
+    },
+    {
+      "key": "relationships",
+      "prompt": "Use case: illustration-story. Asset type: full-bleed event illustration for the Chinese life simulation 中国式赌狗. Input image is the edit target and the reference for subject, character appearance, objects, palette, lighting, and painted style. Regenerate this same scene as a genuinely wide 2:1 landscape composition (1536 x 768 if supported). Recompose/zoom the scene out, do not simply crop the source. Keep complete heads, hair, hands and story-critical objects inside the central safe area, with clear breathing room above hair and below the important tabletop objects. Arrange action horizontally. Match the existing warm, grounded Chinese slice-of-life game illustration: expressive ink contours, detailed gouache shading, amber light, muted jade and worn wood. No frame, no margins, no text overlay, no watermark, no collage. Preserve the scene and mood; change only the camera framing and layout to work naturally at 2:1. A young Chinese man and woman talk across a small cafe table by a rainy window. Show both complete heads, hair and expressive hands. Keep tea cups, envelope and phone visible on the table, leave breathing room above the man and around the woman's bun. Pull back into a horizontal medium two-shot while retaining their quiet earnest expressions, warm interior plants and cool wet street.",
+      "reference": "/Users/moss/Desktop/中国式赌狗/public/assets/events/relationships-v1.webp",
+      "output": "public/assets/events/relationships-wide-v2.webp",
+      "generatedOriginal": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-c0e2b966-7da7-4e05-8a8f-91a0f46b3bd7.png",
+      "projectOriginal": "public/assets/events/relationships-wide-v2.png",
+      "width": 1774,
+      "height": 887,
+      "reviewed": true
+    }
+  ]
+}

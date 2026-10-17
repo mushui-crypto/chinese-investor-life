@@ -1,0 +1,96 @@
+/* Content separators share one rhythm; frames, chart grids and controls keep theirs. */
+:root{
+ --content-rule-color:#b79d6d;
+ --content-rule:1px solid var(--content-rule-color);
+ --content-rule-soft:1px solid color-mix(in srgb,var(--content-rule-color) 40%,transparent);
+ --content-section-space:20px;
+ --content-row-space:16px;
+}
+.crypto-terminal{--content-rule-color:#454e58}
+.casino-hall{--content-rule-color:#987b50}
+
+:is(.workspace,.market-desk) :is(.filter-row,.market-filters,.asset-heading,.market-row,.holding,.journal-entry,.history-item,.case-row,.desk-position-row,.desk-journal p,.option-terms),
+:is(.character-panel,.life-notebook) :is(.pocket-book,.family-line,.total,.wallet-details,.mini-entry),
+.life-notebook>:is(.life-links,.turn-receipt,.childhood-summary,.compact-goal,.upbringing-note,.mini-journal),
+:is(.contact-section,.contact-history,.contact-action-row+.contact-action-row,.employment-update,.work-history li),
+:is(.daily-dock-activities,.life-clockbar .life-pace-actions,.has-daily-event .life-clock),
+.daily-action-rail>:is(.extra-arrangements,.life-notebook,.daily-survival,.daily-receipt),
+#game-dialog :is(.dialog-footer,.dialog-form-actions,.setting-row,.debt-calendar-row,.behavior-memory,.life-history article,.life-offer,.access-check,.shared-memory>div,.turn-note-list p,.run-comparison){
+ border-block-color:var(--content-rule-color);
+ border-block-width:1px;
+}
+:is(.workspace,.market-desk) :is(.market-row,.holding,.journal-entry,.history-item,.desk-position-row),
+.life-notebook .mini-entry,
+#game-dialog .turn-note-list p{border-bottom-style:solid}
+.character-panel :is(.pocket-book,.family-line),
+#game-dialog .dialog-footer{border-top-style:solid}
+
+/* A list ends with its content. The following section owns the next separator. */
+:is(.market-row,.journal-entry,.history-item,.case-row,.desk-position-row,.debt-calendar-row,.behavior-memory,.work-history li,.life-history article,.life-offer,.access-check,.shared-memory>div,.turn-note-list p):last-child,
+.holdings>.holding:last-child,
+.workspace>.holding:has(+.asset-heading),
+.workspace>.holding:last-child,
+.mini-journal>.mini-entry:last-of-type{
+ border-bottom:0;
+}
+#game-dialog :is(.debt-calendar-row,.behavior-memory,.life-history article,.life-offer,.access-check,.shared-memory>div,.turn-note-list p):last-child{border-bottom:0}
+.workspace>.asset-heading{
+ margin-top:var(--content-section-space);
+ padding-top:var(--content-row-space);
+ margin-bottom:12px;
+}
+.workspace>.asset-heading:first-child{margin-top:0;padding-top:0;border-top:0}
+
+/* Ledger rows have space on both sides of the rule, including in narrow dialogs. */
+#game-dialog :is(.debt-calendar-row,.life-history article,.life-offer,.access-check,.shared-memory>div,.turn-note-list p){padding-block:var(--content-row-space)}
+#game-dialog :is(.debt-calendar-row,.life-history article,.life-offer)>:first-child{margin-top:0}
+#game-dialog :is(.debt-calendar-row,.life-history article,.life-offer)>:last-child{margin-bottom:0}
+#game-dialog .behavior-hub>section:not(.behavior-pending){padding-block:var(--content-section-space);border-bottom:0}
+#game-dialog .behavior-hub>section:not(.behavior-pending)+section:not(.behavior-pending){border-top:var(--content-rule)}
+#game-dialog .behavior-hub>.dialog-intro+section{padding-top:0}
+#game-dialog .behavior-hub>section:not(.behavior-pending)>:last-child{margin-bottom:0}
+#game-dialog .dialog-footer{margin-top:var(--content-section-space);padding-top:var(--content-row-space)}
+#game-dialog .dialog-form-actions{margin-top:var(--content-section-space);padding-top:var(--content-row-space)}
+#game-dialog .dialog-form-actions .form-error:empty{display:none}
+:is(#game-dialog,.game-info) hr{border:0;border-top:var(--content-rule);margin:var(--content-section-space) 0}
+
+/* The routine owns its spacing; generic dialog margins must not stack with gaps. */
+#game-dialog .daily-routine{gap:16px;padding:0}
+#game-dialog .daily-routine :is(.daily-activity,.daily-event){display:flex;flex-direction:column;gap:12px}
+#game-dialog .daily-routine :is(.day-feedback,.daily-event h3,.daily-event p){margin:0}
+#game-dialog .daily-routine .day-choices:empty{display:none}
+#game-dialog .daily-routine .day-completed{display:flex;flex-direction:column;gap:8px;padding:14px 16px;background:#dce0bd;border:1px solid #829071;border-radius:4px;color:#285543}
+#game-dialog .daily-routine .day-completed strong{font-size:14px}
+#game-dialog .daily-routine .day-completed small{font-size:12px;line-height:1.6}
+#game-dialog .daily-routine>.employment-detail{display:flex;flex-direction:column;gap:12px;margin:0;padding:16px 0 0;border-top:var(--content-rule);border-bottom:0}
+#game-dialog .daily-routine .employment-detail :is(h3,dl,details){margin:0}
+#game-dialog .daily-routine .employment-detail ul{margin-block:12px 0}
+#game-dialog .daily-routine>:is(.day-rules,.recent-expenses){margin:0;padding:0;border:0}
+#game-dialog .daily-routine .dialog-footer{margin:0;padding-top:16px;gap:12px}
+.stock-session-status{float:right;margin-left:12px;font-size:12px;font-weight:500;color:#5a482f}
+@media(max-width:500px){
+ #game-dialog .daily-routine .dialog-footer{flex-wrap:wrap}
+ .stock-session-status{float:none;display:block;margin:4px 0 0 14px}
+}
+
+/* Folded notebook rows retain one shared edge instead of nested separators. */
+.life-notebook .mini-entry{padding-bottom:12px}
+.life-notebook .mini-entry:last-of-type{padding-bottom:0}
+.contact-section{margin-top:var(--content-section-space);padding-top:var(--content-row-space)}
+.contact-history{margin-top:var(--content-section-space)}
+.contact-action-row+.contact-action-row{border-top-style:solid;margin-top:8px;padding-top:var(--content-row-space)}
+.contact-detail{border-left-width:1px;border-left-color:var(--content-rule-color)}
+.contacts-toolbar,.contacts-roster{border-bottom-width:1px;border-bottom-color:var(--content-rule-color)}
+.contacts-later{border-top:var(--content-rule)}
+.contact-recent{border-left:0;padding-left:0}
+.contact-feedback{border:1px solid #8d9e79}
+.contact-appointment{border:1px solid var(--content-rule-color)}
+.balance-strip>div+div{border-left-color:var(--content-rule-color)}
+.market-desk:not(.desk-stock):not(.crypto-terminal):not(.casino-hall) .desk-positions{border-top:var(--content-rule);margin-top:var(--content-section-space);padding-top:var(--content-row-space)}
+.crypto-terminal :is(.terminal-top,.terminal-modes,.replay-controls,.symbol-strip,.history-facts,.source-note,.session-account,.desk-positions){border-block-color:var(--content-rule-color)}
+
+@media(max-width:600px){
+ :root{--content-section-space:16px;--content-row-space:12px}
+ .desk-stock .stock-market-weather>summary{font-size:14px}
+ .desk-stock .stock-weather-content{gap:16px;padding-bottom:16px}
+}

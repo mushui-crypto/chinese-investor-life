@@ -1,0 +1,311 @@
+@layer game {
+  .stock-exchanges { margin:0 0 26px; }
+  .stock-market-tabs { display:flex; gap:8px; margin-bottom:18px; }
+  .stock-market-tab { flex:1; min-width:0; padding:14px 10px; text-align:left; border:2px solid var(--frame); border-radius:6px; background:var(--paper); color:var(--ink); box-shadow:0 3px 0 var(--frame); }
+  .stock-market-tab.selected { background:var(--gold); box-shadow:0 3px 0 var(--green); border-color:var(--green); }
+  .stock-market-tab:hover { background:var(--sage); }
+  .stock-market-tab strong,.stock-market-tab span,.stock-market-tab b,.stock-market-tab small { display:block; }
+  .stock-market-tab strong { font-size:20px; }
+  .stock-market-tab span,.stock-market-tab small { font-size:13px; margin-top:6px; }
+  .stock-market-tab b { font-size:17px; margin-top:9px; font-variant-numeric:tabular-nums; }
+  .stock-market-weather { padding:18px 0; border-block:1px solid var(--line); }
+  .stock-weather-heading { display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; align-items:start; }
+  .stock-weather-heading>div { flex:1; min-width:180px; }
+  .stock-weather-heading h2 { margin-bottom:5px; }
+  .stock-weather-heading p { margin:0; font-size:14px; line-height:1.7; }
+  .stock-weather-heading>span { font-size:15px; font-weight:700; font-variant-numeric:tabular-nums; }
+  .stock-index-chart { margin:18px 0 8px; color:var(--green); }
+  .stock-index-chart figcaption { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; font-size:13px; color:var(--ink); }
+  .stock-index-chart b { font-size:18px; font-variant-numeric:tabular-nums; }
+  .stock-index-chart svg { display:block; width:100%; height:auto; max-height:135px; }
+  .stock-market-rule { display:flex; align-items:center; gap:8px; font-size:14px; font-weight:700; line-height:1.6; }
+  .stock-market-rule .game-icon { flex:none; width:24px; height:24px; }
+  .stock-market-news,.stock-reality p { font-size:14px; line-height:1.8; }
+  .stock-forum { border:0; margin:16px 0 8px; padding:14px; background:var(--sage); border-radius:5px; color:var(--ink); font-size:15px; line-height:1.8; }
+  .stock-forum span { display:block; font-size:13px; font-weight:700; margin-bottom:5px; }
+  .stock-reality summary { cursor:pointer; min-height:44px; display:flex; align-items:center; font-size:13px; text-decoration:underline; text-underline-offset:4px; }
+  @media(max-width:400px) { .stock-market-tabs { gap:5px; } .stock-market-tab { padding:12px 6px; } .stock-market-tab strong { font-size:18px; } .stock-market-tab b { font-size:15px; } }
+  .market-desk { --desk-accent:var(--green); background:var(--paper); border:2px solid var(--frame); border-radius:9px; padding:24px; box-shadow:var(--shadow); min-width:0; }
+  .desk-navigation { display:flex; justify-content:space-between; gap:16px; align-items:center; margin-bottom:22px; }
+  .desk-navigation label { display:flex; align-items:center; gap:10px; font-size:13px; }
+  .desk-navigation select { padding:9px; background:var(--paper-deep); border:1px solid var(--line); border-radius:5px; max-width:210px; }
+  .desk-title { display:flex; gap:15px; align-items:center; flex-wrap:wrap; padding-bottom:22px; border-bottom:2px solid var(--frame); }
+  .desk-title>.game-icon { width:48px; height:48px; }
+  .desk-title h1 { margin:0; font-size:27px; font-family:var(--title); }
+  .desk-title p { margin:6px 0 0; color:var(--muted); font-size:14px; }
+  .desk-title>span { flex-basis:100%; font-size:13px; color:var(--desk-accent); font-weight:700; }
+  .trading-clock { padding:17px 0; border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin-bottom:23px; }
+  .trading-clock>div:first-child { flex:1; min-width:180px; }
+  .trading-clock strong,.trading-clock span { display:block; }
+  .trading-clock span { margin-top:6px; font-size:13px; color:var(--muted); }
+  .trading-clock>div:nth-child(2) { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+  .trading-clock>small { font-size:12px; color:var(--muted); flex-basis:100%; line-height:1.7; }
+  .desk-body { display:grid; grid-template-columns:minmax(0,1fr) minmax(235px,.8fr); gap:25px; align-items:start; }
+  .desk-body>* { min-width:0; }
+  .instrument-list { display:flex; flex-direction:column; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+  .instrument-option { padding:13px 14px; display:flex; align-items:center; justify-content:space-between; text-align:left; gap:12px; background:var(--paper); min-height:70px; border:0; border-bottom:1px solid var(--line); }
+  .instrument-option:last-child { border-bottom:0; }
+  .instrument-option.selected { background:var(--sage); box-shadow:inset 0 0 0 2px var(--green); }
+  .instrument-option:hover { background:var(--orange-pale); }
+  .instrument-option strong,.instrument-option small { display:block; }
+  .instrument-option strong { font-size:15px; }
+  .instrument-option small { font-size:12px; color:var(--muted); margin-top:3px; }
+  .instrument-price { text-align:right; font-variant-numeric:tabular-nums; }
+  .instrument-price b { font-size:19px; }
+  .stock-board { border:3px solid var(--green); background:var(--green); padding:5px; gap:3px; }
+  .stock-board .instrument-option { border:0; border-radius:3px; background:var(--paper); }
+  .stock-board .instrument-option.selected { background:var(--gold); box-shadow:inset 0 0 0 2px var(--frame); }
+  .stock-up,.stock-up small { color:#a23b2d; }
+  .stock-down,.stock-down small { color:#28634b; }
+  .quote-chart { margin:20px 0; color:var(--desk-accent); padding:0; }
+  .quote-chart figcaption { display:flex; justify-content:space-between; font-size:12px; align-items:center; }
+  .quote-chart figcaption strong { font-size:24px; }
+  .quote-chart svg { width:100%; height:auto; display:block; }
+  .quote-chart small { color:var(--muted); font-size:12px; }
+  .desk-bulletin { margin:22px 0 0; }
+  .market-desk h2 { font-size:18px; line-height:1.5; margin:0 0 12px; }
+  .desk-bulletin p,.trade-ticket>p { font-size:14px; line-height:1.8; margin:9px 0 15px; color:var(--muted); }
+  .desk-bulletin dl,.gambling-table dl { display:flex; flex-wrap:wrap; gap:20px; margin:18px 0; }
+  .desk-bulletin dt,.gambling-table dt { font-size:12px; margin-bottom:6px; }
+  .desk-bulletin dd,.gambling-table dd { margin:0; font-size:17px; font-weight:700; }
+  .trade-ticket { background:var(--paper-deep); border:2px solid var(--frame); border-radius:6px; padding:19px; min-width:0; }
+  .trade-ticket>small { display:block; margin-top:12px; font-size:12px; line-height:1.7; color:var(--muted); }
+  .desk-field { display:flex; flex-direction:column; gap:7px; margin-bottom:16px; font-size:13px; }
+  .desk-field input,.desk-field select { width:100%; min-width:0; min-height:44px; padding:10px; color:var(--ink); background:var(--paper); border:1px solid var(--frame); border-radius:4px; font-size:16px; }
+  .desk-preview { font-size:13px; padding:13px 0; margin:12px 0; border-top:1px dashed var(--line); border-bottom:1px dashed var(--line); }
+  .desk-preview>div { display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; margin:8px 0; }
+  .desk-preview small { display:block; margin-top:10px; line-height:1.7; color:var(--muted); }
+  .lot-shortcuts,.crypto-modes { display:flex; flex-wrap:wrap; gap:8px; }
+  .stock-news { display:flex; gap:10px; align-items:center; padding:14px; background:var(--sage); font-size:14px; line-height:1.8; }
+  .allocation-bar { display:flex; min-height:37px; border-radius:4px; overflow:hidden; background:var(--gold); font-size:12px; }
+  .allocation-bar span { display:flex; align-items:center; justify-content:center; min-width:0; flex:1; }
+  .allocation-bar span:first-child { background:var(--green); color:white; flex:none; }
+  .option-timeline { display:flex; flex-wrap:wrap; gap:6px; }
+  .option-timeline span { padding:9px; background:var(--sage); font-size:12px; }
+  .desk-option { --desk-accent:#714733; }
+  .desk-crypto { --desk-accent:#344c73; }
+  .desk-crypto .desk-title { color:var(--desk-accent); }
+  .crypto-modes { margin-bottom:20px; }
+  .pitch-stamp { display:inline-block; padding:7px 13px; border:2px solid var(--wood); color:var(--wood); font-weight:700; margin-bottom:14px; transform:rotate(-3deg); }
+  .house-sign { display:flex; gap:12px; align-items:center; color:var(--green); margin-bottom:16px; }
+  .house-sign .game-icon { width:54px; height:54px; }
+  .chat-line { background:var(--sage); border-radius:5px; padding:13px; }
+  .chat-line:nth-child(2) { background:var(--paper-deep); margin-left:18px; }
+  .chat-line b { display:block; margin-bottom:5px; color:var(--ink); }
+  .desk-positions { margin-top:28px; border-top:2px solid var(--frame); padding-top:22px; }
+  .desk-positions>h2>span { font-size:13px; color:var(--muted); margin-left:8px; }
+  .desk-position-row { padding:18px 0; border-bottom:1px solid var(--line); }
+  .position-heading { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .position-heading h3 { font-size:16px; margin:0 0 5px; }
+  .position-heading span,.position-heading small { display:block; font-size:12px; color:var(--muted); line-height:1.7; }
+  .position-heading strong { font-size:21px; }
+  .position-numbers { display:flex; flex-wrap:wrap; gap:14px 28px; margin:14px 0; }
+  .position-numbers dt { font-size:12px; color:var(--muted); margin-bottom:5px; }
+  .position-numbers dd { margin:0; font-size:14px; font-weight:600; }
+  .position-actions { display:flex; flex-wrap:wrap; gap:8px; }
+  .position-restriction { font-size:13px; color:#84462e; }
+  .desk-manage-form { display:flex; align-items:end; flex-wrap:wrap; gap:10px; margin-top:18px; }
+  .desk-manage-form .desk-field { margin:0; width:170px; }
+  .desk-manage-form .form-error { flex-basis:100%; order:3; }
+  .desk-plans { padding-top:22px; }
+  .desk-plans>div { display:flex; justify-content:space-between; gap:12px; align-items:center; padding:12px 0; font-size:14px; }
+  .desk-journal { margin-top:22px; }
+  .desk-journal summary { min-height:44px; padding:10px 0; cursor:pointer; font-size:14px; font-weight:650; }
+  .desk-journal p { font-size:13px; line-height:1.8; border-top:1px solid var(--line); padding-top:10px; }
+  .desk-journal small { display:block; color:var(--muted); }
+  .desk-empty { color:var(--muted); font-size:14px; line-height:1.8; }
+  .desk-locked { display:flex; flex-wrap:wrap; align-items:center; gap:13px; padding:17px; background:var(--orange-pale); margin-bottom:20px; }
+  .desk-locked>div { flex:1; min-width:150px; }
+  .desk-locked p { font-size:13px; line-height:1.7; margin:6px 0 0; }
+  .gambling-entry { margin-top:26px; padding:20px; display:flex; flex-wrap:wrap; gap:17px; align-items:center; background:#ecddd1; border:2px solid #795140; border-radius:6px; }
+  .gambling-entry>div { flex:1; min-width:180px; }
+  .gambling-entry h2 { font-size:19px; margin:0 0 9px; }
+  .gambling-entry p { font-size:13px; line-height:1.8; margin:0; }
+  .gambling-entry>.game-icon { width:42px; height:42px; }
+  .gambling-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(235px,.8fr); gap:24px; }
+  .gambling-table { background:#304f43; color:#fff0cc; padding:25px; border:5px solid #9c7850; border-radius:10px; text-align:center; align-self:start; }
+  .gambling-table p { font-size:13px; line-height:1.8; }
+  .gambling-table h2 { margin-top:22px; color:#fff0cc; }
+  .gambling-table dl { justify-content:center; }
+  .playing-card { display:flex; width:104px; height:144px; margin:24px auto; justify-content:center; align-items:center; background:#fff4d5; border:3px solid #49392d; border-radius:7px; box-shadow:4px 5px 0 #20382f; color:#49392d; font-size:55px; font-family:var(--title); }
+  .playing-card.red { color:#ad382b; }
+  .gamble-picks { border:0; padding:0; margin:16px 0; display:flex; flex-wrap:wrap; gap:18px; }
+  .gamble-picks legend { font-size:13px; padding-bottom:10px; }
+  .gamble-picks label { min-height:44px; display:flex; align-items:center; gap:8px; }
+  @media(max-width:1200px) { .desk-body,.gambling-layout { grid-template-columns:1fr; } .trade-ticket { max-width:none; } }
+  @media(max-width:700px) {
+    .market-desk { padding:17px; }
+    .desk-title h1 { font-size:23px; }
+    .desk-title>.game-icon { width:38px; height:38px; }
+    .desk-navigation { flex-wrap:wrap; margin-bottom:16px; gap:10px; }
+    .desk-navigation label { font-size:12px; flex:1; justify-content:end; }
+    .desk-navigation select { max-width:155px; font-size:12px; }
+    .trading-clock>div:nth-child(2) { width:100%; justify-content:space-between; }
+    .trade-ticket { padding:16px; }
+    .instrument-option { padding:13px 10px; }
+    .desk-body,.gambling-layout { gap:20px; }
+    .desk-title p { font-size:13px; }
+    .desk-title>span { font-size:12px; }
+    .desk-positions h3 { font-size:15px; }
+    .gambling-table { padding:18px; }
+    .desk-plans>div { flex-wrap:wrap; }
+  }
+}
+@layer game {
+ .crypto-terminal-open .game-layout { grid-template-columns:minmax(0,1fr); }
+ .crypto-terminal-open .character-panel,.crypto-terminal-open .arrangement-panel { display:none; }
+ .crypto-terminal { --paper:#181a20; --paper-deep:#20242d; --ink:#eaecef; --muted:#b7bdc6; --line:#3d4653; --frame:#434b57; --green:#0ecb81; --sage:#273e35; --desk-accent:#f0b90b; background:#181a20; color:#eaecef; border:1px solid #434b57; box-shadow:none; padding:0; border-radius:7px; overflow:hidden; }
+ .crypto-terminal h1,.crypto-terminal h2,.crypto-terminal h3,.crypto-terminal b,.crypto-terminal strong,.crypto-terminal label { color:inherit; }
+ .terminal-top { display:flex; align-items:center; flex-wrap:wrap; gap:18px; padding:18px 22px; background:#20242d; border-bottom:1px solid #343b46; }
+ .terminal-top>div { flex:1; min-width:180px; }
+ .terminal-top strong { font-size:22px; color:#f0b90b; }
+ .terminal-top span { margin-left:14px; font-size:12px; color:#b7bdc6; }
+ .terminal-top label { font-size:12px; display:flex; align-items:center; gap:8px; }
+ .crypto-terminal select,.crypto-terminal input { background:#242a34; border:1px solid #58616d; color:#eaecef; border-radius:4px; min-height:42px; padding:9px; }
+ .terminal-modes { display:flex; flex-wrap:wrap; border-bottom:1px solid #343b46; padding:0 20px; gap:24px; }
+ .terminal-modes button { color:#b7bdc6; font-size:14px; min-height:52px; padding:12px 0; border-bottom:3px solid transparent; }
+ .terminal-modes button.active { color:#f0b90b; border-bottom-color:#f0b90b; }
+ .replay-controls { display:flex; align-items:center; flex-wrap:wrap; gap:18px; padding:16px 22px; border-bottom:1px solid #343b46; }
+ .replay-controls>div { flex:1; min-width:210px; }
+ .replay-controls strong,.replay-controls small { display:block; }
+ .replay-controls strong { font-size:14px; }
+ .replay-controls small { font-size:12px; color:#b7bdc6; margin-top:7px; line-height:1.6; }
+ .replay-controls label { font-size:12px; display:flex; flex-direction:column; gap:6px; }
+ .replay-controls select { max-width:280px; }
+ .crypto-terminal .trading-clock { margin:0; padding:15px 22px; }
+ .crypto-terminal .button { background:#303843; color:#eaecef; border:1px solid #606b7b; border-radius:4px; box-shadow:none; }
+ .crypto-terminal .button.primary { background:#f0b90b; color:#181a20; border-color:#f0b90b; }
+ .crypto-terminal .button:hover:not(:disabled) { background:#434e5c; transform:none; }
+ .crypto-terminal .button.primary:hover:not(:disabled) { background:#f8ce3e; }
+ .crypto-terminal :disabled { opacity:.48; }
+ .crypto-terminal .text-button { color:#eaecef; }
+ .crypto-terminal .text-button:hover { color:#f0b90b; }
+ .terminal-grid { display:grid; grid-template-columns:220px minmax(0,1fr) 285px; min-width:0; }
+ .terminal-grid>* { min-width:0; }
+ .coin-watchlist { padding:18px 12px; border-right:1px solid #343b46; }
+ .coin-watchlist h2 { font-size:14px; padding:0 6px; }
+ .coin-watchlist h2 small { font-size:10px; color:#b7bdc6; margin-left:8px; }
+ .coin-table-head { display:flex; justify-content:space-between; padding:10px 6px; font-size:11px; color:#b7bdc6; }
+ .coin-row { display:flex; align-items:center; justify-content:space-between; text-align:left; gap:8px; width:100%; min-height:65px; padding:10px 7px; border-radius:3px; }
+ .coin-row.selected { background:#343829; box-shadow:inset 0 0 0 1px #9f841e; }
+ .coin-row:hover { background:#2a313b; }
+ .coin-row strong { font-size:13px; }
+ .coin-row b { font-size:12px; font-variant-numeric:tabular-nums; }
+ .coin-row small { font-size:10px; color:#b7bdc6; }
+ .coin-row>span>small { display:block; margin-top:6px; }
+ .coin-watchlist>p { font-size:11px; color:#b7bdc6; line-height:1.8; margin:19px 6px 0; }
+ .symbol-strip { display:flex; align-items:center; flex-wrap:wrap; justify-content:space-between; padding:22px; gap:14px; }
+ .symbol-strip strong { font-size:21px; }
+ .symbol-strip span,.symbol-strip small { display:block; font-size:12px; color:#b7bdc6; margin-top:6px; }
+ .symbol-strip b { font-size:25px; }
+ .crypto-terminal .crypto-up { color:#0ecb81; }
+ .crypto-terminal .crypto-down { color:#ff7283; }
+ .chart-toolbar { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:12px; padding:12px 22px; background:#20242d; }
+ .chart-toolbar b { color:#f0b90b; }
+ .candle-chart { width:100%; height:auto; display:block; padding:12px; min-height:240px; }
+ .history-facts { display:flex; flex-wrap:wrap; gap:20px; padding:15px 22px; border-top:1px solid #343b46; }
+ .history-facts span,.history-facts b { display:block; }
+ .history-facts span { font-size:11px; color:#b7bdc6; }
+ .history-facts b { font-size:13px; margin-top:7px; }
+ .source-note { font-size:11px; line-height:1.8; color:#b7bdc6; padding:15px 22px; border-top:1px solid #343b46; }
+ .source-note a { color:#f0b90b; margin-left:8px; }
+ .source-note p { margin-bottom:0; }
+ .terminal-order { border-left:1px solid #343b46; padding:20px 16px; background:#1e222a; }
+ .available-margin { font-size:12px; display:flex; justify-content:space-between; gap:8px; margin-bottom:22px; }
+ .available-margin strong { color:#f0b90b; }
+ .terminal-order .trade-ticket { padding:0; border:0; background:transparent; box-shadow:none; }
+ .terminal-order .trade-ticket h2 { font-size:17px; }
+ .terminal-order .trade-ticket>p,.terminal-order>p { font-size:12px; color:#b7bdc6; line-height:1.8; }
+ .terminal-order .trade-ticket [type=submit] { background:#0ecb81; color:#06271a; border-color:#0ecb81; }
+ .terminal-order .trade-ticket.is-short [type=submit] { background:#f6465d; color:#fff; border-color:#f6465d; }
+ .crypto-terminal .form-error { color:#ff8d9a; }
+ .crypto-terminal .desk-positions { margin:0; padding:22px; border-top:1px solid #343b46; }
+ .crypto-terminal .desk-position-row { border-color:#343b46; }
+ .crypto-terminal .desk-journal { padding:0 22px; }
+ .crypto-terminal .position-restriction { color:#e8bd60; }
+ .terminal-disclaimer { padding:16px 22px; margin:0; color:#b7bdc6; font-size:11px; }
+ .crypto-terminal .desk-locked { background:#3b3426; color:#ffe1a5; margin:15px 22px; }
+ .honeypot-notice { padding:35px 22px; min-height:290px; background:#342a20; }
+ .honeypot-notice>.game-icon { width:48px; height:48px; margin-bottom:15px; }
+ .honeypot-notice h2 { color:#f0ca77; }
+ .honeypot-notice p { font-size:14px; line-height:1.9; color:#ead8b9; }
+ @media(max-width:1100px) { .terminal-grid { grid-template-columns:minmax(0,1fr) 270px; } .coin-watchlist { grid-column:1/-1; border-right:0; border-bottom:1px solid #343b46; display:flex; flex-wrap:wrap; gap:6px; } .coin-watchlist h2,.coin-watchlist>p { flex-basis:100%; } .coin-table-head { display:none; } .coin-row { width:calc(33.333% - 4px); } }
+ @media(max-width:700px) { .terminal-grid { grid-template-columns:1fr; } .terminal-top { padding:16px; gap:12px; } .terminal-top>div { flex-basis:100%; } .terminal-top span { display:block; margin:7px 0 0; } .terminal-modes { gap:18px; padding:0 16px; } .terminal-modes button { font-size:12px; min-height:46px; } .replay-controls { padding:16px; } .replay-controls label,.replay-controls select { width:100%; max-width:none; } .crypto-terminal .trading-clock { padding:16px; } .coin-row { width:calc(50% - 3px); min-height:70px; } .coin-row b { font-size:11px; } .symbol-strip { padding:18px 16px; } .symbol-strip strong { font-size:19px; } .symbol-strip b { font-size:22px; } .chart-toolbar { padding:12px 16px; } .candle-chart { padding:8px 2px; min-height:190px; } .terminal-order { border:0; border-top:1px solid #343b46; padding:20px 16px; } .crypto-terminal .desk-positions { padding:20px 16px; } .source-note,.history-facts { padding:15px 16px; } .coin-watchlist { padding:14px 8px; } .crypto-terminal .desk-locked { margin:15px; } }
+}
+
+@layer game {
+ @media(max-width:700px) {
+  .crypto-terminal .terminal-top { padding:12px; gap:8px; }
+  .terminal-top strong { font-size:19px; }
+  .terminal-top span { display:inline; margin-left:9px; font-size:10px; }
+  .terminal-modes { flex-wrap:nowrap; gap:15px; padding:0 12px; overflow-x:auto; }
+  .terminal-modes button { flex:0 0 auto; white-space:nowrap; }
+  .replay-controls { padding:12px; gap:10px; }
+  .replay-controls>div { flex-basis:100%; min-width:0; }
+  .replay-controls small { margin-top:3px; }
+  .replay-controls label { flex:1; width:auto; min-width:0; }
+  .replay-controls select { font-size:11px; }
+  .replay-controls>.button { align-self:end; padding:8px; font-size:11px; max-width:100px; }
+  .crypto-terminal .trading-clock { padding:12px; gap:10px; }
+  .crypto-terminal .trading-clock strong { font-size:14px; }
+  .coin-watchlist { flex-wrap:nowrap; overflow-x:auto; padding:10px; }
+  .coin-watchlist h2,.coin-watchlist>p { display:none; }
+  .coin-row { flex:0 0 145px; min-height:60px; }
+ }
+}
+
+/* One options room; permissions and positions retain their product IDs. */
+.option-sides {display: flex; gap: 12px; margin: 16px 0;}
+.option-sides .button {display: flex; gap: 16px; min-height: 52px; flex: 1; justify-content: space-between;}
+.option-sides strong {font-size: 1rem;}
+.option-sides small {font-size: .8125rem;}
+.option-terms {padding: 16px 0; border-top: 1px solid var(--line);}
+.option-terms h2 {font-size: 1rem; margin: 0 0 8px;}
+.option-terms p {font-size: .875rem; line-height: 1.7;}
+.option-terms > span {font-size: .8125rem;}
+.market-access-conditions + .market-access-heading {margin-top: 12px;}
+@media(max-width:700px){.option-sides .button {flex-direction: column; align-items: flex-start; gap: 4px;}}
+.desk-option .desk-title :is(p:empty,span:empty) {display:none;}
+
+/* One short play loop, with detailed rules disclosed in place. */
+.desk-play-summary{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:12px 24px;padding:14px 0 18px;border-bottom:1px solid var(--line);margin-bottom:18px}
+.desk-play-summary>div{display:flex;flex:1 1 260px;flex-direction:column;gap:5px;min-width:0;font-size:14px;line-height:1.6}
+.desk-play-summary>div>span{color:#67543b;font-size:12px}
+.desk-play-summary .desk-play-help{flex:0 1 auto;min-width:0;margin:0;padding:0;max-width:min(430px,100%);font-size:13px;line-height:1.7}
+.desk-play-summary .desk-play-help summary{min-height:44px;padding:8px 10px;cursor:pointer;white-space:normal}
+.desk-play-summary .desk-play-help p{margin:8px 0 0}
+.order-outcome{border-top:1px solid var(--line);padding-top:12px;margin-top:12px;display:flex;flex-direction:column;gap:7px}
+.order-outcome>div,.order-cash>div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;line-height:1.6}
+.order-outcome b,.order-cash b{text-align:right;font-variant-numeric:tabular-nums}
+.order-outcome small{display:block;font-size:12px;line-height:1.7;margin-top:3px}
+.order-cash{display:flex;flex-direction:column;gap:7px}
+.order-cash p{margin:3px 0 0;line-height:1.65}
+.option-advanced{margin:8px 0 14px}
+.option-advanced>summary{cursor:pointer;min-height:36px;display:list-item;line-height:36px;font-size:13px}
+.option-advanced .desk-field{margin-top:8px}
+.market-directory .market-row-facts{gap:5px}
+.market-directory .empty-state p{margin:0 0 16px}
+@media(max-width:650px){
+ .desk-play-summary{flex-direction:column;gap:8px;padding:12px 0 14px;margin-bottom:14px}
+ .desk-play-summary>div{flex-basis:auto}
+ .desk-play-summary .desk-play-help{max-width:100%;width:100%}
+ .market-directory-heading>div>span{flex-wrap:wrap}
+ .order-outcome>div,.order-cash>div{gap:8px}
+}
+.market-desk:is(.desk-fund,.desk-bond,.desk-option,.desk-futures,.desk-angel,.desk-housing,.desk-ponzi){container-type:inline-size}
+.market-desk:is(.desk-fund,.desk-bond,.desk-futures,.desk-angel,.desk-housing) .instrument-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;border:0;overflow:visible}
+.market-desk:is(.desk-fund,.desk-bond,.desk-futures,.desk-angel,.desk-housing) .instrument-option{padding:10px;min-height:70px;border:1px solid var(--line);border-radius:4px;gap:8px;align-items:flex-start}
+.market-desk:is(.desk-fund,.desk-bond,.desk-futures,.desk-angel,.desk-housing) .instrument-option strong{font-size:14px;line-height:1.5}
+.market-desk:is(.desk-fund,.desk-bond,.desk-futures) .instrument-price{font-size:13px;flex:none}
+.market-desk:is(.desk-fund,.desk-bond,.desk-futures) .instrument-price b{font-size:14px}
+@container(min-width:640px){.market-playing .market-desk:is(.desk-fund,.desk-bond,.desk-option,.desk-futures,.desk-angel,.desk-housing,.desk-ponzi) .desk-body{grid-template-columns:minmax(0,1.15fr) minmax(265px,1fr);gap:16px}}
+@container(max-width:420px){.market-desk:is(.desk-fund,.desk-bond,.desk-futures) .instrument-option{flex-direction:column}.market-desk:is(.desk-fund,.desk-bond,.desk-futures) .instrument-price{display:flex;gap:10px;align-items:baseline}}
+.crypto-terminal .desk-play-summary>div>span,.crypto-terminal .order-outcome small{color:#b7bdc6}
+.crypto-terminal .order-outcome{border-color:#454e58}
+
+.futures-categories{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;padding:0;border:0}
+.futures-categories .button{flex:1;min-width:88px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.futures-categories small{font-weight:400;opacity:.8}
+.desk-futures .instrument-list{margin-bottom:14px}
+.desk-futures .desk-bulletin{font-size:13px;line-height:1.7}
+@container(max-width:420px){.futures-categories{gap:6px}.futures-categories .button{min-width:80px;padding:9px}.desk-futures .instrument-list{grid-template-columns:repeat(3,minmax(0,1fr))}.desk-futures .instrument-option{padding:8px;min-width:0}.desk-futures .instrument-name strong{font-size:13px}.desk-futures .instrument-price{flex-wrap:wrap;gap:2px}.desk-futures .instrument-price b{font-size:12px}}

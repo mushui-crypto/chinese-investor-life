@@ -1,0 +1,41 @@
+.family-panel {margin-top:24px;padding-top:22px;border-top:1px solid var(--contact-rule,#b19b71);}
+.family-heading {display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.family-heading h3,.family-wedding-quote h3 {margin:0;font:700 1rem var(--font);color:#284f3e;}
+.family-stage {padding:4px 9px;background:#dce4c8;color:#284f3e;border-radius:4px;font-size:.8125rem;}
+.family-date {margin:8px 0 16px;font-size:.8125rem;color:#635136;line-height:1.6;}
+.family-next {margin:16px 0 24px;}
+.family-action {display:flex;flex-direction:column;align-items:flex-start;gap:8px;}
+.family-action small {font-size:.8125rem;line-height:1.6;color:#635136;}
+.family-personal {display:flex;flex-wrap:wrap;gap:8px 24px;font-size:.8125rem;line-height:1.6;}
+.family-budget-summary {display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:20px;}
+.family-budget-summary>div {display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.875rem;}
+.family-costs {margin-top:16px;}
+.family-costs summary {min-height:44px;align-content:center;cursor:pointer;font-size:.875rem;line-height:1.6;}
+.family-costs dl,.family-wedding-quote dl {display:grid;gap:12px;margin:16px 0;}
+.family-costs dl>div,.family-wedding-quote dl>div {display:flex;align-items:baseline;justify-content:space-between;gap:24px;}
+.family-costs dd,.family-wedding-quote dd {margin:0;font-variant-numeric:tabular-nums;font-weight:650;}
+.family-costs p,.family-wedding-quote p {font-size:.8125rem;line-height:1.75;color:#635136;max-width:68ch;}
+.family-ledger {margin-top:12px;min-height:44px;}
+.family-car {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:20px;}
+.family-car p,.family-status-line {font-size:.875rem;line-height:1.7;}
+.family-budget-options {display:flex;flex-wrap:wrap;gap:12px;margin:24px 0;}
+.family-wedding-form fieldset {border:0;padding:0;margin:24px 0 32px;min-width:0;}
+.family-wedding-form legend {padding:0;margin-bottom:16px;font-size:1rem;font-weight:700;color:#284f3e;}
+.family-form-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}
+.family-form-grid .field {margin:0;min-width:0;}
+.family-form-grid small {display:block;margin-top:8px;font-size:.8125rem;line-height:1.65;color:#635136;}
+.family-wedding-quote {padding:20px;background:#e8d9b2;border-radius:6px;}
+.family-total {padding-top:12px;border-top:1px solid #b19b71;font-size:1rem;color:#284f3e;}
+.family-confirm {display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:24px;}
+.family-confirm .button,.family-budget-options .button {min-height:44px;}
+.family-story-context {font-size:.8125rem;color:#635136;margin:12px 0;}
+@media(max-width:600px){.family-form-grid{grid-template-columns:1fr;gap:20px}.family-wedding-quote{padding:16px}.family-confirm{flex-direction:column-reverse}.family-confirm .button{width:100%}.family-budget-summary{align-items:flex-start;flex-direction:column;gap:6px}.family-date,.family-personal,.family-costs p,.family-wedding-quote p,.family-form-grid small,.family-action small{font-size:.875rem}}
+
+.child-age-portrait { display: inline-flex; align-items: center; justify-content: center; background: var(--paper, #f5e9cb); color: var(--green, #245747); font-weight: 700; font-size: 18px; flex-shrink: 0; }
+
+.family-panel button {min-height:44px;min-width:44px;}
+/* Keep grouped fields on the same spacing scale as the shared dialog. */
+#game-dialog .family-form-grid .field {margin:0;gap:8px;}
+#game-dialog .family-form-grid small {margin-top:0;}
+#game-dialog .family-wedding-quote h3 {margin:0 0 12px;}
+#game-dialog .family-wedding-form fieldset {margin:24px 0;}

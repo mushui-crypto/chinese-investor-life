@@ -1,0 +1,59 @@
+.birth-backdrop{position:fixed;inset:0;z-index:-2;background:#786b49}
+.birth-backdrop img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.birth-backdrop::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#32271722,transparent 35%,#39281955)}
+.birth-shell{max-width:1600px;min-height:100svh;padding-bottom:24px}
+.birth-stage{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:center;min-height:calc(100svh - 150px);padding:36px 24px 50px}
+.birth-paper{grid-column:2;background:#fff8e9f5;border:2px solid #685137;border-radius:9px;box-shadow:5px 7px 0 #3f2e2633;padding:30px 34px;animation:birth-page-in .25s ease-out both;color:#3b2d20}
+.birth-topline{display:flex;justify-content:space-between;gap:16px;align-items:center;padding-bottom:18px;border-bottom:1px dashed #c5af86;color:#685438;font-size:13px;line-height:1.5}
+.birth-topline>span:first-child{display:inline-flex;align-items:center;gap:7px}
+.birth-topline .icon{width:23px;height:23px;flex-shrink:0}
+.birth-topline>span:last-child{text-align:right}
+.birth-chapter{margin-top:22px;display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#766045}
+.birth-chapter>span{display:flex;gap:7px;align-items:center}
+.birth-chapter i{font-style:normal}
+.birth-chapter b{font-weight:400;color:#b19d78}
+.birth-chapter .current{color:#285542;font-weight:700}
+.birth-paper h1{font-family:var(--title);font-size:clamp(25px,2.5vw,38px);line-height:1.5;letter-spacing:.025em;margin:16px 0 18px}
+.birth-paper h1:focus{outline:none}
+.birth-prose{font-size:17px;line-height:2;min-height:160px}
+.birth-prose p{margin:0 0 16px}
+.birth-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:24px}
+.birth-footer .button{flex-shrink:0;min-height:48px}
+.birth-footer .birth-skip{color:#796548;font-size:13px;min-height:44px;text-align:left}
+.birth-footer>p,.birth-footer>small{margin:0;color:#705e45;font-size:13px;line-height:1.8}
+.birth-choices{margin-top:20px;gap:10px}
+.birth-choices .choice{background:#fffdf3}
+.birth-choices .choice-content small{font-size:12px}
+.birth-paper:has(.birth-choices) .birth-prose{min-height:0}
+@keyframes birth-page-in{from{opacity:.35;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.reduce-motion .birth-paper{animation:none}
+@media(prefers-reduced-motion:reduce){.birth-paper{animation:none}}
+@media(min-width:1600px){.birth-stage{gap:64px;padding-inline:48px}.birth-paper{padding:36px 40px}}
+/* On narrow screens, show the family above the story instead of cropping it behind the paper. */
+@media(max-width:900px){
+ .game-shell.birth-shell{padding:0 12px 24px}
+ .birth-stage{display:flex;flex-direction:column;gap:0;padding:8px 0 0;min-height:0}
+ .birth-backdrop{position:relative;inset:auto;z-index:auto;width:100%;height:clamp(220px,32svh,320px);overflow:hidden;border:2px solid #685137;border-bottom:0;border-radius:9px 9px 0 0}
+ .birth-backdrop img{display:block;width:auto;min-width:100%;max-width:none;height:175%;object-fit:cover;transform:translateY(-10%)}
+ .birth-backdrop::after{display:none}
+ .birth-paper{position:relative;width:100%;padding:24px;box-sizing:border-box;border-radius:0 0 9px 9px}
+ .birth-prose{min-height:0;font-size:16px}
+ .birth-footer{align-items:flex-start;flex-wrap:wrap}
+ .birth-footer .button{margin-left:auto}
+}
+@media(max-width:650px){
+ .birth-backdrop{height:clamp(208px,30svh,256px)}
+ .birth-paper{padding:20px}
+ .birth-topline{font-size:11px;gap:8px;padding-bottom:12px}
+ .birth-chapter{margin-top:16px;flex-direction:row;flex-wrap:wrap;font-size:11px}
+ .birth-paper h1{font-size:26px;margin:14px 0}
+ .birth-prose{font-size:15px;line-height:1.9}
+ .birth-prose p{margin-bottom:13px}
+ .birth-footer{margin-top:18px;gap:8px;flex-direction:column-reverse}
+ .birth-footer>p{font-size:12px}
+ .birth-footer .button{width:100%;justify-content:center}
+ .birth-footer .birth-skip{align-self:center}
+ .birth-choices .choice{padding:12px 10px;gap:9px}
+ .birth-choices .choice-number{width:25px;height:25px;font-size:12px}
+ .birth-choices .choice-content strong{font-size:15px}
+}

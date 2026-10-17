@@ -1,0 +1,41 @@
+{
+  "tool": "Built-in image_gen",
+  "assets": [
+    {
+      "key": "study-day-v1",
+      "ref": "study-v1.webp",
+      "prompt": "Use case: illustration-story. Make ONE finished 16:9 full-screen Chinese life simulation game background, 1920x1080 or same ratio. Match reference hand painted gouache/anime-realism, worn honey wood, muted jade, detailed 2000s Chinese interiors. No UI, text, captions, labels, watermark or collage. Important HUD composition: left/right 23% and bottom 25% will be covered; protagonist head, BOTH anatomically correct hands and focal book/prop must all fit x=38–62%, y=30–65%. Medium wide camera and SMALL central furniture group, three-quarter back view, face not prominent; peripheral details only outside this safe area. Reference is style and character reference only. New scene: 13:00 afternoon self-study in a quiet Chinese public/campus reading room. One young adult man in muted jade shirt sits at a central wooden desk doing exercises with open textbook and notebook. A few distant readers and shelves, NO teacher, NO blackboard, NOT a taught class. Soft clear daytime sky and neutral daylight through window, no orange sunset. All central writing action visible above bottom controls.",
+      "output": "public/assets/daily/study-day-v1.webp"
+    },
+    {
+      "key": "study-night-v1",
+      "ref": "study-v1.webp",
+      "prompt": "Use case: illustration-story. Make ONE finished 16:9 full-screen Chinese life simulation game background, 1920x1080 or same ratio. Match reference hand painted gouache/anime-realism, worn honey wood, muted jade, detailed 2000s Chinese interiors. No UI, text, captions, labels, watermark or collage. Important HUD composition: left/right 23% and bottom 25% will be covered; protagonist head, BOTH anatomically correct hands and focal book/prop must all fit x=38–62%, y=30–65%. Medium wide camera and SMALL central furniture group, three-quarter back view, face not prominent; peripheral details only outside this safe area. Reference is edit target. Recompose central desk and adult slightly smaller for specified UI safe area, keep same room, clothing, book, warm green lamp and painterly art style. At 22:30 studying or preparing for exam. Outside ALL windows is deep blue night with small distant illuminated windows, absolutely NO sun, NO sunset, NO daylight or sunbeams. Single warm desk lamp illuminates open textbook, notebook, pen and both natural hands. Person centered three-quarter from behind, foreground peripheral floor.",
+      "output": "public/assets/daily/study-night-v1.webp"
+    },
+    {
+      "key": "bedtime-v1",
+      "ref": "sleep-v1.webp",
+      "prompt": "Use case: illustration-story. Regenerate this bedtime game background, retaining the same young Chinese man, jade pajamas, humble Chinese bedroom, muted hand-painted gouache illustration style, dark blue night window, amber bedside lamp, powered-off computer and sleeping orange cat. IMPORTANT: change camera and room composition so the man, BOTH hands and phone are all within the central x=38–62% and y=30–64% of the 16:9 image, safely away from the side HUDs and bottom menu. Man sits near center on bed edge, three-quarter side view. Simple anatomically unambiguous pose: his nearer arm reaches only a SHORT natural distance to a bedside table placed centrally just in front of his knee; that hand gently places a small closed flip phone flat on the table. Other arm and hand rest flat on his thigh, with a clearly connected forearm and relaxed fingers. Exactly two arms, two hands, five fingers on each, natural wrists and joints, no fused fingers, duplicate limbs or backwards hands. Both hands clearly separated in silhouette. Whole-body believable sitting posture, feet on floor. Screen switched off: preparing for sleep at22:30, not already sleeping. Preserve warm quiet atmosphere and texture. Full bleed landscape16:9, no UI, captions, text, logo or decorative frame.",
+      "output": "public/assets/daily/bedtime-v1.webp"
+    },
+    {
+      "key": "commute-v1",
+      "ref": "outside-v1.webp",
+      "prompt": "Use case: illustration-story. Full bleed landscape16:9 Chinese life-simulation game background. Match reference hand-painted detailed gouache/anime illustration, muted jade and warm wood, early2000s Chinese ordinary life. No lettering, UI or watermark. Important framing: face/head and BOTH natural hands with main prop within central x38–62%, y30–65%; side23% and bottom25% covered by HUD. Anatomically correct two arms, two separated natural hands, five fingers each, no duplicated limbs. Style/character reference only. New scene:09:30 crowded urban subway carriage on commute to an office job. Protagonist ordinary Chinese young adult in light office shirt and dark trousers, central three-quarter back, standing near closed subway doors with a briefcase strap. One hand holding vertical safety pole at chest height, the other holding small feature phone at waist above bottom HUD. Visible commuters behind and stainless rail, dark tunnel outside windows, indoor fluorescent lighting, authentic metro. No grocery bags, no bus stop, no outdoors, no trading monitor. Camera medium wide.",
+      "output": "public/assets/daily/commute-v1.webp"
+    },
+    {
+      "key": "phone-night-v1",
+      "ref": "phone-v1.webp",
+      "prompt": "Use case: illustration-story. Full bleed landscape16:9 Chinese life-simulation game background. Match reference hand-painted detailed gouache/anime illustration, muted jade and warm wood, early2000s Chinese ordinary life. No lettering, UI or watermark. Important framing: face/head and BOTH natural hands with main prop within central x38–62%, y30–65%; side23% and bottom25% covered by HUD. Anatomically correct two arms, two separated natural hands, five fingers each, no duplicated limbs. Edit target: keep the same man, natural phone-to-ear pose, chair, small living room, cat and central composition. Change time to22:30, DEEP BLUE NIGHT outside, NO sun or orange sunset, no sunlight beams anywhere. Interior lit only by the warm floor lamp. He's speaking to family using his phone, calm natural evening, screen elsewhere powered off.",
+      "output": "public/assets/daily/phone-night-v1.webp"
+    },
+    {
+      "key": "phone-day-v1",
+      "ref": "phone-v1.webp",
+      "prompt": "Use case: illustration-story. Full bleed landscape16:9 Chinese life-simulation game background. Match reference hand-painted detailed gouache/anime illustration, muted jade and warm wood, early2000s Chinese ordinary life. No lettering, UI or watermark. Important framing: face/head and BOTH natural hands with main prop within central x38–62%, y30–65%; side23% and bottom25% covered by HUD. Anatomically correct two arms, two separated natural hands, five fingers each, no duplicated limbs. Edit target: keep same man, natural phone-to-ear pose, chair, small living room, cat and central composition. Change time to11:30 late morning, BLUE SKY and neutral clear daytime light outside, NO low sun or orange sunset. Soft daylight fills room, electric floor lamp switched off. He's speaking to someone using his phone, no active trading.",
+      "output": "public/assets/daily/phone-day-v1.webp"
+    }
+  ]
+}

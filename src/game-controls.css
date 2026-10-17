@@ -1,0 +1,55 @@
+/* Shared paper-and-wood form controls. Values still belong to the original forms. */
+:root{--control-paper:#fff9e9;--control-ink:#3d3023;--control-rim:#735a39;--control-edge:#c4a877;--control-accent:#285647;--control-selected:#e8c16e;--control-muted:#75634b;--control-shadow:#d9c9a7}
+[data-game-native]{display:none!important}
+.game-select,.game-number{display:block;position:relative;min-width:0;max-width:100%;width:100%;vertical-align:middle}
+.game-select-trigger,
+body .game-text-input{appearance:none;-webkit-appearance:none;background:var(--control-paper);color:var(--control-ink);border:2px solid var(--control-rim);border-radius:6px;box-shadow:inset 0 2px 0 var(--control-shadow),0 2px 0 var(--control-shadow);font:inherit;font-size:16px;line-height:1.5;min-height:46px;width:100%;min-width:0;max-width:100%;padding:10px 12px;transition:border-color .16s,background-color .16s;box-sizing:border-box}
+body textarea.game-text-input{min-height:110px;resize:vertical}
+body input::placeholder,body textarea::placeholder{color:var(--control-muted);opacity:1}
+.game-select-trigger{display:flex;gap:12px;align-items:center;justify-content:space-between;text-align:left;cursor:pointer;box-shadow:inset 0 0 0 2px #fff5d5,0 3px 0 var(--control-rim);background:#f3e6c9;padding:0 0 0 12px}
+.game-select-value{display:block;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:10px 0}
+.game-select-arrow{display:grid;place-items:center;align-self:stretch;flex:0 0 38px;font-size:20px;color:var(--control-ink);background:var(--control-selected);border-left:1px solid var(--control-rim);border-radius:0 3px 3px 0}
+.game-select-trigger:hover:not(:disabled){background:#f9edce;border-color:var(--control-accent)}
+.game-select-trigger[aria-expanded=true]{border-color:var(--control-accent);box-shadow:0 2px 0 var(--control-accent)}
+.game-select-trigger[aria-expanded=true] .game-select-arrow{color:#fff9e9;background:var(--control-accent)}
+.game-select-trigger:focus-visible,.number-preset:focus-visible,body input:focus-visible,body textarea:focus-visible{outline:3px solid var(--control-accent);outline-offset:3px;border-color:var(--control-accent)}
+body input:focus,body textarea:focus{border-color:var(--control-accent)}
+body input[type=number]{-moz-appearance:textfield;appearance:textfield}
+body input[type=number]::-webkit-inner-spin-button,body input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.game-number input[type=number]{padding:10px 12px;margin:0}
+.number-presets{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.number-presets[hidden]{display:none}
+.number-presets .number-preset{min-height:44px;padding:8px 10px;font-size:13px;flex:1;white-space:nowrap;background:var(--control-paper);color:var(--control-ink);border:1px solid var(--control-rim);box-shadow:0 2px 0 var(--control-shadow)}
+.number-presets .number-preset[aria-pressed=true]{background:var(--control-selected);border-color:var(--control-accent);font-weight:700}
+.number-presets .number-preset:disabled{opacity:.55;cursor:not-allowed}
+.game-select-trigger:disabled,body input:disabled,body textarea:disabled{background:#e2d9c5;color:#776c5b;border-color:#ad9e86;box-shadow:none;cursor:not-allowed}
+.game-field-error{display:block;font-size:12px;line-height:1.6;color:var(--red);margin-top:7px}
+[aria-invalid=true].game-select-trigger,body input[aria-invalid=true],body textarea[aria-invalid=true]{border-color:var(--red)}
+.game-choice-list{position:fixed;inset:auto;margin:0;padding:5px;border:2px solid var(--control-rim);border-radius:7px;background:var(--control-paper);color:var(--control-ink);box-shadow:0 4px 0 var(--control-rim);overflow:auto;overscroll-behavior:contain;box-sizing:border-box;font-family:var(--font);font-size:14px;line-height:1.5;scroll-padding:5px}
+.game-choice-option{display:flex;gap:8px;align-items:center;min-height:44px;padding:10px 10px 10px 5px;border-radius:3px;cursor:pointer;overflow-wrap:anywhere;box-sizing:border-box}
+.game-choice-option+.game-choice-option{border-top:1px solid var(--control-shadow)}
+.game-choice-check{flex:0 0 22px;width:22px;height:22px;display:grid;place-items:center;font-weight:800;color:var(--control-accent)}
+.game-choice-option[aria-selected=true]{font-weight:700}
+.game-choice-option.is-current{background:var(--control-selected);color:var(--control-ink);box-shadow:inset 3px 0 0 var(--control-accent)}
+.game-choice-option[aria-disabled=true]{color:var(--control-muted);cursor:not-allowed}
+body input[type=checkbox]:not(.switch input),body input[type=radio]:not(.casino-picks input){appearance:none;-webkit-appearance:none;position:relative;width:21px;height:21px;min-width:21px;border:2px solid var(--control-rim);border-radius:4px;background:var(--control-paper);box-shadow:inset 0 2px 0 var(--control-shadow);vertical-align:middle;cursor:pointer}
+body input[type=checkbox]:not(.switch input):checked{background:var(--control-accent);border-color:var(--control-accent);box-shadow:none}
+body input[type=checkbox]:not(.switch input):checked::after{content:'✓';display:block;color:#fff9e9;text-align:center;font-size:16px;font-weight:800;line-height:17px}
+.check-field{min-height:44px;align-items:center;cursor:pointer}
+.field .game-select,.playtest-form .game-select{margin-top:6px}
+.desk-navigation .game-select,.casino-heading .game-select,.terminal-top .game-select{width:190px;max-width:100%}
+.desk-navigation .game-select-trigger,.casino-heading .game-select-trigger,.terminal-top .game-select-trigger{font-size:13px}
+.replay-controls .game-select{width:280px;max-width:100%}
+.crypto-terminal,[data-control-theme=terminal]{--control-paper:#20262e;--control-ink:#f0ede3;--control-rim:#8b794e;--control-edge:#665b40;--control-accent:#ebc460;--control-selected:#403b2b;--control-muted:#beb9a8;--control-shadow:#11171e}
+[data-control-theme=terminal] .game-select-trigger,.crypto-terminal .game-select-trigger{background:#2b3036;box-shadow:inset 0 0 0 2px #3d4146,0 3px 0 #11171e}
+[data-control-theme=terminal] .game-select-arrow{background:#4b4430;color:#f0d189}
+[data-control-theme=terminal] .game-select-trigger:hover:not(:disabled){background:#383b37}
+[data-control-theme=terminal] .game-select-trigger[aria-expanded=true] .game-select-arrow{color:#242018;background:#ebc460}
+.crypto-terminal .game-select-trigger:disabled{background:#292b2d;color:#9c9c94;border-color:#5d5c53}
+.casino-hall [data-control-theme=casino] .game-select-trigger{background:#f3e6c9}
+@media(max-width:600px){.desk-navigation label,.terminal-top label,.casino-heading nav label{min-width:0;max-width:100%}.desk-navigation .game-select,.casino-heading .game-select,.terminal-top .game-select{width:155px}.replay-controls .game-select{width:100%}.game-choice-list{font-size:15px}.game-number input[type=number]{padding:10px 12px}}
+@media(prefers-reduced-motion:reduce){.game-select-trigger,body input,body textarea{transition:none}}
+.reduce-motion .game-select-trigger,.reduce-motion input,.reduce-motion textarea{transition:none}
+
+body input[type=radio]:not(.casino-picks input){border-radius:50%}
+body input[type=radio]:not(.casino-picks input):checked{border-color:var(--control-accent);background:var(--control-accent);box-shadow:inset 0 0 0 4px var(--control-paper)}

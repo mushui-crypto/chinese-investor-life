@@ -1,0 +1,55 @@
+import {createRequire} from 'node:module';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {createRun} from '../src/game/narrative.js';
+import {applyAction,PRODUCTS} from '../src/game/core.js';
+import {STOCKS} from '../src/game/stock-markets.js';
+import {INSTRUMENTS} from '../src/game/market-play.js';
+import {MEME_COINS,memeKind,cryptoClock} from '../src/game/crypto-markets.js';
+import {setSaveCatalog,encodeSave} from '../src/game/storage.js';
+import {chooseGameOption} from './game-control-helpers.mjs';
+import {clearClockMessages} from './qa-continue.mjs';
+const require=createRequire(import.meta.url),{chromium}=require(process.env.PLAYWRIGHT_PATH||`${process.env.HOME}/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright`);
+const catalog={};for(const n of ['events','families','characters','history','endings']){const d=JSON.parse(await readFile(`data/${n}.json`));catalog[n]=n==='events'?d.events:d;}setSaveCatalog(catalog);
+const dir=process.env.QA_REPORT_DIR||'reports/v1.29/daily-crypto',url=process.env.GAME_URL||'http://127.0.0.1:4173';await mkdir(dir,{recursive:true});
+const browser=await chromium.launch({headless:true,channel:'chrome'}),context=await browser.newContext({viewport:{width:1500,height:1000},reducedMotion:'reduce'}),page=await context.newPage(),errors=[],checks=[];
+page.on('pageerror',e=>errors.push(e.message));
+function adult(){const s=createRun({seed:'chart-browser',familyId:'F08'},catalog);Object.assign(s,{age:25,turn:20,phase:'planning',activeEvent:null,eventQueue:[],dueAnchors:[],cash:1e9,monthlyIncome:800000,giftReceived:true});s.marketProgress={firstExperienceAge:18,simulations:3,unlocked:Object.fromEntries(Object.keys(PRODUCTS).map(k=>[k,true]))};s.stats.insight=90;return s;}
+function act(s,a){const r=applyAction(s,a);assert.equal(r.result.error,undefined,r.result.error);return r.state;}
+const click=q=>page.locator(q+':visible').first().click(),current=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('cng-v1-slot-0')).state);
+const check=(name,value)=>{assert.ok(value,name);checks.push(name);console.log('PASS',name);};
+async function load(s){await page.goto(url);await page.locator('#app button').first().waitFor();await page.evaluate(save=>{localStorage.setItem('cng-v1-slot-0',JSON.stringify(save));localStorage.setItem('cng-v1-active-slot','0');},encodeSave(s));await page.reload();await click('[data-action=load-slot]');await click('[data-action=tab][data-tab=market]');}
+async function open(kind){if(kind==='option_short'){await open('option');await click('[data-action=option-side][data-product=option_short]');return;}if(await page.locator('#desk-switch').count())await chooseGameOption(page,'#desk-switch',kind);else await click(`[data-action=invest][data-product=${kind}]`);}
+async function shot(name){await page.locator('#toast.show').waitFor({state:'detached',timeout:5000});await page.screenshot({path:`${dir}/${name}.png`,animations:'disabled'});}
+try{
+ await load(adult());await open('stock');const initialState=JSON.stringify(await current()),seenCharts=new Map();
+ for(const stock of STOCKS){
+  const first=STOCKS.find(i=>i.market===stock.market).id;
+  await click(`[data-action=stock-market][data-id=${first}]`);await click(`[data-action=desk-instrument][data-id=${stock.id}]`);
+  const c=page.locator('.desk-research-pane [data-daily-chart]');
+  check(stock.name+' opens with thirty candles',await c.locator('.daily-body').count()===30);
+  const latest=JSON.parse(await c.locator('[data-daily-point]').last().getAttribute('data-daily-point')),price=Number(await page.locator('#desk-order').getAttribute('data-price'));
+  check(stock.name+' latest candle matches the tradable quote',Number(latest.close.replaceAll(',',''))===price/100);
+  seenCharts.set(stock.id,await c.locator('[data-daily-point]').evaluateAll(es=>es.map(e=>e.dataset.dailyPoint)));
+  if(stock.id===first){await click('.stock-market-weather>summary');check(stock.market+' index has thirty daily values',await page.locator('.stock-market-weather .daily-dot').count()===30);await c.scrollIntoViewIfNeeded();await shot('opening-'+stock.market);}
+ }
+ await click('[data-action=stock-market][data-id=chip]');
+ check('switching back keeps the same stock history',JSON.stringify(await page.locator('.desk-research-pane [data-daily-point]').evaluateAll(es=>es.map(e=>e.dataset.dailyPoint)))===JSON.stringify(seenCharts.get('chip')));
+ for(const fund of INSTRUMENTS.fund){await open('fund');await click(`[data-action=desk-instrument][data-id=${fund.id}]`);const c=page.locator('.desk-research-pane [data-daily-chart]');check(fund.name+' has a continuous thirty-day net-value line',await c.locator('.daily-dot').count()===30&&await c.locator('.daily-line').count()===29);}
+ check('visiting every stock and fund never changes the saved game',JSON.stringify(await current())===initialState);
+ await page.reload();await click('[data-action=load-slot]');await open('stock');check('reload preserves opening stock history',JSON.stringify(await page.locator('.desk-research-pane [data-daily-point]').evaluateAll(es=>es.map(e=>e.dataset.dailyPoint)))===JSON.stringify(seenCharts.get('chip')));
+ const legacy=adult();for(const q of [...Object.values(legacy.trading.quotes),...Object.values(legacy.trading.stockWorld)])delete q.daily;
+ await load(legacy);const legacyBefore=JSON.stringify(await current());await open('stock');check('old saves immediately have thirty visible candles',await page.locator('.desk-research-pane .daily-body').count()===30);check('old save is not rewritten to store synthetic prices',JSON.stringify(await current())===legacyBefore);
+ let s=adult();for(let i=0;i<2;i++){for(let j=0;j<3;j++)s=act(s,{type:'market_tick'});s=act(s,{type:'market_day'});}s=act(s,{type:'market_tick'});s.behavior.pending=null;s.lifeArcs.pending=null;await load(s);await open('stock');
+ let chart=page.locator('.desk-research-pane [data-daily-chart]');check('stock fills thirty days and retains all three played days',await chart.locator('[data-daily-point]').count()===30&&await chart.locator('[data-daily-point]').evaluateAll(es=>es.filter(e=>JSON.parse(e.dataset.dailyPoint).status!=='开盘前模拟').length)===3);const before=JSON.stringify(await current());
+ await chart.locator('[data-daily-point]').nth(27).click();check('click reveals selected date and OHLC',(await chart.locator('[data-daily-field=day]').innerText())===JSON.parse(await chart.locator('[data-daily-point]').nth(27).getAttribute('data-daily-point')).day);await chart.locator('[data-daily-point]').first().focus();await page.keyboard.press('End');check('keyboard reaches latest day',await chart.locator('[data-daily-point]').last().getAttribute('aria-pressed')==='true');check('chart browsing does not alter balances, clock or RNG',JSON.stringify(await current())===before);await chart.scrollIntoViewIfNeeded();await shot('stock-daily-desktop');
+ await open('fund');chart=page.locator('.desk-research-pane [data-daily-chart]');check('fund shows thirty daily net values',await chart.locator('.daily-dot').count()===30&&await chart.locator('.daily-body').count()===0);await chart.scrollIntoViewIfNeeded();await shot('fund-daily-desktop');
+ for(const kind of ['bond','futures','option','option_short']){await open(kind);check(kind+' has daily prices',await page.locator('[data-daily-chart]').count()===1);}
+ await open('crypto');check('crypto tabs use short labels',(await page.locator('.terminal-modes button').allTextContents()).join('|')==='现货|合约|ignite.fun · Meme');check('crypto has no historical scenario picker',await page.locator('#crypto-scenario,.replay-controls').count()===0);for(const mode of ['spot','perp','meme']){await click(`[data-action=crypto-mode][data-mode=${mode}]`);check(mode+' offers ten coins',await page.locator('.coin-row').count()===10);check(mode+' shows a complete initial chart',await page.locator('.terminal-chart-area [data-daily-point]').count()===30);if(mode==='meme'){await page.locator('.terminal-chart-area').scrollIntoViewIfNeeded();await shot('meme-chart-desktop');}}
+ check('unbought meme projects have no trap labels',!(/貔貅|断头台|无法卖出/.test(await page.locator('.coin-watchlist').innerText())));
+ await click('[data-action=crypto-mode][data-mode=perp]');await chooseGameOption(page,'#desk-order [name=leverage]','1000');check('1000x risk estimate is visible',(await page.locator('.contract-scenarios').innerText()).includes('0.06%'));await click('#desk-order [type=submit]');check('1000x opens a position',(await current()).positions.at(-1).leverage===1000);await shot('crypto-1000-desktop');
+ for(const width of [1024,390,320]){await page.setViewportSize({width,height:900});for(const kind of ['stock','fund','crypto']){await open(kind);check(`${kind} fits ${width}px`,await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));const c=page.locator('[data-daily-chart]').last();await c.scrollIntoViewIfNeeded();check(`${kind} chart readout fits ${width}px`,await c.evaluate(el=>{const r=el.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth+1;}));await shot(`${kind}-daily-${width}`);}}
+ await page.setViewportSize({width:1500,height:1000});s=adult();const id=MEME_COINS.find(c=>memeKind(s,c.id)==='rug').id;s=act(s,{type:'desk_order',product:'crypto',instrument:id,amount:100000});s.trading.memeProjects[id].due=cryptoClock(s)+2;s=act(s,{type:'market_tick'});s.behavior.pending=null;s.lifeArcs.pending=null;await load(s);await open('crypto');await click('[data-action=crypto-mode][data-mode=meme]');await click(`[data-action=desk-instrument][data-id=${id}]`);for(let n=0;n<3&&(await current()).positions.length;n++){await clearClockMessages(page,current);await click('.desk-quickbar [data-action=life-continue]');}check('delayed rug reaches zero and removes exposed holdings',(await current()).trading.quotes[id].price===0&&!(await current()).positions.length);check('failed project cannot be repurchased',await page.locator('#desk-order [type=submit]').isDisabled());check('zero chart has no invalid numbers',!(/NaN|Infinity/.test(await page.locator('.terminal-chart-area').innerText())));await shot('meme-project-zero');
+ s=act(adult(),{type:'desk_order',product:'crypto',instrument:'PIXIU',amount:100000});await load(s);await click('[data-action=tab][data-tab=assets]');await click('.holding [data-action=desk-open]');check('asset link opens the held meme coin and its holdings',await page.locator('[data-action=crypto-mode][data-mode=meme]').getAttribute('aria-pressed')==='true'&&await page.locator('#desk-order').getAttribute('data-instrument')==='PIXIU'&&await page.locator('.desk-position-row').count()===1);
+ check('no browser errors',errors.length===0);await writeFile(`${dir}/checks.json`,JSON.stringify({passed:true,checks,errors},null,2));
+}catch(e){await page.screenshot({path:`${dir}/failure.png`});await writeFile(`${dir}/checks.json`,JSON.stringify({passed:false,checks,errors,error:String(e)},null,2));throw e;}finally{await browser.close();}

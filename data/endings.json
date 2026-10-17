@@ -1,0 +1,895 @@
+[
+  {
+    "id": "E01",
+    "title": "资本桌上有你一席",
+    "priority": 90,
+    "condition": {
+      "all": [
+        {
+          "metric": "net_worth_yuan",
+          "op": "gte",
+          "value": 100000000
+        },
+        {
+          "metric": "liquid_ratio",
+          "op": "gte",
+          "value": 0.3
+        },
+        {
+          "metric": "credit",
+          "op": "gte",
+          "value": 40
+        }
+      ]
+    },
+    "epilogue": "电话里的人不再问你在哪上班，而是问你有没有空坐一坐。你看着窗外，想起第一次对着余额多看了一个零。",
+    "open_directions": [
+      "接下一笔收购",
+      "减少公开露面",
+      "把部分事业交给团队"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E02",
+    "title": "百倍那一夜",
+    "priority": 70,
+    "condition": {
+      "all": [
+        {
+          "flag": "option_big_win",
+          "is": true
+        },
+        {
+          "metric": "net_worth_yuan",
+          "op": "gte",
+          "value": 1000000
+        }
+      ]
+    },
+    "epilogue": "别人说你有眼光，你知道那晚手心全是汗。巨额回报是真的，明天如何对待它也是真的。",
+    "open_directions": [
+      "保留生活资金",
+      "继续研究",
+      "再开一单"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E03",
+    "title": "我又回来了",
+    "priority": 85,
+    "condition": {
+      "all": [
+        {
+          "metric": "wipeouts",
+          "op": "gte",
+          "value": 1
+        },
+        {
+          "metric": "net_worth_yuan",
+          "op": "gte",
+          "value": 1000000
+        },
+        {
+          "flag": "rebuilding",
+          "is": true
+        }
+      ]
+    },
+    "epilogue": "旧群里有人发来你当年的截图。你没删，只补上一张现在的照片：门开着，灯亮着，人还在。",
+    "open_directions": [
+      "守住新事业",
+      "重返市场",
+      "去见当年帮过你的人"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E04",
+    "title": "账面首富，现金告急",
+    "priority": 95,
+    "condition": {
+      "all": [
+        {
+          "metric": "net_worth_yuan",
+          "op": "gte",
+          "value": 10000000
+        },
+        {
+          "metric": "liquid_ratio",
+          "op": "lt",
+          "value": 0.05
+        }
+      ]
+    },
+    "epilogue": "财经号说你身价惊人，你正在找今天能支付的账户。别人看见数字，你看见解禁日期。",
+    "open_directions": [
+      "谈退出",
+      "缩减开支",
+      "继续经营等兑现"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E05",
+    "title": "坐过山车的人",
+    "priority": 80,
+    "condition": {
+      "all": [
+        {
+          "metric": "peak_net_worth_yuan",
+          "op": "gte",
+          "value": 10000000
+        },
+        {
+          "metric": "net_worth_yuan",
+          "op": "lt",
+          "value": 100000
+        },
+        {
+          "metric": "wipeouts",
+          "op": "gte",
+          "value": 1
+        }
+      ]
+    },
+    "epilogue": "你曾经用一部手机买下想象中的世界。现在手机仍在，世界需要重新按月付款。",
+    "open_directions": [
+      "求职",
+      "经营小生意",
+      "把经历写下来"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E06",
+    "title": "低谷里开了家店",
+    "priority": 75,
+    "condition": {
+      "all": [
+        {
+          "flag": "business_owner",
+          "is": true
+        },
+        {
+          "flag": "rebuilding",
+          "is": true
+        },
+        {
+          "metric": "business_cashflow_yuan",
+          "op": "gt",
+          "value": 0
+        }
+      ]
+    },
+    "epilogue": "招牌不大，收银台也不响亮。第一位老客推门时，你知道这次明天有一部分握在自己手里。",
+    "open_directions": [
+      "开第二家",
+      "教徒弟",
+      "保留小店过日子"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E07",
+    "title": "这门手艺养活了我",
+    "priority": 65,
+    "condition": {
+      "all": [
+        {
+          "metric": "skill",
+          "op": "gte",
+          "value": 75
+        },
+        {
+          "flag": "career_history",
+          "is": true
+        },
+        {
+          "metric": "net_worth_yuan",
+          "op": "gte",
+          "value": 0
+        }
+      ]
+    },
+    "epilogue": "年轻人叫你师傅。你偶尔还看行情，但现在有人愿意为你亲手解决的问题付钱。",
+    "open_directions": [
+      "带新人",
+      "做独立业务",
+      "减少工作量"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E08",
+    "title": "还款表最后一行",
+    "priority": 82,
+    "condition": {
+      "all": [
+        {
+          "flag": "ever_indebted",
+          "is": true
+        },
+        {
+          "metric": "debt_yuan",
+          "op": "eq",
+          "value": 0
+        },
+        {
+          "metric": "debt_free_turns",
+          "op": "gte",
+          "value": 2
+        }
+      ]
+    },
+    "epilogue": "最后一笔付款没有烟花。你把表格往下滚，第一次发现已经没有下一行。",
+    "open_directions": [
+      "继续工作",
+      "重新建立储备",
+      "修复关系"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E09",
+    "title": "重组中的人生",
+    "priority": 78,
+    "condition": {
+      "all": [
+        {
+          "metric": "debt_yuan",
+          "op": "gt",
+          "value": 0
+        },
+        {
+          "flag": "restructuring",
+          "is": true
+        }
+      ]
+    },
+    "epilogue": "纸上的总额仍然沉重，日期却终于排开。你没有一夜翻身，至少不必每一天都假装明天。",
+    "open_directions": [
+      "继续履行计划",
+      "增加收入",
+      "调整生活安排"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E10",
+    "title": "下一班还得上",
+    "priority": 60,
+    "condition": {
+      "all": [
+        {
+          "metric": "net_worth_yuan",
+          "op": "lt",
+          "value": 0
+        },
+        {
+          "flag": "employed",
+          "is": true
+        }
+      ]
+    },
+    "epilogue": "工牌放在门口，账单放在桌上。你把闹钟拨好，故事并没有停在那张失败截图。",
+    "open_directions": [
+      "继续还款",
+      "学习转岗",
+      "做一个小规模试验"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E11",
+    "title": "没有接下来的回款",
+    "priority": 72,
+    "condition": {
+      "all": [
+        {
+          "flag": "ponzi_loss",
+          "is": true
+        },
+        {
+          "metric": "claims_yuan",
+          "op": "gt",
+          "value": 0
+        }
+      ]
+    },
+    "epilogue": "平台已经很久没有更新，你的生活却不能跟着卡在加载中。追偿记录还留着，新的日子也在继续。",
+    "open_directions": [
+      "继续依法追偿",
+      "重新谋生",
+      "和旧友谈一次"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E12",
+    "title": "信任不能提现",
+    "priority": 88,
+    "condition": {
+      "all": [
+        {
+          "flag": "recruited",
+          "is": true
+        },
+        {
+          "metric": "trust",
+          "op": "lt",
+          "value": 25
+        }
+      ]
+    },
+    "epilogue": "你解释自己也亏了，对方说他知道。他仍然不接你的下一通电话。",
+    "open_directions": [
+      "承担具体责任",
+      "给对方时间",
+      "公开还原经过"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E13",
+    "title": "项目还活着",
+    "priority": 68,
+    "condition": {
+      "all": [
+        {
+          "flag": "angel_investor",
+          "is": true
+        },
+        {
+          "metric": "private_equity_yuan",
+          "op": "gt",
+          "value": 0
+        },
+        {
+          "metric": "liquid_ratio",
+          "op": "lt",
+          "value": 0.3
+        }
+      ]
+    },
+    "epilogue": "许舟又发来一份月报，这次没有漂亮封面。你先翻到现金，再翻到客户，仍然愿意读下去。",
+    "open_directions": [
+      "继续等待",
+      "谈部分退出",
+      "帮忙解决业务问题"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E14",
+    "title": "敲钟以后",
+    "priority": 84,
+    "condition": {
+      "all": [
+        {
+          "flag": "equity_exit",
+          "is": true
+        },
+        {
+          "metric": "realized_equity_proceeds_yuan",
+          "op": "gte",
+          "value": 1000000
+        }
+      ]
+    },
+    "epilogue": "当年的两页纸终于换成了实际到账。合影里所有人都在笑，只有你知道中间有多少次差点结束。",
+    "open_directions": [
+      "再投一个人",
+      "离开喧闹",
+      "做自己的产品"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E15",
+    "title": "小店成了连锁",
+    "priority": 80,
+    "condition": {
+      "all": [
+        {
+          "metric": "business_count",
+          "op": "gte",
+          "value": 3
+        },
+        {
+          "metric": "business_cashflow_yuan",
+          "op": "gt",
+          "value": 0
+        }
+      ]
+    },
+    "epilogue": "有人问你的商业秘诀。你想起最早那张被风吹倒的价签，先问他有没有算退货。",
+    "open_directions": [
+      "继续扩张",
+      "交给团队",
+      "出售一部分业务"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E16",
+    "title": "守住家里那只铁盒",
+    "priority": 67,
+    "condition": {
+      "all": [
+        {
+          "metric": "reserve_months",
+          "op": "gte",
+          "value": 24
+        },
+        {
+          "metric": "trust",
+          "op": "gte",
+          "value": 70
+        },
+        {
+          "metric": "debt_yuan",
+          "op": "eq",
+          "value": 0
+        }
+      ]
+    },
+    "epilogue": "铁盒换过几次，里面的安排越来越清楚。家人仍然有争论，只是不再靠隐瞒度过。",
+    "open_directions": [
+      "照顾家人",
+      "给自己留兴趣预算",
+      "安排传承"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E17",
+    "title": "有钱，也有缺席",
+    "priority": 86,
+    "condition": {
+      "all": [
+        {
+          "metric": "net_worth_yuan",
+          "op": "gte",
+          "value": 10000000
+        },
+        {
+          "metric": "trust",
+          "op": "lt",
+          "value": 30
+        }
+      ]
+    },
+    "epilogue": "长桌足够坐很多人，今晚还是只有你一个。账户里没有一条流水能解释少了哪些声音。",
+    "open_directions": [
+      "主动修复",
+      "接受关系改变",
+      "重新安排时间"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E18",
+    "title": "终于一起吃晚饭",
+    "priority": 69,
+    "condition": {
+      "all": [
+        {
+          "flag": "relationship_repaired",
+          "is": true
+        },
+        {
+          "metric": "trust",
+          "op": "gte",
+          "value": 65
+        }
+      ]
+    },
+    "epilogue": "你们聊起一件小事，中间没有人低头看价格。饭有点凉，谈话却没有断。",
+    "open_directions": [
+      "维持约定",
+      "一起规划新生活",
+      "保留各自的选择"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E19",
+    "title": "名气比账户大",
+    "priority": 76,
+    "condition": {
+      "all": [
+        {
+          "metric": "fame",
+          "op": "gte",
+          "value": 75
+        },
+        {
+          "metric": "net_worth_yuan",
+          "op": "lt",
+          "value": 1000000
+        }
+      ]
+    },
+    "epilogue": "路人能叫出你的网名，未必知道你的房租。你开始决定还要把多少生活交给镜头。",
+    "open_directions": [
+      "认真做内容",
+      "重建职业收入",
+      "暂别公众"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E20",
+    "title": "老师也会认错",
+    "priority": 74,
+    "condition": {
+      "all": [
+        {
+          "metric": "fame",
+          "op": "gte",
+          "value": 50
+        },
+        {
+          "flag": "public_truth",
+          "is": true
+        },
+        {
+          "metric": "trust",
+          "op": "gte",
+          "value": 50
+        }
+      ]
+    },
+    "epilogue": "你讲到失败时，台下有人抬起头。这次掌声不是因为你预言了什么。",
+    "open_directions": [
+      "继续公开记录",
+      "带新人",
+      "回归私人生活"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E21",
+    "title": "把自己找回来",
+    "priority": 77,
+    "condition": {
+      "all": [
+        {
+          "flag": "recovering_health",
+          "is": true
+        },
+        {
+          "metric": "health",
+          "op": "gte",
+          "value": 65
+        },
+        {
+          "metric": "stress",
+          "op": "lte",
+          "value": 35
+        }
+      ]
+    },
+    "epilogue": "你开始能睡完整的一觉。以前用来盯盘的清晨，现在能看见真正的天色。",
+    "open_directions": [
+      "慢慢工作",
+      "培养兴趣",
+      "与重要的人重聚"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E22",
+    "title": "他们走了自己的路",
+    "priority": 71,
+    "condition": {
+      "all": [
+        {
+          "flag": "succession_released",
+          "is": true
+        },
+        {
+          "metric": "trust",
+          "op": "gte",
+          "value": 55
+        }
+      ]
+    },
+    "epilogue": "后来的人没有复制你的每一步。他们仍愿意回来告诉你，今天发生了什么。",
+    "open_directions": [
+      "继续做长辈",
+      "帮助但不接管",
+      "记录家族故事"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E23",
+    "title": "封盘不是认输",
+    "priority": 83,
+    "condition": {
+      "all": [
+        {
+          "flag": "voluntary_exit",
+          "is": true
+        },
+        {
+          "metric": "reserve_months",
+          "op": "gte",
+          "value": 12
+        },
+        {
+          "metric": "debt_yuan",
+          "op": "eq",
+          "value": 0
+        }
+      ]
+    },
+    "epilogue": "你卸下行情提醒，世界依然开盘。某个下午，你发现自己已经很久没有计算错过多少。",
+    "open_directions": [
+      "继续平静生活",
+      "经营新爱好",
+      "留一个有限探索账户"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E24",
+    "title": "明天照常开门",
+    "priority": 0,
+    "condition": {
+      "all": []
+    },
+    "epilogue": "这一生没有被一个标签收得干净。你有赢过的部分，也有还没解决的部分。窗外有人出门，下一页还空着。",
+    "open_directions": [
+      "继续这个角色",
+      "开启下一代",
+      "换一种家庭重开"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E25",
+    "title": "铁窗里的收盘钟",
+    "priority": 130,
+    "condition": {
+      "all": [
+        {
+          "flag": "in_prison",
+          "is": true
+        }
+      ]
+    },
+    "epilogue": "外面的市场照常开盘，你的时间有了另一张表。案卷里没有“运气不好”这一栏；还没走完的刑期、需要承担的责任，都留在这段人生里。",
+    "open_directions": [
+      "继续面对责任",
+      "等待刑期结束",
+      "把这段选择记住"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E26",
+    "title": "退赔表还有下一行",
+    "priority": 115,
+    "condition": {
+      "all": [
+        {
+          "flag": "legal_debt",
+          "is": true
+        },
+        {
+          "metric": "debt_yuan",
+          "op": "gt",
+          "value": 0
+        }
+      ]
+    },
+    "epilogue": "曾经到账的钱被你叫作机会，现在需要退赔的数字有了具体的人。那张表不会因为你重新开始就消失，你仍能靠下一份真实收入继续偿还。",
+    "open_directions": [
+      "继续履行退赔",
+      "寻找正规工作",
+      "不再增加新的伤害"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E27",
+    "title": "出狱以后，第一张工牌",
+    "priority": 100,
+    "condition": {
+      "all": [
+        {
+          "flag": "ever_released",
+          "is": true
+        },
+        {
+          "flag": "reentry_employed",
+          "is": true
+        },
+        {
+          "flag": "in_prison",
+          "is": false
+        }
+      ]
+    },
+    "epilogue": "工牌很普通，你却认真把它挂正。过去没有被洗白，明天也没有被判完。你拿起工具，开始做这一班真正需要完成的工作。",
+    "open_directions": [
+      "守住正常工作",
+      "继续履行责任",
+      "慢慢修复关系"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E28",
+    "title": "这次真的没有下一把",
+    "priority": 98,
+    "condition": {
+      "all": [
+        {
+          "flag": "gambling_history",
+          "is": true
+        },
+        {
+          "flag": "gambling_quit",
+          "is": true
+        },
+        {
+          "flag": "in_prison",
+          "is": false
+        },
+        {
+          "flag": "gambling_final_loss",
+          "is": false
+        }
+      ]
+    },
+    "epilogue": "你不再给“最后一把”添加新的日期。欠下的钱仍要处理，失去的信任仍要慢慢修，但今天晚上你没有再按那个按钮。",
+    "open_directions": [
+      "持续寻求支持",
+      "安排稳定收入",
+      "把生活过回自己的节奏"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E29",
+    "title": "最后一碗面，没能续上",
+    "priority": 1000,
+    "condition": {
+      "all": [
+        {
+          "flag": "survival_failed",
+          "is": true
+        },
+        {
+          "flag": "health_failed",
+          "is": false
+        }
+      ]
+    },
+    "epilogue": "持续的缺食让健康一点点耗尽。就医与生活周转的提醒始终没有得到处理，最终因饥饿离世。这一局到此结束，尚未变现的资产和未偿还的欠款仍留在档案里。",
+    "open_directions": [
+      "保留这段人生作为复盘",
+      "换一个出身重新开始"
+    ],
+    "evaluation": "immediate_survival_failure"
+  },
+  {
+    "id": "E30",
+    "title": "这回，钱够慢慢花了",
+    "priority": 84,
+    "condition": {
+      "all": [
+        {
+          "metric": "plain_investor",
+          "op": "eq",
+          "value": 1
+        },
+        {
+          "metric": "retirement_cover_months",
+          "op": "gte",
+          "value": 600
+        },
+        {
+          "metric": "debt_yuan",
+          "op": "eq",
+          "value": 0
+        },
+        {
+          "metric": "pending_case_count",
+          "op": "eq",
+          "value": 0
+        }
+      ]
+    },
+    "epilogue": "你把房租、饭钱和日常开销重新算了一遍。手里的现金和能卖出的普通投资，够现在的日子过很久。没有哪一把决定你的一生；慢慢攒下的本金、几次抓住的上涨，还有没乱借的钱，凑成了今天。你关掉行情页面，第一次认真想，明天可以不用赶那么早。",
+    "open_directions": [
+      "少接一点工作",
+      "留时间陪家里人",
+      "按自己的节奏继续投资"
+    ],
+    "evaluation": "only_at_player_settlement_or_age_80"
+  },
+  {
+    "id": "E31",
+    "title": "最后一把，真的没了",
+    "priority": 1100,
+    "condition": {
+      "all": [
+        {
+          "flag": "gambling_final_loss",
+          "is": true
+        }
+      ]
+    },
+    "epilogue": "“赢回来就不玩了。”这句话，你说过不止一次。尾声里，停下过的手又伸向了牌桌，赢钱的截图变成了追损的理由。存款、转手的家当，一笔笔填了进去。最后，余额停在零，欠条却还在。房间里很安静，再没有人问你下一把押什么。",
+    "open_directions": [
+      "把欠条一张张理清",
+      "去上明天那班工",
+      "别再把后来押给下一把"
+    ],
+    "evaluation": "authored_terminal_epilogue"
+  },
+  {
+    "id": "E32",
+    "title": "把一生都押上以后",
+    "priority": 900,
+    "condition": {
+      "all": [
+        {
+          "flag": "allin_final_loss",
+          "is": true
+        }
+      ]
+    },
+    "epilogue": "你熟悉那种感觉：不押满，总像少赚了。赚过的钱让你更敢下手，亏掉的钱又让你更急着翻本。尾声里，最后一次追涨遇上了急跌，卖家当补进去的钱也没能回来。剩下的存款耗尽，旧债仍在催。你看着从前的收益截图，才发现上面的数字已经不属于今天。",
+    "open_directions": [
+      "重新找一份稳定工作",
+      "处理旧债",
+      "把翻本两个字放下"
+    ],
+    "evaluation": "authored_terminal_epilogue"
+  },
+  {
+    "id": "E33",
+    "title": "健康先走到了尽头",
+    "priority": 1001,
+    "condition": {
+      "all": [
+        {
+          "flag": "health_failed",
+          "is": true
+        }
+      ]
+    },
+    "epilogue": "疾病、透支与被一再推迟的照料，终于让健康耗尽。钱和持仓仍在账上，这段人生却停在了这里。",
+    "open_directions": [
+      "保留这段人生作为复盘",
+      "开启新的人生"
+    ],
+    "evaluation": "immediate_survival_failure"
+  },
+  {
+    "id": "E34",
+    "title": "Crypto爆仓破产",
+    "priority": 1090,
+    "condition": {
+      "all": [
+        {
+          "flag": "crypto_final_loss",
+          "is": true
+        }
+      ]
+    },
+    "epilogue": "高倍合约、追损、借贷和别的项目叠在一起。回款和欠款留在账本上，这次按实际经历结算。",
+    "open_directions": [
+      "保留这段人生作为复盘",
+      "开启新的人生"
+    ],
+    "evaluation": "actual_crypto_bankruptcy"
+  }
+]

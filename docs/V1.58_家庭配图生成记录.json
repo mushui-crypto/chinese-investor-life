@@ -1,0 +1,34 @@
+{
+  "mode": "built-in image_gen",
+  "rules": "Story frames render at exactly 3:1; source images are approximately 3:1. New assets copied intact, without raster editing.",
+  "assets": [
+    {
+      "file": "public/assets/events/family-date-v1.png",
+      "brief": "Young Chinese couple chatting at an affordable cafe near university in late afternoon. Lin Xia has shoulder-length brown hair, a sage cardigan and cream blouse; protagonist in muted olive. Warm painted style, natural hands, no investment charts, no readable text, 3:1."
+    },
+    {
+      "file": "public/assets/events/family-wedding-v1.png",
+      "brief": "Modest Chinese wedding meal in a small restaurant, Lin Xia in red and cream, protagonist in a simple dark suit, smiling together. Warm hand-painted 3:1 panorama, plausible setting, not a luxury banquet."
+    },
+    {
+      "file": "public/assets/events/family-newborn-v1.png",
+      "brief": "Morning postpartum hospital room, Chinese parents gently hold a tiny wrapped newborn. Lin Xia has shoulder-length brown hair, protagonist olive shirt, warm painted illustration, anatomically natural hands, 3:1."
+    },
+    {
+      "file": "public/assets/events/family-baby-prep-v1.png",
+      "prompt": "Create a single ultra-wide 3:1 panorama (2172 x 724 preferred) for a Chinese illustrated life simulation. Warm hand-painted cinematic 2D realism, textured brushwork, muted jade, honey light and old wood, rich detail, believable ordinary Chinese rented apartment. Scene: an expectant couple's planning table at soft daytime, seen close up without any people or body parts: two ceramic cups, a closed folder of prenatal appointment papers (no legible writing), a plain open budget notebook with simple untitled ruled lines, a small calculator, a few neatly folded newborn clothes and a soft baby blanket at the right, an empty simple wooden infant cot partly visible behind right edge. No baby yet, no wedding objects, no hospital bed, no currency charts, no celebratory banners, no readable text. Composition leaves the central table clearly visible, calm practical preparation rather than luxury. This is for prenatal appointment planning and preparing essential infant supplies, visually suitable before childbirth; exact 3:1 horizontal canvas."
+    },
+    {
+      "file": "public/assets/events/family-childcare-v1.png",
+      "prompt": "Generate one ultra-wide 3:1 2172x724 hand-painted cinematic 2D illustration for an ordinary Chinese family life simulation, consistent warm textured amber and muted sage palette, natural physical proportions. Scene: quiet midnight in a modest rented apartment, a tiny one-month-old newborn sleeping safely on its back in a simple wooden bassinet with a firm flat mattress and no loose objects around its face; infant body small and wearing a fitted pale-green sleep suit, no adult body or adults in the frame. Low dim bedside warm lamp stands safely well away on adjacent table with a closed care notebook and small clock. A folded parent cardigan and two plain cups on the distant side table suggest two parents sharing night care. Wide horizontal room composition, infant on center-right, enough context to feel lived-in but calm. No hospital equipment, no older child, no computer charts, no writing, no bottles in crib, no thick blankets covering face, no pillows, no stuffed toys in crib. Natural safe baby anatomy, recognizably tiny infant, do not make a schoolchild. Warm late night domestic nursery illustration in 3:1 panorama."
+    },
+    {
+      "file": "public/assets/events/family-talk-v1.png",
+      "prompt": "Create a horizontal exact 3:1 panorama, 2172 by 724, warm hand-painted Chinese narrative game art with muted green, honey light and textured wood. A quiet affordable Chinese cafe in late afternoon, close view of a small wooden table for two beside the window. On the table two ceramic cups of tea, two small plates of simple food, an ordinary smartphone placed face down off to the side, and a closed personal notebook. Two empty chairs partially frame the table. No people or body parts, no baby, no wedding decorations, no clear writing, no investment charts, no bundles of money, no readable text. The mood is attentive, intimate but neutral, suitable for a couple having an honest conversation, budget discussion, a friend's project celebration, or repairing a disagreement. Make the environment clearly a public modest tea shop with soft out of focus cafe chairs behind, not a private kitchen and not a student's family house. All objects physically accurate, consistent warm painted illustration, cinematic 3:1 landscape composition."
+    },
+    {
+      "file": "public/assets/events/family-newborn-hospital-v1.png",
+      "brief": "Daytime maternity hospital, only the tiny newborn in a transparent bassinet, no parents depicted; avoids assigning wrong ages to older parents. Warm jade and cream hand-painted style, 3:1."
+    }
+  ]
+}

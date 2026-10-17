@@ -1,0 +1,43 @@
+/* A brief scene between settled days, above the HUD and ordinary dialogs. */
+.night-transition{position:fixed;inset:0;margin:0;padding:72px clamp(20px,5vw,100px) 28px;border:0;border-radius:0;width:100vw;max-width:none;height:100dvh;max-height:none;overflow:auto;background:#151e23;color:#fff3d6;box-shadow:none;outline:none;opacity:1;transition:opacity 280ms ease-out;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+.night-transition::backdrop{background:#151e23}
+.night-transition-art,.night-transition-shade,.night-transition-caption{opacity:0;transition:opacity 280ms ease-out}
+.night-transition.is-playing :is(.night-transition-art,.night-transition-shade,.night-transition-caption){opacity:1}
+.night-transition.is-leaving{opacity:0}
+.night-transition-art,.night-transition-shade{pointer-events:none}
+.night-transition-art{position:relative;flex:none;width:100%;max-width:calc(max(100px,100dvh - 340px)*3);aspect-ratio:var(--scene-art-ratio,3/1);overflow:hidden;border-radius:6px}
+.night-transition-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:45% 50%;transform-origin:45% 50%}
+.night-transition.is-playing .night-transition-art img{animation:night-camera 3s cubic-bezier(.16,1,.3,1) both}
+.night-transition-shade{display:none}
+.night-transition-art::after{content:'';position:absolute;inset:0;background:#071625;opacity:0}
+.night-transition.is-sleep.is-playing .night-transition-art::after{animation:night-lights-down 2.6s ease-out both}
+.night-transition-caption{position:relative;flex:none;width:100%;max-width:1000px;text-shadow:0 2px 3px #07162580}
+.night-transition-caption p{margin:0;font-size:15px;line-height:1.7}
+.night-transition-caption h2{margin:8px 0 12px;font:700 clamp(26px,3.2vw,44px)/1.4 var(--title);letter-spacing:1px;color:#fff1c9}
+.night-transition-caption .night-transition-time{font-size:14px;color:#e0cdac;font-variant-numeric:tabular-nums}
+.night-transition-caption .night-transition-next{margin-top:10px;color:#d5c6ab;font-size:13px}
+.night-transition-skip{color:#3c2f20;position:absolute;right:max(24px,env(safe-area-inset-right));top:max(24px,env(safe-area-inset-top));min-width:76px}
+.night-transition.is-reduced,.night-transition.is-reduced :is(.night-transition-art,.night-transition-shade,.night-transition-caption){transition:none}
+.night-transition.is-reduced .night-transition-art img,.night-transition.is-reduced .night-transition-art::after{animation:none!important}
+@keyframes night-camera{from{transform:scale(1.025)}to{transform:scale(1)}}
+@keyframes night-lights-down{from{opacity:0}to{opacity:.23}}
+@media(max-aspect-ratio:1/1){
+ .night-transition.is-sleep .night-transition-art img{object-position:26% center;transform-origin:26% center}
+ .night-transition.is-night .night-transition-art img{object-position:52% center;transform-origin:52% center}
+ .night-transition{gap:20px;padding-bottom:max(28px,env(safe-area-inset-bottom))}
+}
+@media(max-height:480px){.night-transition{justify-content:flex-start;padding:20px 108px 20px 24px;gap:12px}.night-transition-art{max-width:600px}.night-transition-caption h2{font-size:22px;margin:2px 0 6px}.night-transition-caption .night-transition-next{margin-top:4px}}
+@media(prefers-reduced-motion:reduce){.night-transition{transition:none}.night-transition .night-transition-art img,.night-transition .night-transition-art::after{animation:none!important}}
+
+/* Morning follows the saved night outcome, with softer motion than the game HUD. */
+.night-transition.is-night .night-transition-art::after{inset:0;background:#06121f;mix-blend-mode:normal}
+.night-transition.is-night.is-playing .night-transition-art::after{animation:night-lights-down 2.4s ease-out both}
+.night-transition:is(.is-wake-fresh,.is-wake-alarm,.is-wake-late) .night-transition-art img{object-position:44% center;transform-origin:44% 44%}
+.night-transition.is-wake-fresh .night-transition-art::after{background:linear-gradient(125deg,transparent 35%,#ffebb53b 70%,transparent);opacity:0}
+.night-transition.is-wake-fresh.is-playing .night-transition-art::after{animation:wake-daylight 2.4s ease-out both}
+.night-transition.is-wake-alarm.is-playing .night-transition-art img{animation:wake-alarm-camera 2.4s ease-out both}
+.night-transition.is-wake-late.is-playing .night-transition-art img{animation:wake-late-camera 2.4s cubic-bezier(.16,1,.3,1) both}
+@keyframes wake-daylight{from{opacity:0}to{opacity:.6}}
+@keyframes wake-alarm-camera{from{transform:scale(1.015) translateY(3px)}to{transform:scale(1) translateY(0)}}
+@keyframes wake-late-camera{from{transform:scale(1)}to{transform:scale(1.035)}}
+@media(max-aspect-ratio:1/1){.night-transition:is(.is-sleep,.is-wake-fresh,.is-wake-alarm,.is-wake-late) .night-transition-art img{object-position:42% center;transform-origin:42% center}}

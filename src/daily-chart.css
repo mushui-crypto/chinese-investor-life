@@ -1,0 +1,24 @@
+.daily-chart{margin:16px 0;color:var(--ink);min-width:0}
+.daily-chart figcaption{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px}
+.daily-chart figcaption strong{font:650 15px var(--body,sans-serif);min-width:0}
+.daily-chart .daily-chart-tools{display:flex;align-items:center;gap:6px;flex:none;font-size:12px;color:var(--green)}
+.daily-chart-tools .info-button{width:28px;min-width:28px;height:32px;min-height:32px}
+.daily-readout{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 16px;margin:8px 0;padding:10px 0;border-block:1px solid var(--line);font-variant-numeric:tabular-nums;font-size:12px;line-height:1.5}
+.daily-readout-day{color:var(--muted);flex:none;min-width:28px}
+.daily-chart .daily-readout dl{display:flex;flex-wrap:wrap;gap:6px 16px;margin:0;min-width:0}
+.daily-readout dl>div{display:flex;align-items:baseline;gap:6px}.daily-readout dt{color:var(--muted);font-size:12px}.daily-readout dd{margin:0;font-size:12px;font-weight:600;overflow-wrap:anywhere}
+.daily-plot{width:100%;min-width:0}
+.market-playing .quote-chart.daily-chart svg,.daily-chart svg{display:block;width:100%;height:auto;max-height:none;min-height:0;overflow:hidden}
+.daily-axis{font:12px var(--body,sans-serif);fill:var(--ink);font-variant-numeric:tabular-nums}.daily-grid{stroke:var(--line);stroke-width:1;opacity:.55}.daily-time-grid{opacity:.22}.daily-axis-line{stroke:var(--line);stroke-width:1;fill:none;opacity:.8}.daily-gap{stroke:var(--frame);stroke-dasharray:3 5;opacity:.55}
+.daily-line{stroke:var(--green);stroke-width:1.5;fill:none}.daily-up{color:#ae3829}.daily-down{color:#27624b}.daily-flat{color:#655540}
+.daily-wick{stroke:currentColor;stroke-width:1}.daily-body,.daily-dot{fill:currentColor}.daily-net-value .daily-dot{fill:var(--green)}
+.daily-hit{fill:transparent}.daily-point{cursor:crosshair;outline:none}.daily-point:focus-visible .daily-hit{stroke:var(--frame);stroke-width:1;fill:var(--gold);fill-opacity:.08}
+.daily-crosshair{display:none;stroke:var(--ink);stroke-width:1;stroke-dasharray:3 4;opacity:.5;pointer-events:none}.daily-chart[data-inspecting] .daily-point[aria-pressed=true] .daily-crosshair{display:block}
+.daily-latest-line{stroke:currentColor;stroke-dasharray:4 4;stroke-width:1;opacity:.65}.daily-latest{pointer-events:none}.daily-latest rect{fill:currentColor}.daily-latest text{fill:#fff3d4;font:600 12px var(--body,sans-serif);font-variant-numeric:tabular-nums}
+.desk-stock .daily-latest text{fill:#20372b}
+@media(max-width:600px){.daily-readout{gap:5px 10px;padding-block:8px}.daily-chart .daily-readout dl{gap:5px 12px}.daily-chart figcaption strong{font-size:14px}}
+.crypto-terminal .daily-chart{--ink:#eaecef;--green:#f0b90b;--muted:#b7bdc6;--line:#3b424b;--frame:#f0b90b;padding:14px;margin:0;background:#181a20;border:0;border-radius:0}
+.crypto-terminal .daily-up{color:#0ecb81}.crypto-terminal .daily-down{color:#f6465d}.crypto-terminal .daily-flat{color:#b7bdc6}
+.crypto-terminal .daily-readout{background:none}.crypto-terminal .daily-readout dd{color:#eaecef}.crypto-terminal .daily-latest text{fill:#171b20}
+.crypto-status{margin:12px;padding:12px;border:1px solid #665b38;color:#f0ca77;line-height:1.6}.crypto-terminal .source-note summary{cursor:pointer;color:#eaecef}
+.crypto-terminal .terminal-modes{flex-wrap:wrap}.crypto-terminal .terminal-modes button{white-space:normal}

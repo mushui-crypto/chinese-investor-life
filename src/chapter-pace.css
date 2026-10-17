@@ -1,0 +1,82 @@
+.chapter-entry{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0;margin:0}
+.chapter-entry>div{display:grid;gap:4px;min-width:0}.chapter-entry strong{font-size:14px;color:#285447}.chapter-entry span{font-size:12px;color:#66583f}.chapter-entry .button{flex-shrink:0}
+.chapter-plan,.chapter-receipt{display:grid;gap:var(--content-section-space)}.chapter-plan p,.chapter-receipt p{margin:0;line-height:1.7}.chapter-target{color:#285447;font-weight:700}.chapter-stop{padding:12px 0;border-block:var(--content-rule);color:#814126}
+.chapter-numbers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 16px;margin:0}.chapter-numbers div{min-width:0}.chapter-numbers dt{font-size:13px;color:#66583f}.chapter-numbers dd{margin:6px 0 0;font-size:19px;font-weight:700;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.chapter-controls{display:flex;justify-content:flex-end;gap:12px;flex-wrap:wrap}.chapter-controls .button{min-height:44px}
+.chapter-montage{display:grid;gap:16px}.chapter-montage figure{margin:0;position:relative;aspect-ratio:var(--scene-art-ratio,3/1);background:#294e40;overflow:hidden;border-radius:6px}.chapter-montage img{width:100%;height:100%;object-fit:cover;animation:chapter-camera 10s ease-in-out alternate infinite}.chapter-montage figcaption{position:absolute;bottom:16px;left:16px;color:#fff8e6;background:#203c32e6;padding:6px 12px}.chapter-montage p{margin:0;color:#66583f}.chapter-date{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-variant-numeric:tabular-nums}.chapter-date strong{color:#285447}.chapter-montage.is-still img{animation:none}
+@keyframes chapter-camera{from{transform:scale(1)}to{transform:scale(1.04)}}
+@media(max-width:600px){.chapter-entry{align-items:stretch;flex-wrap:wrap}.chapter-entry>div{flex:1 1 180px}.chapter-numbers{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.chapter-controls .button{flex:1}.chapter-date{gap:8px}}
+@media(prefers-reduced-motion:reduce){.chapter-montage img{animation:none}}
+
+#game-dialog :is(.chapter-plan,.chapter-receipt)>p{margin:0}
+@media(max-height:760px){.chapter-entry strong{font-size:13px}.chapter-entry span{font-size:12px}.chapter-entry .button{padding-block:6px}}
+
+.chapter-montage img[hidden]{display:none}
+
+/* Stage planning is the default; the detailed day is an optional zoom into events. */
+.stage-operation-bar{container-type:inline-size}
+.stage-plan-inline{gap:14px}
+/* Minor school stories stay with the choices at the bottom, without a hero image. */
+.student-event-dock{max-height:var(--operation-max-height,56dvh);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;border:2px solid var(--frame);border-radius:8px;background:var(--paper);box-shadow:var(--shadow);scroll-padding:16px}
+.game-shell .student-event-dock .story-panel{margin:0;padding:18px var(--panel-inset);border:0;box-shadow:none;background:transparent}
+.student-event-dock .story-kicker{margin-bottom:10px}
+.student-event-dock .event-copy h2{font-size:21px;line-height:1.4;margin:0 0 10px}
+.student-event-dock .story-text{font-size:14px;line-height:1.8;margin:0 0 16px;max-width:72ch}
+.student-event-dock .choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.student-event-dock .choice{min-width:0;min-height:52px;padding:10px 12px;gap:10px}
+.student-event-dock .choice-content{min-width:0}
+.student-event-dock .choice strong{font-size:14px;line-height:1.6}
+.student-event-dock .choice small{font-size:12px;line-height:1.6}
+.student-event-dock .world-scope{font-size:12px;line-height:1.6;margin:12px 0 0}
+.student-event-dock .result-footer{margin-top:16px;padding-top:12px}
+/* Story options use the available panel width, including the lower student dock. */
+.story-panel{container:story / inline-size}
+.story-panel>.choices{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.story-panel>.choices>.choice{min-width:0;height:100%;align-items:center}
+.story-panel>.choices .choice-content{min-width:0;overflow-wrap:anywhere}
+@container story (min-width:580px){
+ .story-panel>.choices{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .story-panel>.choices>.choice:only-child{grid-column:1/-1}
+}
+.stage-heading{display:flex;justify-content:space-between;align-items:start;gap:12px}
+.stage-heading>div{display:grid;gap:4px;min-width:0}
+.stage-heading strong{font-size:16px;color:#285447}
+.stage-heading span,.stage-plan-effect{font-size:13px;color:#51452f}
+.stage-focus-selector{margin:0!important;padding:0!important;border:0!important}
+.stage-focus-selector>summary{cursor:pointer;min-height:36px;align-content:center;color:#285447;font-weight:700}
+.stage-focus-selector>summary span{font-size:12px;font-weight:400;margin-left:12px;text-decoration:underline}
+.stage-focus-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding-block:10px 4px}
+.button.stage-focus-option{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:5px;min-width:0;min-height:110px;text-align:left;white-space:normal;padding:12px}
+.stage-focus-option strong{font-size:14px}.stage-focus-option span,.stage-focus-option small{font-size:12px;line-height:1.6;font-weight:400;color:#51452f}
+.stage-focus-option small{margin-top:auto}
+.stage-focus-option.is-selected{background:#e9c36b;border-color:#285447}
+.stage-focus-option:focus-visible{outline:3px solid #285447;outline-offset:2px}
+.stage-footer{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;border-top:var(--content-rule)}
+.stage-footer :is(.button,.text-button){min-height:44px}
+.stage-time-actions{display:grid;gap:6px;min-width:0}
+.stage-time-buttons{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.stage-time-actions>small{font-size:12px;line-height:1.6;color:#51452f}
+.stage-fast-forward{padding:8px 12px;text-decoration:none}
+.chapter-plan>.chapter-stop{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border:0;padding:4px 0}
+.chapter-plan>.chapter-stop .button{flex-shrink:0}
+.chapter-plan>.shortfall-settlement{border-top:0;padding-top:0}
+.stage-shortage{font-size:13px;color:#87402a}.stage-stat-receipt{font-size:14px;color:#285447}
+@container(max-width:720px){.stage-focus-options{grid-template-columns:repeat(2,minmax(0,1fr))}.stage-footer{align-items:flex-start;flex-wrap:wrap;gap:8px 16px}.stage-plan-inline{gap:10px}}
+@container(max-width:410px){.stage-focus-options{grid-template-columns:1fr}.button.stage-focus-option{min-height:0}.stage-focus-option span,.stage-focus-option small{font-size:14px}}
+
+.chapter-receipt .chapter-stop{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.chapter-bills{display:grid;gap:20px}.chapter-bills>p{margin:0}.chapter-bills ul{margin:0;padding:0;list-style:none}.chapter-bills li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:12px 0}.chapter-bills li+li{border-top:var(--content-rule-soft)}.chapter-bills li>span{min-width:0;overflow-wrap:anywhere}.chapter-bills li>strong{flex-shrink:0;font-variant-numeric:tabular-nums}
+
+/* Consumption bills use a compact dated list; borrowing terms live elsewhere. */
+.chapter-bills .living-bill-list{margin:0;padding:0;list-style:none}
+.chapter-bills .living-bill-list li{align-items:flex-start;gap:16px;padding:14px 0}
+.bill-description,.bill-amount{display:grid;gap:5px;min-width:0}
+.bill-description small,.bill-amount small{font-size:12px;color:var(--muted);line-height:1.6}
+.bill-description strong{font-size:14px;overflow-wrap:anywhere}
+.bill-amount{text-align:right;font-variant-numeric:tabular-nums;flex-shrink:0}
+.bill-amount>strong{font-size:16px}.bills-pending{padding:16px;background:var(--paper-dark,#ecdfbb);border-radius:6px}
+.bills-pending h3{margin:0 0 10px;font-size:15px}.bill-pending-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0}
+.bill-pending-row>span{display:grid;gap:4px;font-size:14px}.wallet-bills{min-height:44px;text-align:left;width:100%;font-size:13px}
+.market-welcome{display:grid;gap:20px}.market-welcome p{margin:0}.market-welcome-choices{display:grid;gap:10px}.market-welcome-choices .button{text-align:left;min-height:48px;white-space:normal}
+.welcome-rules{padding:16px;background:var(--paper-dark,#ecdfbb);border-radius:6px;display:grid;gap:10px}.welcome-rules h3{margin:0;font-size:15px}
+@media(max-width:480px){.chapter-bills .living-bill-list li{display:grid;gap:8px}.bill-amount{text-align:left;display:flex;align-items:baseline;flex-wrap:wrap;gap:10px}.bill-pending-row{align-items:flex-start;flex-wrap:wrap}}

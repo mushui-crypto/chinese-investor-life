@@ -1,0 +1,73 @@
+/* One spacing rhythm across desks; crypto retains its exchange colours. */
+.market-desk{--market-gap:24px;--market-inset:24px;container-type:inline-size}
+.market-desk:not(.crypto-terminal):not(.casino-hall){padding:var(--market-inset)}
+.market-desk:not(.crypto-terminal):not(.casino-hall)>.desk-play-summary{margin:0 0 var(--market-gap);padding:16px 0;border-top:0;border-bottom:var(--content-rule)}
+.market-desk .desk-play-summary>div{min-width:0}
+.market-desk:not(.crypto-terminal):not(.casino-hall):not(.desk-stock) .desk-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,1fr);gap:var(--market-gap);align-items:start}
+.market-desk:not(.crypto-terminal):not(.casino-hall):not(.desk-stock) .desk-research-pane{display:flex;flex-direction:column;gap:24px;min-width:0}
+.market-desk:not(.desk-stock) .instrument-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;border:0;overflow:visible}
+.market-desk:not(.desk-stock) .instrument-option{min-width:0;min-height:76px;border:1px solid var(--line);border-radius:4px;padding:12px;align-items:start;gap:8px}
+.market-desk:not(.desk-stock) .instrument-option .game-icon{flex:none;width:24px;height:24px}
+.market-desk:not(.desk-stock) .instrument-option small{font-size:13px;line-height:1.5;color:#64543c}
+.market-desk:not(.desk-stock) .instrument-price b{font-size:16px}
+.market-desk:not(.desk-stock) .desk-research-pane>.daily-chart{margin:0}
+.market-desk:not(.crypto-terminal):not(.casino-hall):not(.desk-stock) .trade-ticket{padding:20px;background:var(--paper-deep);border:1px solid var(--line);box-shadow:none;border-radius:6px}
+.market-desk:not(.crypto-terminal):not(.casino-hall):not(.desk-stock) .trade-ticket h2{font-family:var(--font);font-size:18px;line-height:1.5;margin:0 0 8px}
+.market-desk .trade-ticket>.form-error{margin:12px 0;line-height:1.6}
+.market-desk .trade-ticket>.form-error:empty{display:none}
+.market-desk .desk-preview{border:0;margin:16px 0;padding:0;font-variant-numeric:tabular-nums}
+.market-desk .desk-preview>div{display:block;margin:0}
+.market-desk .desk-preview .order-cash{margin-bottom:16px}
+.market-desk .desk-preview :is(.order-cash,.order-outcome)>div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:6px 0}
+.market-desk .desk-preview :is(.order-cash,.order-outcome)>div b{flex-shrink:0;text-align:right}
+.market-desk .desk-preview .order-outcome{padding-top:12px;border-top:var(--content-rule-soft)}
+.market-desk .desk-preview small{color:var(--muted);font-size:12px;line-height:1.6}
+.market-desk .desk-preview .cash-shortage{line-height:1.6;margin:8px 0}
+.market-desk .number-presets{gap:8px}
+.market-desk .number-preset{flex:1 1 calc(50% - 8px)}
+.project-brief{display:flex;flex-direction:column;gap:16px;min-width:0}
+.project-brief h2{margin:0 0 8px;font-family:var(--font);font-size:20px}
+.project-brief header p{margin:0;font-size:14px;line-height:1.8;max-width:65ch;color:var(--ink)}
+.project-facts{display:flex;flex-direction:column;gap:0;margin:0}
+.project-facts>div{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:12px 0;border-bottom:var(--content-rule-soft)}
+.project-facts>div:last-child{border-bottom:0}
+.project-facts dt{font-size:13px;color:var(--muted)}
+.project-facts dd{margin:0;text-align:right;font-size:14px;font-weight:650;font-variant-numeric:tabular-nums}
+.project-footnote,.position-footnote{font-size:13px;line-height:1.7;color:var(--muted);margin:0;max-width:65ch}
+.project-research{display:flex;gap:8px;flex-wrap:wrap}
+.market-desk .payment-methods{display:flex;flex-direction:column;gap:8px;border:0;padding:0;margin:20px 0 16px;min-width:0}
+.payment-methods legend{padding:0;margin-bottom:8px;font-size:13px;font-weight:650}
+.payment-methods label{display:flex;align-items:center;gap:12px;padding:12px;min-height:60px;border:1px solid var(--line);border-radius:4px;cursor:pointer;background:var(--paper)}
+.payment-methods label:has(:checked){background:var(--sage);border-color:var(--green)}
+.payment-methods strong,.payment-methods small{display:block;line-height:1.6;font-size:14px}
+.payment-methods small{font-size:12px;color:var(--muted)}
+.housing-order .desk-preview .housing-payment>div,.housing-order .desk-preview .housing-cashflow>div{display:flex;justify-content:space-between;gap:16px;padding:6px 0}
+.housing-order .payment-total{font-size:16px;font-weight:650;color:var(--green)}
+.housing-order .housing-cashflow{padding-top:16px;margin-top:16px!important;border-top:var(--content-rule-soft)}
+.housing-cashflow h3{font-family:var(--font);font-size:13px;margin:0 0 8px}
+.market-desk:not(.desk-stock):not(.crypto-terminal) .desk-positions{margin-top:32px;padding-top:24px;border-top:var(--content-rule)}
+.market-desk .position-numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:16px;margin:20px 0}
+.market-desk .position-heading small{font-size:12px}
+.market-desk .position-actions+.position-footnote{margin-top:12px}
+.market-desk .desk-journal{margin-top:24px}
+.market-desk .desk-manage-form{padding-top:16px;border-top:var(--content-rule-soft)}
+.market-desk .desk-manage-form .desk-field{width:min(100%,320px)}
+.market-desk .desk-manage-form .desk-preview{flex:1 1 180px}
+.market-desk .contract-scenarios{margin-top:16px;padding-top:12px;border-top:var(--content-rule-soft)}
+.market-desk .contract-scenarios>summary{min-height:44px}
+.crypto-terminal .number-presets .number-preset{color:#eaecef;background:#2b3036;border-color:#66717e}
+.crypto-terminal .number-presets .number-preset[aria-pressed=true]{background:#403b2b;border-color:#ebc460;color:#f0d189}
+.crypto-terminal .desk-preview .order-outcome{border-color:#454e58}
+@container(max-width:800px){
+ .market-desk:not(.crypto-terminal):not(.casino-hall):not(.desk-stock) .desk-body{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:700px){
+ .market-desk{--market-gap:20px;--market-inset:16px}
+ .market-desk:not(.crypto-terminal):not(.casino-hall):not(.desk-stock) .trade-ticket{padding:16px}
+ .market-desk .project-facts>div{gap:16px}
+ .market-desk:not(.desk-stock) .instrument-list{grid-template-columns:1fr}
+ .market-desk .position-heading{gap:16px}
+ .market-desk .desk-manage-form .desk-field{width:100%}
+}
+
+.housing-order .number-presets .number-preset{flex:1 1 90px}

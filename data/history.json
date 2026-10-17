@@ -1,0 +1,359 @@
+[
+  {
+    "id": "HST01",
+    "date": "1973-10",
+    "name": "石油冲击",
+    "fact": "OAPEC 石油禁运加剧能源与宏观经济压力。",
+    "source_url": "https://www.federalreservehistory.org/-/media/Project/FedHistory/FedHistory/Documents/essaysPDFs/Oil-Shock-of-1973-74-_-Federal-Reserve-History.pdf",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "能源成本",
+      "通胀",
+      "运输利润"
+    ],
+    "archetype": "oil_shock",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST02",
+    "date": "1987-10-19",
+    "name": "黑色星期一",
+    "fact": "1987 年 10 月股市急剧下跌，美联储随后表明提供流动性的立场。",
+    "source_url": "https://www.federalreservehistory.org/essays/stock-market-crash-of-1987",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "股票",
+      "流动性",
+      "保证金"
+    ],
+    "archetype": "equity_crash",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST03",
+    "date": "1992-09-16",
+    "name": "英镑退出 ERM",
+    "fact": "英国于 1992 年 9 月 16 日暂停英镑的欧洲汇率机制成员资格。",
+    "source_url": "https://www.bankofengland.co.uk/quarterly-bulletin/1992/q4/operation-of-monetary-policy",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "汇率",
+      "外币债务"
+    ],
+    "archetype": "fx_regime_break",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST04",
+    "date": "1997-07",
+    "name": "亚洲金融危机",
+    "fact": "危机于 1997 年 7 月从泰国开始，随后波及亚洲多地。",
+    "source_url": "https://www.federalreservehistory.org/essays/asian-financial-crisis",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "汇率",
+      "信用",
+      "订单"
+    ],
+    "archetype": "regional_credit_crisis",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST05",
+    "date": "1998-09",
+    "name": "LTCM 危机",
+    "fact": "LTCM 陷入危机，1998 年 9 月由多家金融机构出资避免其立即崩溃。",
+    "source_url": "https://www.federalreservehistory.org/essays/ltcm-near-failure",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "相关性",
+      "杠杆",
+      "流动性"
+    ],
+    "archetype": "correlation_break",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST06",
+    "date": "2000",
+    "name": "互联网泡沫退潮",
+    "fact": "美联储历史资料将 2000 年互联网股泡沫破裂列为该时期的重要冲击。",
+    "source_url": "https://www.federalreservehistory.org/essays/great-moderation",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "科技股",
+      "风险资本",
+      "就业"
+    ],
+    "archetype": "growth_bust",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST07",
+    "date": "2001-09-11",
+    "name": "九一一袭击及金融运行冲击",
+    "fact": "袭击造成重大社会冲击，美联储采取措施支持金融系统运行。",
+    "source_url": "https://www.federalreservehistory.org/essays/september-11",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "支付",
+      "交易可用性",
+      "信心"
+    ],
+    "archetype": "operational_shock",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST08",
+    "date": "2008-09-15",
+    "name": "雷曼兄弟破产",
+    "fact": "雷曼兄弟于 2008 年 9 月 15 日申请破产。",
+    "source_url": "https://www.federalreservehistory.org/essays/support-for-specific-institutions",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "对手方",
+      "信用",
+      "资产价格"
+    ],
+    "archetype": "counterparty_crisis",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST09",
+    "date": "2008-12",
+    "name": "麦道夫骗局曝光",
+    "fact": "SEC 于 2008 年 12 月起诉麦道夫及其公司，披露庞氏骗局相关指控。",
+    "source_url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-20834",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "虚假净值",
+      "冻结",
+      "追偿"
+    ],
+    "archetype": "fraud_revelation",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST10",
+    "date": "2010-05-06",
+    "name": "闪电崩盘",
+    "fact": "2010 年 5 月 6 日美国市场出现重大交易波动，SEC 与 CFTC 开展调查。",
+    "source_url": "https://www.sec.gov/newsroom/speeches-statements/ts052010mls-examining-causes-lessons-may-6th-market-plunge",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "流动性",
+      "滑点",
+      "订单"
+    ],
+    "archetype": "flash_liquidity",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST11",
+    "date": "2011-03-11",
+    "name": "东日本大地震与供应链冲击",
+    "fact": "地震与海啸打击日本生产，并对汽车、电子等供应链造成影响。",
+    "source_url": "https://www.worldbank.org/content/dam/Worldbank/GEP/GEParchives/GEP2011b/GEP2011bIPAnnex.pdf",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "供应链",
+      "订单",
+      "能源"
+    ],
+    "archetype": "supply_disruption",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST12",
+    "date": "2013-03",
+    "name": "塞浦路斯银行危机",
+    "fact": "银行危机处置涉及银行重组、未受保存款参与及临时支付限制；受保存款与未受保存款并非同样处理。",
+    "source_url": "https://www.imf.org/en/news/articles/2015/09/28/04/53/socar051713a",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "特定银行",
+      "资金可用性"
+    ],
+    "archetype": "bank_resolution",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST13",
+    "date": "2015-01-15",
+    "name": "瑞郎汇率下限取消",
+    "fact": "瑞士央行于 2015 年 1 月 15 日宣布取消最低汇率安排。",
+    "source_url": "https://www.snb.ch/en/publications/communication/press-releases/2015/pre_20150115",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "外汇",
+      "跳空",
+      "保证金"
+    ],
+    "archetype": "fx_gap",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST14",
+    "date": "2015-06",
+    "name": "中国股市剧烈调整",
+    "fact": "2015 年中中国股票市场发生显著调整，IMF 在当年报告中讨论其影响。",
+    "source_url": "https://www.imf.org/en/blogs/articles/2015/10/05/managing-chinas-economic-transition",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "股票",
+      "杠杆",
+      "市场情绪"
+    ],
+    "archetype": "equity_deleveraging",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST15",
+    "date": "2016-06-24",
+    "name": "英国脱欧公投结果",
+    "fact": "2016 年 6 月公布的脱欧公投结果带来市场与经济调整预期。",
+    "source_url": "https://www.bankofengland.co.uk/news/2016/june/statement-from-the-governor-of-the-boe-following-the-eu-referendum-result",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "汇率",
+      "不确定性"
+    ],
+    "archetype": "political_repricing",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST16",
+    "date": "2018-02-05",
+    "name": "波动率产品风暴",
+    "fact": "BIS 分析了 2018 年 2 月 5 日市场波动与杠杆、反向波动率产品再平衡的关联。",
+    "source_url": "https://www.bis.org/publications/equity-market-turbulence-5-february-role-exchange-traded-volatility-products",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "波动率",
+      "路径依赖",
+      "再平衡"
+    ],
+    "archetype": "volatility_feedback",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST17",
+    "date": "2020-03",
+    "name": "疫情与全球经济冲击",
+    "fact": "2020 年疫情及相关防控措施冲击全球经济，IMF 将其称为大封锁时期。",
+    "source_url": "https://www.imf.org/en/publications/weo/issues/2020/04/14/weo-april-2020",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "健康",
+      "就业",
+      "经营",
+      "市场"
+    ],
+    "archetype": "pandemic_shock",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST18",
+    "date": "2020-04-20",
+    "name": "WTI 特定月份合约负结算价",
+    "fact": "2020 年 4 月 20 日，NYMEX WTI 五月交割合约出现负价格结算；不是所有原油价格都为负。",
+    "source_url": "https://www.cftc.gov/PressRoom/PressReleases/8315-20",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "指定合约",
+      "仓储",
+      "交割"
+    ],
+    "archetype": "delivery_dislocation",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST19",
+    "date": "2021-01",
+    "name": "GameStop 等迷因股交易潮",
+    "fact": "SEC 工作人员报告研究了 2021 年初 GameStop 等股票的交易活动和市场结构。",
+    "source_url": "https://www.sec.gov/newsroom/press-releases/2021-212",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "个股",
+      "期权",
+      "流动性"
+    ],
+    "archetype": "meme_mania",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST20",
+    "date": "2022-02",
+    "name": "俄乌战争及经济外溢",
+    "fact": "战争与相关制裁产生严重经济影响，能源与商品价格压力向多地传递。",
+    "source_url": "https://www.imf.org/en/news/articles/2022/03/05/pr2261-imf-staff-statement-on-the-economic-impact-of-war-in-ukraine",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "能源",
+      "粮食",
+      "供应链",
+      "付款"
+    ],
+    "archetype": "war_spillover",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST21",
+    "date": "2022-05",
+    "name": "Terra 体系崩溃",
+    "fact": "SEC 的审判后公告说明，2022 年 5 月 UST 脱锚后，相关代币价格大幅下跌至接近零。",
+    "source_url": "https://www.sec.gov/newsroom/press-releases/2024-73",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "算法稳定币",
+      "相关抵押物"
+    ],
+    "archetype": "stablecoin_collapse",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST22",
+    "date": "2022-09",
+    "name": "英国国债与 LDI 风波",
+    "fact": "2022 年 9 月英国国债市场严重失灵，英格兰银行实施临时购债干预。",
+    "source_url": "https://www.bankofengland.co.uk/quarterly-bulletin/2023/2023/financial-stability-buy-sell-tools-a-gilt-market-case-study",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "国债",
+      "保证金",
+      "养老金结构"
+    ],
+    "archetype": "collateral_spiral",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST23",
+    "date": "2022-11",
+    "name": "FTX 危机",
+    "fact": "SEC 于 2022 年 12 月公布针对 FTX 创始人的欺诈指控，涉及客户资金转移等事项；游戏冲击节点设在 11 月危机时期。",
+    "source_url": "https://www.sec.gov/newsroom/press-releases/2022-219",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "托管",
+      "平台信用",
+      "流动性"
+    ],
+    "archetype": "custody_failure",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  },
+  {
+    "id": "HST24",
+    "date": "2023-03-10",
+    "name": "硅谷银行被关闭接管",
+    "fact": "硅谷银行于 2023 年 3 月 10 日被加州监管机构关闭，FDIC 被指定为接管人。",
+    "source_url": "https://www.fdic.gov/resources/resolutions/bank-failures/failed-bank-list/silicon-valley.html",
+    "checked_on": "2026-09-22",
+    "shock_channels": [
+      "银行流动性",
+      "企业现金"
+    ],
+    "archetype": "bank_run",
+    "scope_note": "仅映射相关持仓、账户、经营或生活敞口；不统一扣除全部财富。"
+  }
+]

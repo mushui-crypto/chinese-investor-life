@@ -1,0 +1,234 @@
+/* One stable home for identity, attributes and money across game screens. */
+:root{--screen-gap:20px;--panel-inset:24px;--panel-gap:16px;--control-gap:8px;--player-header-height:112px;--status-rail-width:220px;--right-rail-width:244px;--actor-dock-height:220px;--player-bar-offset:120px}
+.game-shell{max-width:none;padding-top:var(--player-header-height)}
+.has-status-rail{padding-left:calc(var(--status-rail-width) + var(--screen-gap)*2);padding-right:calc(var(--right-rail-width) + var(--screen-gap)*2)}
+.game-shell .player-header{position:fixed;inset:0 0 auto;z-index:12;height:var(--player-header-height);min-height:0;padding:var(--screen-gap);gap:16px;pointer-events:none;align-items:flex-start}
+.player-header>button,.player-header>.header-tools{pointer-events:auto}
+.player-profile{display:flex;align-items:center;gap:12px;min-width:0;max-width:min(600px,calc(100% - 240px));min-height:72px;height:auto;padding:8px 14px 8px 10px;background:var(--paper);border:2px solid var(--frame);border-radius:8px;color:var(--ink);text-align:left;box-shadow:inset 0 0 0 3px var(--paper-deep),0 3px 0 var(--frame)}
+.player-profile:hover{background:var(--paper-deep)}
+.player-profile>.portrait{width:48px;height:48px;border:2px solid var(--wood)}
+.player-identity{display:flex;flex-direction:column;gap:4px;min-width:0}
+.player-name>strong{font-family:var(--title);font-size:21px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.player-identity>small{font-size:12px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.player-date{display:flex;flex-direction:column;align-items:flex-start;gap:3px;flex-shrink:0;border-left:1px solid var(--line);padding-left:14px}
+.player-date>strong{font-family:var(--title);font-size:27px;line-height:1.25;color:var(--green)}
+.player-date>span{font-size:13px;line-height:1.5}
+.player-date>small{font-size:12px;color:var(--muted);line-height:1.5}
+.game-shell .status-rail{display:block;position:fixed;left:var(--screen-gap);top:var(--status-rail-top,var(--player-header-height));bottom:auto;height:auto;max-height:calc(100dvh - var(--status-rail-top,var(--player-header-height)) - var(--screen-gap));width:var(--status-rail-width);z-index:6;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:14px 14px 16px;border:2px solid var(--frame);border-radius:10px;box-shadow:var(--shadow);background:var(--paper)}
+.rail-heading{font-size:15px;font-family:var(--font);margin:0 0 10px;color:var(--green)}
+.status-rail .stats{gap:6px}
+.status-rail .stat dt{gap:5px;font-size:13px}
+.status-rail .stat dt .game-icon{width:19px;height:19px}
+.status-rail .stat dt .info-button{width:26px;height:28px;min-height:28px;flex-basis:26px}
+.status-rail .stat dd{font-size:13px}
+.status-rail .stat-track{height:6px}
+.stat-note{grid-column:1/-1;margin-top:2px;font-size:11px;line-height:1.5;color:var(--muted);overflow-wrap:anywhere}
+.stat.is-fatigued :is(dd,.stat-note){color:#9e3826}
+.stat.is-fatigued .stat-track i{background:#b85038}
+.status-rail .pocket-book{margin-top:14px;padding-top:12px}
+.status-rail .pocket-book h3{margin-bottom:8px;font-size:14px}
+.status-rail .pocket-book dl>div{font-size:12px;margin:6px 0;gap:5px}
+.status-rail .pocket-book dd{font-size:14px;overflow-wrap:anywhere}
+.status-rail .pocket-book .text-button{min-height:34px;font-size:13px}
+.status-rail .family-line{font-size:12px;margin-top:8px;padding-top:8px}
+.status-rail .family-line small{font-size:11px;line-height:1.5}
+/* Living cash flow belongs to the wallet; expand it without crowding the scene. */
+.wallet-living{border-top:var(--content-rule);margin-top:8px}
+.wallet-living>summary{cursor:pointer;min-height:44px;padding:10px 0;font-size:13px;line-height:1.6}
+.wallet-living-body{display:grid;gap:6px;padding-bottom:10px;min-width:0}
+.wallet-living-body>dl{margin:0}
+.wallet-living dd{white-space:nowrap;font-variant-numeric:tabular-nums}
+.wallet-living dd small{font-size:11px;font-weight:400;color:var(--muted)}
+.wallet-payday{margin:0;font-size:12px;line-height:1.6;color:var(--muted)}
+.college-support-summary{font-size:13px;line-height:1.7}
+.college-support-summary p{margin:0 0 8px}
+.has-status-rail .game-layout{grid-template-columns:minmax(0,1fr);max-width:none;margin:0;gap:var(--screen-gap)}
+.has-status-rail.market-playing{--right-rail-width:0px;padding-right:var(--screen-gap)}
+.has-status-rail.market-playing .game-layout{grid-template-columns:minmax(0,1fr);max-width:none}
+.has-status-rail .arrangement-panel{position:fixed;right:var(--screen-gap);top:var(--right-rail-top,var(--player-header-height));width:var(--right-rail-width);max-height:calc(100dvh - var(--right-rail-top,var(--player-header-height)) - var(--screen-gap));overflow:auto;overscroll-behavior:contain;grid-column:auto;grid-row:auto;display:grid;gap:12px;padding-bottom:4px}
+.has-status-rail.market-playing .arrangement-panel{display:none}
+/* Only the middle pane scrolls; its bottom always clears the actual nav height. */
+html.game-active,html.game-active body{height:100%;overflow:hidden;overscroll-behavior:none}
+.game-shell.has-status-rail{display:flex;flex-direction:column;height:100dvh;min-height:0;overflow:hidden;padding-bottom:var(--game-bottom-space,var(--game-nav-space,120px))}
+.has-status-rail>.player-header{flex-shrink:0}
+.game-scroll{flex:1;min-height:0;min-width:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--wood) transparent;scrollbar-gutter:stable;padding:2px 8px 8px 2px;scroll-padding-block:12px;overflow-anchor:none}
+.game-shell .game-scroll .main-stage,.game-shell .game-scroll .story-panel,.game-shell .game-scroll .story-panel h2{scroll-margin-block:12px}
+.game-shell .game-scroll .desk-quickbar{top:0}
+.game-scroll:focus-visible{outline:2px solid var(--wood);outline-offset:-2px}
+/* Middle-column panels share edges, content insets, and a single vertical rhythm. */
+.game-shell .main-stage{gap:var(--panel-gap);min-width:0}
+.game-scroll>.survival-panel{width:100%;margin:0 0 var(--panel-gap);padding:var(--panel-inset);grid-template-columns:minmax(0,1fr) auto;gap:16px 24px}
+.game-scroll>.survival-panel .survival-heading{min-width:0}
+.game-scroll>.survival-panel .survival-metrics{gap:16px 24px}
+.game-scroll>.survival-panel .survival-rescue{padding-top:16px}
+.game-scroll>.survival-panel .survival-actions{margin-top:12px;gap:var(--control-gap)}
+.game-shell .main-stage>:is(.workspace:not(.market-desk),.story-panel){padding:var(--panel-inset)}
+.game-shell .period-heading{padding:16px var(--panel-inset);gap:16px;flex-wrap:wrap}
+.game-shell .period-heading>:first-child{min-width:0}
+.game-shell .period-title{flex-wrap:wrap}
+.game-shell .period-heading>.life-pace-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:var(--control-gap);margin-left:auto}
+.game-shell .period-console .compact-budget{padding:16px var(--panel-inset)}
+.game-shell .compact-budget .budget-footer{gap:8px 16px}
+@media(max-width:1249px){.game-scroll>.survival-panel{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:700px){
+ .game-shell .period-heading>.life-pace-actions{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .game-shell .period-heading>.life-pace-actions>.primary{grid-column:1/-1}
+}
+@media(max-width:600px){
+ :root{--panel-inset:16px;--panel-gap:12px}
+ .game-shell .period-heading{padding-block:12px;gap:12px}
+ .game-shell .period-console .compact-budget{padding-block:12px}
+ .game-scroll>.survival-panel{gap:12px}
+ .game-scroll>.survival-panel .survival-metrics{gap:12px 16px}
+}
+.child-planning .child-planning-footer{margin:0;padding:0;border:0;justify-content:flex-end}
+.game-shell .main-stage,.game-shell .story-panel{scroll-margin-top:calc(var(--player-header-height) + 16px)}
+.game-shell .desk-quickbar{top:var(--player-bar-offset)}
+.has-status-rail :is(.bottom-nav,.daily-operation-dock){left:calc(50% + (var(--status-rail-width) - var(--right-rail-width))/2);width:min(1100px,calc(100% - var(--status-rail-width) - var(--right-rail-width) - var(--screen-gap)*4))}
+.has-status-rail .bottom-nav{bottom:var(--screen-gap)}
+.birth-shell{max-width:1600px}
+@media(min-width:901px) and (max-width:1249px){
+ :root{--status-rail-width:200px;--right-rail-width:0px}
+ .has-status-rail .game-layout{grid-template-columns:minmax(0,1fr)}
+ .has-status-rail{padding-right:var(--screen-gap)}
+ .has-status-rail .arrangement-panel{position:static;width:auto;max-height:none;overflow:visible;grid-column:1;grid-row:auto}
+ .has-status-rail .action-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .has-status-rail.market-playing .desk-body{grid-template-columns:minmax(0,1fr)}
+ .has-status-rail .terminal-grid{grid-template-columns:minmax(0,1fr) 270px}
+ .has-status-rail .coin-watchlist{grid-column:1/-1;border-right:0;display:flex;flex-wrap:wrap;gap:6px}
+ .has-status-rail .coin-watchlist h2,.has-status-rail .coin-watchlist>p{flex-basis:100%}
+ .has-status-rail .coin-table-head{display:none}.has-status-rail .coin-row{width:calc(33.333% - 4px)}
+ .has-status-rail .casino-play-area{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:900px){
+ :root{--screen-gap:12px;--player-header-height:0px;--status-rail-width:0px;--right-rail-width:0px;--player-bar-offset:8px}
+ .game-shell,.has-status-rail{padding:0 12px 114px}
+ .game-shell .player-header{position:relative;inset:auto;height:auto;min-height:88px;padding:var(--screen-gap) 0;gap:10px;pointer-events:auto}
+ .player-profile{max-width:calc(100% - 116px);min-height:68px;height:auto;gap:9px;padding:8px}
+ .player-header .save-state{display:none}
+ .player-header .header-tools{gap:8px}
+ .game-shell .status-rail{display:none}
+ .has-status-rail .game-layout{display:block}.has-status-rail .arrangement-panel{position:static;width:auto;max-height:none;overflow:visible;margin-top:var(--screen-gap)}
+ .has-status-rail.market-playing .arrangement-panel{display:none}
+ .game-shell .mobile-summary{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;padding:4px 12px;background:var(--paper);border:1px solid var(--wood);border-radius:6px;margin-bottom:12px}
+ .game-shell .mobile-summary strong{font-size:13px;color:var(--green)}
+ .game-shell .mobile-summary .text-button{font-size:13px;min-height:44px}
+ .has-status-rail :is(.bottom-nav,.daily-operation-dock){left:50%;width:calc(100% - 24px)}
+ .birth-shell{padding-bottom:24px}
+}
+@media(max-width:600px){
+ .game-shell,.has-status-rail{padding-bottom:154px}
+ .game-shell .player-header{align-items:flex-start;min-height:0;gap:8px}
+ .player-profile{display:grid;grid-template-columns:38px minmax(0,1fr);max-width:none;flex:1;height:auto;gap:5px 8px;padding:8px}
+ .player-profile>.portrait{width:38px;height:38px}
+ .player-name>strong{font-size:18px}.player-identity>small{font-size:11px;line-height:1.5}
+ .player-date{grid-column:1/-1;border:0;border-top:1px solid var(--line);padding:6px 0 0;gap:3px}
+ .player-date>strong{font-size:21px}.player-date>span,.player-date>small{font-size:11px}
+ .player-header .header-tools{gap:6px}
+ .player-header .header-tools .icon-button{width:38px;min-width:38px;height:44px;min-height:44px}
+ .player-header .header-tools .game-icon{width:26px;height:26px}
+ .game-shell .bottom-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;padding:5px;bottom:max(var(--screen-gap),env(safe-area-inset-bottom));border-radius:8px;overflow:visible}
+ .game-shell .bottom-nav.preschool-nav{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .game-shell .bottom-nav .nav-tab{min-width:0;min-height:53px;padding:4px 1px;gap:2px;font-size:11px;line-height:1.3;white-space:normal}
+ .game-shell .bottom-nav .nav-tab>.game-icon{width:25px;height:25px}
+ .game-shell .bottom-nav .nav-label{display:inline}.game-shell .bottom-nav .nav-label-short{display:none}
+ .game-shell .main-stage{scroll-margin-bottom:148px}
+ .birth-shell{padding-bottom:24px}
+}
+
+/* Half-body portraits belong to the foreground, never to the story flow. */
+.world-scene{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+/* Keep the portrait and dialogue below the right tools, clear of the ledger. */
+.world-actor,.world-scene-child .world-actor{position:absolute;left:auto;right:var(--screen-gap);bottom:var(--screen-gap);width:var(--right-rail-width);height:var(--actor-dock-height);transform:none}
+.world-scene .protagonist-wrap{inset:0 0 auto;position:absolute;width:100%;height:auto;max-width:none;aspect-ratio:1}
+.world-scene .protagonist-wrap>span{display:none}
+.world-dialogue{position:absolute;left:0;right:0;bottom:0;margin:0;padding:10px 12px;background:var(--paper);border:2px solid var(--frame);border-radius:8px;box-shadow:var(--shadow);color:var(--ink);font-size:12px;line-height:1.7;text-wrap:wrap}
+@media(min-width:1250px) and (min-height:761px){
+ .world-scene:not(.is-daily)+.life-playing .arrangement-panel{max-height:calc(100dvh - var(--right-rail-top,var(--player-header-height)) - var(--actor-dock-height) - var(--screen-gap)*2)}
+}
+/* Without a dedicated right column, keep decoration out of playable content. */
+@media(max-width:1249px),(max-height:760px){.world-scene{display:none}}
+
+/* Story text must clear the fixed player header when focus follows a choice. */
+.game-shell .story-panel h2{scroll-margin-top:calc(var(--player-header-height) + 16px);scroll-margin-bottom:148px}
+
+/* Trading already has a cash summary beside its order form. */
+@media(max-width:900px){.market-playing:has(.market-desk) .mobile-summary{display:none}}
+@media(max-width:600px){.market-playing:has(.market-desk) .player-identity>small{display:none}}
+@media(min-width:1250px){.has-status-rail .casino-ticket{padding:12px 16px}.has-status-rail .casino-ticket .cash-budget{padding-block:8px}}
+
+@media(max-width:600px){
+ .market-playing .stock-board{grid-template-columns:minmax(0,1fr)}
+ .market-playing .stock-board .instrument-option{flex-direction:row;align-items:center;min-height:64px;padding:8px}
+ .market-playing .stock-board .instrument-price{display:block}
+ .market-playing .stock-exchanges{margin-bottom:8px}
+ .market-playing .stock-market-tab span,.market-playing .stock-market-tab b{margin-top:0}
+}
+
+
+/* Desktop identity shares the left column, leaving the middle free at the top. */
+@media(min-width:901px){
+ .game-shell.has-status-rail{padding-top:var(--screen-gap)}
+ .has-status-rail .player-header{height:auto}
+ .has-status-rail .player-profile{display:grid;grid-template-columns:38px minmax(0,1fr);flex:none;width:var(--status-rail-width);max-width:var(--status-rail-width);height:auto;gap:8px;padding:10px}
+ .has-status-rail .player-profile>.portrait{width:38px;height:38px}
+ .has-status-rail .player-identity{gap:3px}
+ .has-status-rail .player-name>strong{font-size:18px}
+ .has-status-rail .player-identity>small{font-size:11px;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
+ .has-status-rail .player-date{grid-column:1/-1;border-left:0;border-top:1px solid var(--line);padding:8px 0 0;gap:3px}
+ .has-status-rail .player-date>strong{font-size:23px}
+ .has-status-rail .player-date>span,.has-status-rail .player-date>small{font-size:11px;line-height:1.5}
+}
+/* At medium widths the right tools still need their own line above the market. */
+@media(min-width:901px) and (max-width:1249px){.game-shell.has-status-rail{padding-top:var(--right-rail-top,84px)}}
+
+.player-name{display:flex;align-items:center;gap:6px;min-width:0}
+.player-name>strong{min-width:0}
+.employment-badge{display:inline-block;flex:none;padding:2px 6px;border:1px solid #9f895e;border-radius:4px;background:#e6d5ae;color:#58412b;font:600 10px/1.5 var(--font);white-space:nowrap;vertical-align:middle}
+.employment-badge.is-employed{background:#dce4c9;border-color:#8b9b71;color:#30523e}
+.employment-update{border-top:1px solid #b8a171;margin-top:14px;padding-top:12px;font-size:13px;line-height:1.7}
+.employment-update strong{display:flex;flex-wrap:wrap;gap:4px 8px;justify-content:space-between}
+.employment-update p{margin:6px 0 0;color:#59452d}
+.employment-detail{margin:16px 0;padding:16px 0;border-block:1px solid #b8a17180}
+.daily-routine>.employment-detail{margin:0;border-bottom:0;padding-bottom:0}
+.employment-update .positive,.work-history .positive{color:var(--green)}
+.employment-detail h3{display:flex;align-items:center;gap:8px;margin:0 0 12px;font:700 16px/1.5 var(--font);color:#285543}
+.employment-detail dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px 20px;margin:0 0 12px}
+.employment-detail dt{font-size:12px;color:#59452d;margin-bottom:4px}
+.employment-detail dd{margin:0;font-size:14px;font-weight:600;line-height:1.6}
+.career-route{margin-block:20px}
+.career-route h4{margin:0 0 8px;color:var(--green,#285543);font-size:14px}
+.career-steps{list-style:none;display:flex;flex-wrap:wrap;gap:12px 20px;padding:0;margin:16px 0}
+.career-steps li{display:grid;grid-template-columns:24px 1fr;gap:3px 8px;flex:1 1 135px;font-size:13px;color:#59452d}
+.career-steps li>span{grid-row:span 2;align-self:center;display:grid;place-items:center;width:24px;height:24px;border:1px solid #8f7856;border-radius:50%;font-variant-numeric:tabular-nums}
+.career-steps li[aria-current]{color:#245b48}
+.career-steps li[aria-current]>span{background:#245b48;color:#fff8df;border-color:#245b48}
+.career-steps small{font-size:12px}
+.career-next{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;font-size:14px;margin:18px 0 12px}
+.career-next span{color:#285543;font-weight:600}
+.employment-detail .career-requirements{grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.career-requirements small{display:block;color:#59452d;font-weight:400;margin-top:3px}
+.work-history summary,.work-event-rules summary{cursor:pointer;min-height:44px;padding:12px 0;font-size:13px;font-weight:600}
+.work-history ol{list-style:none;margin:0;padding:0}
+.work-history li{padding:12px 0;border-bottom:1px solid #b8a17166}
+.work-history li>div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:14px}
+.work-history time{display:block;font-size:12px;color:#685338;margin-top:4px}
+.work-history p,.work-event-rules li{font-size:13px;line-height:1.8;margin:6px 0 0}
+.work-event-rules ul{padding-left:20px;margin:0}
+
+/* Short screens keep every destination visible without spending two rows on icons. */
+@media(min-width:360px) and (max-width:900px) and (max-height:740px){
+ .game-shell .bottom-nav{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;padding:5px}
+ .game-shell .bottom-nav.preschool-nav{grid-template-columns:repeat(6,minmax(0,1fr))}
+ .game-shell .bottom-nav .nav-tab{min-height:44px;padding:4px 2px;font-size:11px;line-height:1.4}
+ .game-shell .bottom-nav .nav-tab>.game-icon{display:none}
+ .game-shell .bottom-nav .nav-label{display:block;max-width:2em;text-align:center}
+}
+@media(max-width:900px) and (max-height:500px){
+ .game-shell .player-header{min-height:0;padding-block:8px;align-items:center}
+ .game-shell .player-profile{display:flex;min-height:0;align-items:center;padding:6px 8px;gap:8px}
+ .game-shell .player-profile>.portrait{width:32px;height:32px}
+ .game-shell .player-identity>small{display:none}
+ .game-shell .player-date{flex:1;flex-direction:row;flex-wrap:wrap;align-items:center;gap:2px 12px;border-top:0;border-left:1px solid var(--line);padding:0 0 0 8px}
+ .game-shell .player-date>strong{font-size:18px}
+}

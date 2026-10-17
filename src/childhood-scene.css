@@ -1,0 +1,69 @@
+/* The childhood room stays visible; yearly choices share the lower operation dock. */
+.world-backdrop.childhood-world>img{object-position:50% 50%}
+.childhood-world::after{background:linear-gradient(180deg,#312d2215,transparent 25%,transparent 75%,#312d2230)}
+.childhood-stage{min-height:0;pointer-events:none}
+.childhood-mobile-art{display:none}
+.childhood-operations{display:flex;flex-direction:column;gap:12px;padding:16px var(--panel-inset);border:2px solid #81633e;border-radius:7px;background:#e9d9b4;box-shadow:inset 0 0 0 2px #f5e9c8,0 3px #49372755;max-height:min(48dvh,var(--operation-max-height,48dvh));overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.childhood-operation-heading{display:flex;align-items:baseline;justify-content:space-between;gap:6px 16px;flex-wrap:wrap}
+.childhood-operation-heading h2{margin:0;font:700 16px/1.5 var(--font);color:var(--green)}
+.childhood-operation-heading>span{font-size:13px;line-height:1.6;color:var(--muted)}
+.childhood-operation-heading strong{color:var(--green);font-variant-numeric:tabular-nums}
+.childhood-feedback{margin:0;max-width:100%;font-size:14px;line-height:1.65;color:#3c4c33;text-wrap:wrap}
+.childhood-feedback>div{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline}
+.childhood-feedback p{margin:4px 0 0;font-size:13px;color:var(--muted)}
+.childhood-effects{display:flex;flex-wrap:wrap;gap:2px 12px;font-size:13px;line-height:1.6;font-weight:400;font-variant-numeric:tabular-nums}
+.childhood-effects>span{white-space:nowrap}
+.childhood-operation-actions{display:flex;flex-direction:column;gap:12px}
+.childhood-activity-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.childhood-year-end{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 16px;padding-top:12px;border-top:1px solid #b8a17180}
+.childhood-year-end>p{margin:0 auto 0 0;font-size:12px;line-height:1.6;color:var(--muted)}
+.childhood-year-end>.primary{flex:none;gap:8px}
+.childhood-activity{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:6px;min-width:0;min-height:48px;padding:12px 14px;font-size:14px;line-height:1.5;white-space:normal;text-align:left}
+.childhood-activity-label{display:flex;gap:8px;align-items:center}
+.childhood-activity small{font-size:12px;line-height:1.5;font-weight:400;color:var(--muted);margin-top:auto}
+.childhood-activity .game-icon{width:23px;height:23px;flex:none}
+.childhood-operations .button:disabled{opacity:1;color:#6d614b;background:#e3d5b5;box-shadow:0 2px #8c795a;cursor:not-allowed}
+.childhood-playing .arrangement-panel .childhood-path>summary{padding:12px;gap:6px;flex-wrap:wrap}
+.childhood-playing .arrangement-panel .childhood-path>.child-growth-body{padding:4px 12px 12px}
+.childhood-playing .arrangement-panel .child-growth-body label{grid-template-columns:minmax(0,1fr);gap:8px}
+.childhood-playing .arrangement-panel .child-growth-body .game-select{width:100%}
+.childhood-playing .arrangement-panel .child-stages{font-size:12px}
+.childhood-playing .arrangement-panel .child-skip{flex-direction:column;align-items:stretch}
+
+/* Keep the illustrated childhood story compact while retaining the 3:1 scene. */
+.childhood-playing .main-stage>.story-panel{width:94%;max-width:1040px;margin-inline:auto;padding:20px;box-sizing:border-box}
+.childhood-playing .main-stage>.story-panel h2{font-size:24px;line-height:1.4}
+.childhood-playing .main-stage>.story-panel .event-intro{gap:12px;margin-bottom:12px}
+.childhood-playing .main-stage>.story-panel .choices{margin-top:16px}
+.childhood-playing .main-stage>.story-panel .choice{padding:12px;min-height:54px}
+@media(max-width:1100px){
+ .childhood-playing .main-stage>.story-panel{width:100%;padding:16px}
+ .childhood-playing .main-stage>.story-panel h2{font-size:22px}
+}
+.childhood-planning .status-rail{max-height:calc(100dvh - var(--status-rail-top,var(--player-header-height)) - var(--screen-gap))}
+@media(min-width:1250px){
+ .childhood-planning .game-scroll{scrollbar-gutter:auto}
+}
+@media(max-width:1249px){
+ .childhood-world>img{opacity:.6}
+ .childhood-mobile-art{display:block;width:100%;height:auto;aspect-ratio:var(--scene-art-ratio,3/1);object-fit:cover;object-position:50% 35%;border-radius:6px}
+ .childhood-planning .arrangement-panel .child-growth-body{max-width:680px}
+}
+@media(max-width:900px){
+ .childhood-operations{gap:10px;padding:12px}
+ .childhood-operation-actions{gap:10px}
+ .childhood-year-end{padding-top:10px;gap:8px 12px}
+ .childhood-activity-buttons{grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px}
+ .childhood-activity{min-width:0;padding:8px 6px;white-space:normal;font-size:13px;gap:4px}
+ .childhood-year-end>.primary{min-height:44px;font-size:13px}
+ .childhood-feedback{font-size:13px}
+}
+@media(max-width:480px){
+ .childhood-activity{padding:10px;min-height:66px;font-size:14px}
+ .childhood-activity .game-icon{display:none}
+ .childhood-effects{font-size:14px;gap:2px 8px}
+ .childhood-operation-heading h2{font-size:15px}
+ .childhood-operation-heading>span{font-size:12px}
+}
+
+.childhood-operations>*{flex-shrink:0}

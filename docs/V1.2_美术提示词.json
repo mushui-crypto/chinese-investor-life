@@ -1,0 +1,31 @@
+{
+  "tool": "built-in image_gen",
+  "generatedAt": "2026-09-22",
+  "assets": [
+    {
+      "src": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-51d83057-f80b-4ac1-842c-a09a7eb1b43a.png",
+      "name": "life-rental-v2",
+      "prompt": "Use case: precise-object-edit. Asset: fullscreen illustrated background for the Chinese life simulation game. Edit target is the provided room. Remove ONLY the human character entirely, including their phone if held. Reconstruct the empty chair, desk, and room behind them naturally. Keep the room composition, camera, furniture, objects, warm hand-painted animation style, exact palette, light, architectural details and cat (if present) unchanged. Nobody anywhere in the scene. No new UI, text, borders or watermarks. Landscape 1536x1024."
+    },
+    {
+      "src": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-5177c97e-5570-43e0-92d8-6a3ff4dd5f98.png",
+      "name": "life-shop-v2",
+      "prompt": "Use case: precise-object-edit. Asset: fullscreen illustrated background for the Chinese life simulation game. Edit target is the provided room. Remove ONLY the human character entirely, including their phone if held. Reconstruct the empty chair, desk, and room behind them naturally. Keep the room composition, camera, furniture, objects, warm hand-painted animation style, exact palette, light, architectural details and cat (if present) unchanged. Nobody anywhere in the scene. No new UI, text, borders or watermarks. Landscape 1536x1024."
+    },
+    {
+      "src": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-6c9bfcd5-941d-41af-aae9-b3bf90a27190.png",
+      "name": "life-office-v2",
+      "prompt": "Use case: precise-object-edit. Asset: fullscreen illustrated background for the Chinese life simulation game. Edit target is the provided room. Remove ONLY the human character entirely, including their phone if held. Reconstruct the empty chair, desk, and room behind them naturally. Keep the room composition, camera, furniture, objects, warm hand-painted animation style, exact palette, light, architectural details and cat (if present) unchanged. Nobody anywhere in the scene. No new UI, text, borders or watermarks. Landscape 1536x1024."
+    },
+    {
+      "src": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-bcde67c8-1ded-456f-8ff6-1606bfcaa90b.png",
+      "name": "life-prison-v2",
+      "prompt": "Use case: precise-object-edit. Asset: fullscreen illustrated background for the Chinese life simulation game. Edit target is the provided room. Remove ONLY the human character entirely, including their phone if held. Reconstruct the empty chair, desk, and room behind them naturally. Keep the room composition, camera, furniture, objects, warm hand-painted animation style, exact palette, light, architectural details and cat (if present) unchanged. Nobody anywhere in the scene. No new UI, text, borders or watermarks. Landscape 1536x1024."
+    },
+    {
+      "src": "/Users/moss/.codex/generated_images/01a0c7db-4853-7d31-81d6-dd36d9f477f6/exec-1ca31bf5-464a-4665-b4cf-ea4aa280f9fc.png",
+      "name": "character-atlas-v2",
+      "prompt": "Use case: illustration-story. Asset: one production character SPRITE ATLAS for a Chinese life simulation game. Reference is ONLY face identity, age progression and hand-painted animation style. Create a square 2048x2048 atlas with EXACTLY FOUR evenly sized columns and FOUR evenly sized rows (16 equal 512x512 cells). Every cell contains one independent FRONT-facing head-to-mid-thigh character centered with 25px transparent margins, entirety of head and both arms inside its own cell. Genuine transparent alpha background, absolutely NO checkerboard painted into pixels, no background shadows, no scenery, no frames, no text, no grid lines. Columns from left to right are SAME Chinese man aged 9 child, 24 young adult, 45 middle-aged, 72 elderly white hair. Row1: everyday, sage green cotton shirt or cardigan, gently curious smile. Row2: successful affluent, teal tailored jacket (child smart sweater), proud lively smile and upright posture. Row3: exhausted and broke, worn ochre casual jacket, tired worried face and slumped shoulders. Row4: confined prisoner, plain slate blue grey clothing, sober reflective expression, no restraints or numbers (child column is ordinary grey school clothes, used only as unused cell). Consistent face identity ages correctly with obvious elderly wrinkles. Smooth confident painted contours, warm cream skin and earthy muted colors, crisp game art. Do NOT overlap cells or crop head/arms. Different expressive poses in each row but same scale. Transparency is essential."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+@layer game {
+ .rescue-menu h3,.loan-receipt h3{font-size:16px;margin:0 0 12px}.rescue-work{background:#e8eddb;padding:16px;border:2px solid #637257;border-radius:6px;margin-bottom:26px}.rescue-work-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.rescue-work-actions button{width:100%;min-height:44px}.rescue-work-actions small{display:block;font-size:12px;line-height:1.65;margin-top:7px;color:#4a503e}.rescue-borrow>p{font-size:13px;color:#63513d;line-height:1.7;margin:0 0 10px}.rescue-offer{padding:18px 0;border-bottom:1px solid #c8b697}.rescue-offer-title{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.rescue-offer-title h4{font-size:16px;margin:0}.rescue-offer-icon{width:30px;height:30px;display:grid;place-items:center;flex:0 0 auto}.rescue-offer-icon svg{width:28px;height:28px}.rescue-cost{margin-left:auto;font-size:13px;color:#63513d;font-variant-numeric:tabular-nums}.rescue-offer.costly .rescue-cost{color:#883b2b;font-weight:700}.rescue-offer-detail{display:flex;gap:18px;align-items:center;margin-top:9px}.rescue-offer-detail>div{flex:1;min-width:0}.rescue-offer-detail p{font-size:14px;line-height:1.7;margin:0 0 5px}.rescue-offer-detail small{font-size:13px;line-height:1.65;color:#63513d;display:block}.rescue-offer-detail button{flex:0 0 auto;min-height:44px}.rescue-offer-detail button:disabled{opacity:1;color:#73644e;background:#e7ddca;border-color:#a3947b;box-shadow:none}.rescue-footnote{font-size:12px;color:#63513d;line-height:1.8;margin:20px 0}.loan-receipt{padding:16px;background:#f1e4c6;border:2px solid #92774e;border-radius:6px;margin:18px 0}.loan-receipt dl{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0}.loan-receipt dt{font-size:13px;color:#63513d}.loan-receipt dd{font-size:18px;font-weight:700;margin:6px 0 0;font-variant-numeric:tabular-nums}.loan-receipt dd,.rescue-cost{overflow-wrap:anywhere}
+ @media(max-width:600px){.rescue-work-actions{grid-template-columns:1fr}.rescue-offer-detail{align-items:stretch;flex-direction:column;gap:10px}.rescue-cost{margin-left:39px;width:calc(100% - 39px)}.rescue-menu .dialog-footer{align-items:stretch;flex-direction:column}.rescue-menu .dialog-footer button{min-height:44px}.loan-receipt{padding:12px}}
+ .survival-panel{margin:0 24px 18px;padding:16px 20px;background:#f4eacb;border:2px solid #856a43;border-radius:7px;box-shadow:3px 3px 0 #49392d;display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:10px 24px;color:#49392d}
+ .survival-heading{display:flex;align-items:center;gap:12px}.survival-symbol{display:grid;place-items:center;width:42px;height:42px;flex:0 0 auto;background:#e5d2a5;border:2px solid #866c47;border-radius:6px}.survival-symbol svg{width:29px;height:29px}
+ .survival-panel h2{font:18px var(--title);margin:0 0 6px}.survival-panel p{margin:0;font-size:12px;line-height:1.8}.survival-metrics{display:flex;gap:26px;flex-wrap:wrap;margin:0;align-items:center}.survival-metrics dt{font-size:11px;color:#65533d}.survival-metrics dd{margin:5px 0 0;font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
+ .survival-rules{grid-column:1/-1;font-size:12px}.survival-rules summary{cursor:pointer;min-height:26px;padding-top:4px}.survival-rules p{margin-top:8px;max-width:100%}
+ .survival-crisis{background:#f5dfc3;border-color:#9b5038}.survival-crisis h2{color:#883b2b}.survival-crisis .survival-symbol{background:#e5b17c;border-color:#9b5038}.survival-rescue{grid-column:1/-1;border-top:var(--content-rule);padding-top:13px}.survival-rescue p{max-width:100%}.survival-days{display:flex;gap:7px;margin-bottom:12px}.survival-days span{display:grid;place-items:center;width:27px;height:27px;background:#fff3d8;border:1px solid #9d835f;border-radius:4px;font-size:12px}.survival-days .used{background:#9e4936;color:#fff2d4}.survival-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}.survival-rescue small{display:block;margin-top:10px;font-size:12px}
+ @media(max-width:900px){.survival-panel{grid-template-columns:1fr}.survival-metrics{gap:16px 30px}.survival-metrics dd{font-size:17px}}
+ @media(max-width:600px){.survival-panel{margin:0 12px 15px;padding:14px}.survival-panel h2{font-size:17px}.survival-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.survival-metrics div:last-child:nth-child(3){grid-column:1/-1}.survival-actions{display:grid;grid-template-columns:1fr 1fr}.survival-actions button{white-space:normal;font-size:12px;min-height:44px}.survival-heading{align-items:start}.survival-days{gap:6px}.survival-rules summary{min-height:32px}}
+}
+
+/* Life status has its own frame, separate from every market room. */
+@layer game {
+ .survival-panel .survival-heading{align-items:flex-start}
+ .survival-panel .survival-heading h2{font-family:var(--sans);font-size:18px;font-weight:700}
+ .survival-health{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-block:16px;border-top:var(--content-rule);grid-column:1/-1}
+ .survival-health>div:first-child{flex:1;min-width:0}
+ .survival-health strong{font-size:14px;color:#294f3e}
+ .survival-health p{margin:6px 0 0;font-size:13px;line-height:1.7}
+ .survival-health.needs-care strong{color:#883b2b}
+ .survival-health-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+ .survival-health-actions .button{min-height:44px;white-space:normal}
+ .survival-panel>.survival-actions{grid-column:1/-1;margin:0;justify-content:flex-end}
+ .survival-panel>.survival-rules{margin:0;padding-top:12px;border-top:var(--content-rule)}
+ .rescue-menu>.survival-health{margin:0;padding:var(--content-row-space) 0;border-bottom:0}
+ .daily-survival .survival-health{display:block}
+ .daily-survival .survival-health-actions{margin-top:12px;justify-content:flex-start}
+ @media(max-width:700px){.survival-health{flex-direction:column;gap:12px}.survival-health-actions{width:100%;justify-content:flex-start}.survival-panel>.survival-actions{justify-content:flex-start}.survival-panel>.survival-actions .button{min-height:44px}}
+}
+/* Override general description-list margins within this compact status panel. */
+.game-scroll>.survival-panel{gap:12px 24px;padding:20px 24px}
+.survival-panel .survival-metrics{margin:0}
+.survival-panel .survival-health{padding:12px 0 0;flex-wrap:wrap;gap:12px 20px}
+.survival-panel .survival-health>div:first-child{flex:1 1 240px}
+.survival-panel .survival-health-actions{align-self:flex-end;flex:0 1 auto}
+.survival-health-actions:empty{display:none}
+.rescue-menu>.survival-health p{margin:6px 0 0;font-size:13px;line-height:1.7}
+.survival-panel .survival-rules{margin:0}
+.survival-panel .survival-rules summary{min-height:32px;display:flex;align-items:center;gap:8px;padding:0}
+.survival-panel .survival-rules summary::before{content:'▸'}
+.survival-panel .survival-rules[open] summary::before{content:'▾'}
+@media(max-width:700px){.game-scroll>.survival-panel{padding:16px}.survival-panel .survival-health>div:first-child{flex-basis:auto}.survival-panel .survival-health-actions{align-self:stretch}}

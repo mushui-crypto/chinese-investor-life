@@ -1,0 +1,144 @@
+/* Keep the decision, price and consequence together; secondary reading unfolds. */
+.life-notebook{border:1px solid #ac9266;border-radius:8px;background:#f9f0da;min-width:0;overflow:hidden}
+.life-notebook>summary,.leisure-actions>summary{display:flex;align-items:center;gap:8px;min-height:44px;padding:10px 14px;cursor:pointer;font-size:14px;font-weight:650;list-style:none}
+.life-notebook>summary:after,.leisure-actions>summary:after{content:'＋';margin-left:auto;font-size:18px}
+.life-notebook[open]>summary:after,.leisure-actions[open]>summary:after{content:'−'}
+.life-notebook>summary svg{width:23px;height:23px}
+.life-notebook>.compact-goal,.life-notebook>.upbringing-note,.life-notebook>.mini-journal{border:0;border-top:1px solid #d6c6a6;border-radius:0;box-shadow:none;margin:0;background:transparent}
+.life-notebook .compact-goal .text-button{min-height:36px;font-size:13px}
+.leisure-actions{border-top:1px solid #d0bf9c;margin-top:5px}
+.leisure-actions>summary{padding:6px 3px;color:#4d503a}
+.leisure-actions .life-action{margin-top:7px;width:100%}
+.behavior-bar{padding:8px 14px;gap:10px;min-height:48px}
+.behavior-bar>strong{flex:1;font-size:14px}
+.behavior-bar .text-button{min-height:40px}
+.behavior-bar .behavior-emblem{width:26px;height:26px}
+.desk-life-menu{display:inline-flex;align-items:center;gap:3px;font-size:12px;white-space:nowrap}
+.desk-life-menu .info-button{height:40px;width:34px;flex-basis:34px}
+.desk-life-links{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.desk-life-links .button{min-height:44px;white-space:normal}
+.inline-receipt{padding:10px 16px;gap:5px;position:relative}
+.inline-receipt>strong{font-size:14px;line-height:1.6}
+.inline-receipt .receipt-metrics{gap:8px 18px;font-size:13px}
+.inline-receipt .action-quip{display:none}
+.inline-receipt>details{margin-top:4px;font-size:12px}
+.desk-preview{margin:10px 0;padding:9px 0}
+.desk-preview>.order-budget{margin:0 0 8px;padding:10px 12px;border-radius:6px}
+.desk-preview>.order-budget dl{display:grid;grid-template-columns:1fr;gap:4px;margin:0}
+.desk-preview>.order-budget dl>div{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.desk-preview>.order-budget dt{font-size:12px;min-height:0;line-height:1.6}
+.desk-preview>.order-budget dd{font-size:15px;max-width:56%;margin:0;text-align:right;line-height:1.6}
+.order-budget .budget-footer{display:block;position:relative;margin:6px 0 0;min-height:0;padding-right:0}
+.order-budget .budget-footer>.info-button{position:absolute;top:-3px;right:-4px}
+.order-budget .cash-shortage{padding-right:23px;margin:4px 0;font-size:12px}
+.order-budget .cash-warning{margin:0;padding:5px 23px 0 0;font-size:12px;line-height:1.65;border:0}
+.order-budget .cash-warning .text-button{display:inline-flex;margin:0 0 0 5px;padding:0;min-height:32px;font-size:12px}
+.desk-preview>div{margin:5px 0}
+.desk-preview>small{margin-top:5px;font-size:12px;line-height:1.6}
+.trade-ticket .form-error:empty{display:none}
+.casino-heading{padding:14px 20px}
+.casino-heading h1{font-size:25px;margin-bottom:3px}
+.casino-sign{width:45px;height:48px;font-size:26px}
+.casino-wallet{padding:9px 20px;gap:8px 30px}
+.casino-wallet b{font-size:17px}
+.casino-record-brief{margin-left:auto}
+.casino-record-brief .text-button{font-size:12px;min-height:36px;padding:0}
+.casino-games{padding:8px 16px;gap:7px}
+.casino-games button{min-height:58px;flex:1 0 108px;padding:7px 10px;grid-template-columns:29px auto;grid-template-rows:auto;column-gap:6px}
+.casino-games .casino-glyph{width:29px;height:29px;grid-row:auto}
+.casino-games strong{font-size:14px}
+.casino-play-area{grid-template-columns:minmax(0,1fr) minmax(340px,400px);gap:20px;padding:18px 20px}
+.casino-ticket{padding:16px}
+.casino-ticket h2{font-size:19px;margin:0 0 12px}
+.casino-picks{margin-bottom:12px;gap:6px}
+.casino-picks legend{margin-bottom:6px}
+.casino-picks span{min-height:44px;padding:7px}
+.casino-ticket .desk-field{margin:10px 0}
+.casino-stakes{margin:8px 0;gap:8px}
+.casino-stakes button{min-height:40px}
+.casino-ticket>.button{margin-top:8px}
+.casino-exit{padding-top:10px;margin-top:12px}
+.casino-table{min-height:340px}
+.casino-road{margin:14px 0 6px}
+.survival-panel{padding:14px 18px}
+.survival-heading h2{font-size:19px}
+.survival-heading p,.survival-rescue>p{font-size:13px;line-height:1.6}
+.survival-metrics{margin:12px 0}
+.survival-rescue .survival-days{display:none}
+.survival-rules{font-size:13px}
+@media(min-width:1100px){.casino-picks{grid-template-columns:repeat(3,minmax(0,1fr))}.casino-ticket .cash-warning{line-height:1.6}.casino-ticket .desk-preview{margin:8px 0}}
+@media(max-width:760px){
+ .casino-heading{padding:12px 14px;gap:9px}.casino-heading nav{width:auto;flex:1;justify-content:flex-end}.casino-heading nav label{display:none}.casino-heading p{display:none}
+ .casino-wallet{padding:8px 12px;gap:6px 16px}.casino-wallet>span{font-size:12px}.casino-record-brief{flex-basis:100%;margin-left:0}
+ .casino-games{padding:8px 10px}.casino-games button{flex:0 0 102px;min-height:52px}.casino-games strong{font-size:13px}
+ .casino-play-area{grid-template-columns:1fr;padding:12px;gap:14px}.casino-table{min-height:280px}
+ .casino-ticket{padding:14px}.casino-outcome h3{font-size:17px}.casino-outcome p{line-height:1.65}
+ .desk-life-menu{font-size:12px}.desk-quickbar{gap:6px}.survival-panel{padding:12px}.life-notebook>summary{min-height:48px}
+}
+@media(max-width:360px){.casino-wallet b{font-size:15px}.casino-play-area{padding:9px}.casino-ticket{padding:12px}.desk-life-links{grid-template-columns:1fr}.order-budget .cash-warning{padding-right:20px}}
+.period-life-menu{display:inline-flex;align-items:center;margin-left:12px;font-size:12px;font-weight:400;color:#67553c}
+.period-title{flex-wrap:wrap}.period-title .period-life-menu .info-button{min-height:32px}
+.leisure-actions{grid-column:1/-1}
+@media(min-width:1100px){.casino-play-area{grid-template-columns:minmax(0,1fr) 450px}.casino-picks{grid-template-columns:repeat(4,minmax(0,1fr))}.casino-picks span{font-size:12px;padding:6px}}
+@media(max-width:760px){.period-life-menu{margin-left:0}.period-title .period-life-menu{flex-basis:100%}.desk-quickbar .desk-life-menu{order:3;margin-left:auto}.leisure-actions[open]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.leisure-actions>summary{grid-column:1/-1}}
+
+.inline-receipt>details .action-quip{display:block}
+.quickbar-jumps .desk-life-menu{margin:0;order:0;justify-content:center}
+@media(max-width:700px){.quickbar-jumps{grid-template-columns:repeat(4,minmax(0,1fr))}.desk-life-menu .info-button{width:26px;flex-basis:26px;min-height:36px;height:36px}.quickbar-jumps .desk-life-menu{font-size:11px;gap:0}}
+.casino-ticket h2{margin-bottom:8px}.casino-ticket .desk-field{margin:6px 0}.casino-stakes{margin:4px 0}.casino-ticket .desk-preview{padding-block:6px;margin-block:6px}
+@media(min-width:1100px){.casino-heading{padding-block:10px}.casino-play-area{padding-top:12px}.casino-ticket .desk-preview{margin-block:4px}.casino-ticket>.button[type=submit]{margin-top:4px}}
+
+/* Childhood puts the current choice first; adult desks keep their existing HUD. */
+.childhood-playing .game-layout{grid-template-columns:200px minmax(0,820px);max-width:1042px;margin-inline:auto;gap:22px}
+.childhood-playing .main-stage{gap:14px}
+.childhood-playing .story-panel{margin:0;padding:24px 28px}
+.childhood-playing .choice{min-height:58px}
+.childhood-playing .choice small{font-size:13px}
+.childhood-playing .choice-content:has(>strong:only-child){padding-block:2px}
+.childhood-playing .childhood-path{padding:0;margin:0;border:1px solid var(--wood);border-radius:8px;box-shadow:none;background:var(--paper)}
+.childhood-path>summary{display:flex;align-items:center;gap:8px;padding:10px 16px;min-height:48px;list-style:none;cursor:pointer;box-sizing:border-box}
+.childhood-path>summary::-webkit-details-marker{display:none}
+.childhood-path>summary span{font-size:14px;color:var(--ink);line-height:1.6}
+.childhood-path>summary strong{font-size:14px;font-weight:650}
+.childhood-path>summary .child-settings-label{margin-left:auto;color:var(--green);font-size:13px;white-space:nowrap}
+.childhood-path>summary::after{content:'▾';color:var(--green)}
+.childhood-path[open]>summary::after{content:'▴'}
+.childhood-path>.child-growth-body{display:block;padding:4px 16px 16px;border-top:1px solid var(--line)}
+.child-growth-body .child-stages{font-size:13px;color:var(--muted);margin:10px 0}
+.child-growth-body label{display:grid;grid-template-columns:auto minmax(0,1fr);font-size:14px}
+.child-growth-body .game-select{min-width:0}
+.child-growth-body .child-focus-lock{font-size:13px;margin-bottom:8px}
+.child-focus-effects{list-style:none;padding:0;margin:8px 0 16px;line-height:1.85;font-size:13px}
+.child-focus-effects strong{font-size:13px;margin-right:7px}
+.child-skip{border-top:1px solid var(--line);padding-top:8px}
+.child-skip .text-button{padding-left:0;min-height:44px}
+.child-skip .game-icon{width:18px;height:18px}
+.child-skip small{color:var(--muted)}
+.childhood-playing .child-market{margin:0;border-radius:10px}
+.child-planning .section-heading{margin-bottom:14px;display:flex;justify-content:space-between;gap:12px}
+.childhood-playing .child-planning h2{font-size:22px;margin:0}
+.child-planning .ap-count{font-size:20px;white-space:nowrap}
+.child-planning .ap-count i{font-size:13px;margin-left:4px;font-style:normal;font-weight:400}
+.child-planning .action-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.child-planning .life-action{min-width:0;display:flex;flex-direction:column;padding:14px 8px;gap:7px;text-align:center}
+.child-planning .life-action small{display:block;font-size:12px;line-height:1.6}
+.child-planning-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);margin-top:18px;padding-top:14px}
+.child-planning-footer>span{font-size:13px;color:var(--muted)}
+.child-planning-footer .button{flex-shrink:0}
+.child-back{justify-self:start;min-height:44px}
+.child-back>.game-icon{transform:rotate(180deg);width:20px;height:20px}
+.childhood-playing .memory-scene{height:250px;min-height:0}
+.childhood-playing .memory-scene .scene-place,.childhood-playing .memory-scene .scene-foot,.childhood-playing .protagonist-wrap>span{display:none}
+.childhood-playing .memory-scene .scene-quote{bottom:26px;max-width:50%}
+.childhood-playing .protagonist-wrap{width:250px;bottom:0}
+@media(max-width:980px){.childhood-playing .game-layout{grid-template-columns:180px minmax(0,1fr);gap:16px}.childhood-playing .story-panel{padding:22px}.child-planning-footer{flex-wrap:wrap}}
+@media(max-width:700px){
+ .childhood-playing .game-layout{display:block}.childhood-playing .story-panel{padding:20px 16px}
+ .childhood-playing .mobile-summary{margin-bottom:12px}.childhood-playing .mobile-summary .text-button{min-height:44px;font-size:13px}
+ .childhood-path>summary{padding:10px 12px}.childhood-path>summary span{display:inline;margin:0}.childhood-path>summary .child-settings-label{font-size:12px}
+ .childhood-path>.child-growth-body{padding-inline:12px}.child-growth-body label{grid-template-columns:1fr;gap:8px}
+ .childhood-playing .memory-scene{height:210px}.childhood-playing .protagonist-wrap{width:210px;max-width:63%}
+ .child-planning .action-list{gap:6px}.child-planning .life-action{padding:10px 5px}.child-planning .life-action strong{font-size:13px}
+ .child-planning .life-action small{font-size:12px}.child-planning-footer .button{width:100%}
+}
+.childhood-playing .result-footer{justify-content:flex-end}

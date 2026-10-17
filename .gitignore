@@ -1,0 +1,28 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+.build/
+/releases/
+/output/
+/*.zip
+
+# Local QA evidence and historical source snapshots
+/reports/*
+!/reports/校验报告.md
+playwright-report/
+test-results/
+__pycache__/
+*.py[cod]
+
+# Local configuration, credentials and player data
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+userdata/
+
+# OS / editor caches
+.DS_Store
+._*
+*.log
